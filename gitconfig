@@ -1,0 +1,32 @@
+[push]
+	default = simple
+[user]
+    name = Jerry Wang
+    email = jerryw@gmail.com
+[core]
+    editor = 'subl' -w
+    autocrlf = false
+    eol = lf
+[merge]
+    tool = kdiff3NoAuto
+[mergetool "kdiff3NoAuto"]
+    cmd = kdiff3 --L1 \"$MERGED (Base)\" --L2 \"$MERGED (Local)\" --L3 \"$MERGED (Remote)\" -o \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[push]
+    default = simple
+[alias]
+    unstage = reset HEAD --
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    last = log -10 HEAD
+    gl = log --pretty='format:%Cgreen%h%Creset %an - %s' --graph
+    dc = diff --cached
+[credentials]
+[url "https://"]
+    insteadOf = git://
+[http]
+    sslVerify = false
