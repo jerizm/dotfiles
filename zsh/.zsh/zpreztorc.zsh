@@ -1,0 +1,1 @@
+/Users/jwang/.zprezto/runcoms/zpreztorc
