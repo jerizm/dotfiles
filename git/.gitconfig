@@ -1,9 +1,10 @@
 [push]
-	default = simple
+    default = simple
 [user]
     name = Jerry Wang
     email = jerryw@gmail.com
 [core]
+    excludesfile = /Users/jerry/.gitignore_global
     editor = 'subl' -w
     autocrlf = false
     eol = lf
@@ -25,7 +26,10 @@
     last = log -10 HEAD
     gl = log --pretty='format:%Cgreen%h%Creset %an - %s' --graph
     dc = diff --cached
-[credentials]
+[filter "lfs"]
+    clean = git lfs clean %f
+    smudge = git lfs smudge %f
+    required = true
 [url "https://"]
     insteadOf = git://
 [http]
