@@ -112,3 +112,22 @@ set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+
+" ================ Search ===========================
+
+"transparent background (note has to go after local file,
+"as that might set colors
+"hi Normal ctermbg=none
+hi LineNr ctermbg=none guibg=bg
+
+"NERDTree
+"show hidden files
+let NERDTreeShowHidden=1
+
+"toggle display of nerdtree: http://stackoverflow.com/a/10417725/1011470
+silent! nmap <F3> :NERDTreeToggle<CR>
+silent! map <F4> :NERDTreeFind<CR>
+let g:NERDTreeMapPreview="<F4>"
+
+"have <ENTER> add a new line staying in normal mode
+nmap <CR> o<Esc>
