@@ -113,7 +113,14 @@ set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
-" ================ Search ===========================
+" ================ custom settings ===========================
+
+" use silver searcher for ctrlp
+if executable("ag") 
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --depth 8 -g ""' 
+endif
+
+let g:syntastic_javascript_checkers = ['eslint']
 
 "transparent background (note has to go after local file,
 "as that might set colors
