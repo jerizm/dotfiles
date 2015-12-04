@@ -42,12 +42,6 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
-alias mc='docker-machine'
-eval "$(mc env dev)"
-
-export NVM_DIR="${HOME}/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 #
 # Browser
 #
