@@ -132,9 +132,8 @@ hi LineNr ctermbg=none guibg=bg
 let NERDTreeShowHidden=1
 
 "toggle display of nerdtree: http://stackoverflow.com/a/10417725/1011470
-silent! nmap <F3> :NERDTreeToggle<CR>
-silent! map <F4> :NERDTreeFind<CR>
-let g:NERDTreeMapPreview="<F4>"
+nmap ,n :NERDTreeFind<CR>
+nmap ,m :NERDTreeToggle<CR>
 
 "have <ENTER> add a new line staying in normal mode
 nmap <CR> o<Esc>
