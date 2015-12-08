@@ -7,5 +7,6 @@ then
   echo 'docker is not running'
 elif [[ $docker_running == *"Running"* ]]
 then 
+  echo 'Running eval "$(mc env dev)"'
   eval "$(mc env dev)"
 fi
