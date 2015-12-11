@@ -137,3 +137,7 @@ nmap ,m :NERDTreeToggle<CR>
 
 "have <ENTER> add a new line staying in normal mode
 nmap <CR> o<Esc>
+nmap <s-CR> O<Esc> 
+
+" insert spaces in normal mode
+nmap <space> i<space><esc>
