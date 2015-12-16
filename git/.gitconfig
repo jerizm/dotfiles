@@ -5,7 +5,7 @@
     email = jerryw@gmail.com
 [core]
     excludesfile = /Users/jerry/.gitignore_global
-    editor = 'subl' -w
+    editor = vim 
     autocrlf = false
     eol = lf
 [merge]
