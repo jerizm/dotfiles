@@ -10,6 +10,7 @@ endif
 
 " ================ General Config ====================
 
+set encoding=utf-8
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -65,10 +66,6 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-
 filetype plugin on
 filetype indent on
 
@@ -114,6 +111,10 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 " ================ custom settings ===========================
+
+" make sure powerline glyphs work
+
+let g:airline_powerline_fonts = 1
 
 " use silver searcher for ctrlp
 if executable("ag") 
