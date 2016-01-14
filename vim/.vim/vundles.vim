@@ -28,6 +28,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'sickill/vim-pasta'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
