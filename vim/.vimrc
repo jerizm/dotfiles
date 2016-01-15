@@ -146,3 +146,7 @@ nmap <space> i<space><esc>
 nmap  fy    jvaBVy    
 nmap  fc    jvaBVd    
 
+" paste without indents
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
