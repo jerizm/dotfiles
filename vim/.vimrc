@@ -117,8 +117,8 @@ set smartcase       " ...unless we type a capital
 let g:airline_powerline_fonts = 1
 
 " use silver searcher for ctrlp
-if executable("ag") 
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --depth 8 -g ""' 
+if executable("ag")
+  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --depth 8 -g ""'
 endif
 
 let g:syntastic_javascript_checkers = ['eslint']
@@ -143,10 +143,14 @@ nmap <CR> o<Esc>
 nmap <space> i<space><esc>
 
 " function yank function cut
-nmap  fy    jvaBVy    
-nmap  fc    jvaBVd    
+nmap  fy    jvaBVy
+nmap  fc    jvaBVd
 
 " paste without indents
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+
+" stamp over words
+noremap S "_diwP
+

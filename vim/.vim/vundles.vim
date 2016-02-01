@@ -30,7 +30,10 @@ Plugin 'tpope/vim-commentary'
 Plugin 'sickill/vim-pasta'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+syntax enable
 filetype plugin indent on    " required
