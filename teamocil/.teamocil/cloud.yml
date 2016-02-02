@@ -1,0 +1,13 @@
+windows:
+  - name: token
+    root: ~/Git/CloudOps-Infrastructure
+    options:
+      main-pane-width: 150
+    layout: main-vertical
+    panes:
+      - vim
+      - commands:
+        - git pull
+        - git status
+      - echo
+
