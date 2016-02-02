@@ -1,5 +1,5 @@
 windows:
-  - name: token
+  - name: cloud
     root: ~/Git/CloudOps-Infrastructure
     options:
       main-pane-width: 150
