@@ -1,0 +1,13 @@
+windows:
+  - name: token
+    root: ~/Git/Atom.Token.Api
+    options:
+      main-pane-width: 150
+    layout: main-vertical
+    panes:
+      - vim
+      - commands:
+        - git pull
+        - git status
+      - echo
+
