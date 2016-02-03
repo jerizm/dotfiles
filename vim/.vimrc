@@ -2,7 +2,11 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
+" vim plug
+if filereadable(expand("~/.vim/plug.vim"))
+  source ~/.vim/plug.vim
+endif
+
 " source ~/.vimrc.before if it exists.
 if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
@@ -17,7 +21,6 @@ set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
 " This makes vim act like all other editors, buffers can
@@ -34,36 +37,34 @@ syntax on
 " the plugins.
 let mapleader=","
 
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
+" }}}-------------------------------------------------------------------------
+"   Undo, Backup and Swap file locations                                  {{{
+" ----------------------------------------------------------------------------
+
+" Don't leave .swp files everywhere. Put them in a central place
+if !isdirectory(expand('~').'/.vim/backups')
+  silent !mkdir ~/.vim/backups > /dev/null 2>&1
 endif
 
-" ================ Turn Off Swap Files ==============
+if !isdirectory(expand('~').'/.vim/swap')
+  silent !mkdir ~/.vim/swap > /dev/null 2>&1
+endif
 
-set noswapfile
-set nobackup
-set nowb
+if !isdirectory(expand('~').'/.vim/undo')
+  silent !mkdir ~/.vim/undo > /dev/null 2>&1
+endif
 
-" ================ Persistent Undo ==================
-" Keep undo history across sessions, by storing in file.
-" Only works all the time.
-if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
-  silent !mkdir ~/.vim/backups > /dev/null 2>&1
-  set undodir=~/.vim/backups
-  set undofile
+set directory=~/.vim/swap//
+set backupdir=~/.vim/backups//
+if exists('+undodir')
+    set undodir=/.vim/undo
+    set undofile
 endif
 
 " ================ Indentation ======================
 
-set autoindent
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
-set smartindent
-
-filetype plugin on
-filetype indent on
+filetype plugin indent on
+set tabstop=2 shiftwidth=2 expandtab
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
@@ -142,11 +143,14 @@ nmap <space> i<space><esc>
 nmap  fy    jvaBVy
 nmap  fc    jvaBVd
 
-" paste without indents
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
+" show paste mode
 set showmode
 
 " stamp over words
 noremap S "_diwP
 
+" colorscheme
+let g:solarized_termcolors=256
+syntax enable
+set background=dark
+colorscheme solarized
