@@ -31,7 +31,11 @@ Plug 'airblade/vim-gitgutter'
 
 " file switching and viewer
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+Plug 'Shougo/unite.vim'
+
+" support mru and unite
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/vimproc.vim'
 
 " code-completion
 Plug 'Valloric/YouCompleteMe'

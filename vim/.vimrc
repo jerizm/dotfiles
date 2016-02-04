@@ -169,6 +169,19 @@ set showmode
 " stamp over words
 noremap S "_diwP
 
+" Unite
+let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts =
+			\ '-i --vimgrep --hidden --ignore ' .
+			\ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+let g:unite_source_grep_recursive_opt = ''
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <C-p> :Unite -no-split -buffer-name=files  -start-insert file_rec/async:!<cr>
+nnoremap <space>/ :Unite grep:.<cr>
+nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
+nnoremap <space>r :Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
+
 " colorscheme
 syntax enable
 set background=dark
