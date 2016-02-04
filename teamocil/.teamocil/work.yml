@@ -1,6 +1,6 @@
 windows:
-  - name: token
-    root: ~/Git/Atom.Token.Api
+  - name: work
+    root: .
     options:
       main-pane-width: 150
     layout: main-vertical
@@ -10,4 +10,3 @@ windows:
         - git pull
         - git status
       - echo
-

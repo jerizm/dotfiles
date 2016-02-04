@@ -13,6 +13,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
+" Completion
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+
 " Better JS Support
 Plug 'pangloss/vim-javascript'
 

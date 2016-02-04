@@ -62,7 +62,6 @@ fi
 setopt RM_STAR_WAIT
 
 export SUBLIME=subl
-export EDITOR="$SUBLIME -n -w"
 export VISUAL=$EDITOR
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
