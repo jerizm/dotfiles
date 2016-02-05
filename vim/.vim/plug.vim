@@ -9,6 +9,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Fancy statusline
+Plug 'vim-airline/vim-airline'
+
 " Syntax
 Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -42,9 +45,6 @@ Plug 'Valloric/YouCompleteMe'
 
 " class outline viewer
 Plug 'majutsushi/tagbar'
-
-" Fancy statusline
-Plug 'bling/vim-airline'
 
 " Fugitive: Git from within Vim
 Plug 'tpope/vim-fugitive'

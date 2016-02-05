@@ -129,8 +129,12 @@ set smartcase       " ...unless we type a capital
 
 " ================ custom settings ===========================
 
-" make sure powerline glyphs work
+" airline
+set ttimeoutlen=50
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
 
+" make sure powerline glyphs work
 let g:airline_powerline_fonts = 1
 
 " use silver searcher for ctrlp
