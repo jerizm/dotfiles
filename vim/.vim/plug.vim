@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline'
 " Syntax
 Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee'}
 
 " Completion
 Plug 'mattn/emmet-vim', { 'for': 'html' }
