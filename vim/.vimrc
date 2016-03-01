@@ -129,6 +129,9 @@ set smartcase       " ...unless we type a capital
 
 " ================ custom settings ===========================
 
+" shared clipboard
+set clipboard=unnamed
+
 " airline
 set ttimeoutlen=50
 set laststatus=2
