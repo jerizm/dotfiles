@@ -1,12 +1,25 @@
 " Install vim-plug if we don't arlready have it
 if empty(glob("~/.vim/autoload/plug.vim"))
-    " Ensure all needed directories exist  (Thanks @kapadiamush)
-    silent !mkdir -p ~/.vim/plugged > /dev/null 2>&1
-    silent !mkdir -p ~/.vim/autoload > /dev/null 2>&1
-    " Download the actual plugin manager
-    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+  " Ensure all needed directories exist  (Thanks @kapadiamush)
+  silent !mkdir -p ~/.vim/plugged > /dev/null 2>&1
+  silent !mkdir -p ~/.vim/autoload > /dev/null 2>&1
+  " Download the actual plugin manager
+  execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
 
+
+function! BuildYCM(info)
+  if a:info.status == 'installed' || a:info.force
+    if has("unix")
+      let s:uname = system("uname -s")
+      if s:uname == "Darwin"
+        ./install.py --clang-completer
+      endif
+    elseif
+      ./install.py
+    endif
+  endif
+endfunction
 call plug#begin('~/.vim/plugged')
 
 " Fancy statusline
@@ -42,7 +55,7 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim'
 
 " code-completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 " class outline viewer
 Plug 'majutsushi/tagbar'
