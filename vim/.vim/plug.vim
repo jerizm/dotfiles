@@ -42,7 +42,7 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim'
 
 " code-completion
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " class outline viewer
 Plug 'majutsushi/tagbar'
@@ -57,7 +57,7 @@ Plug 'tpope/vim-commentary'
 Plug 'sickill/vim-pasta'
 
 " tern base JS support
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 
 " respect editor config
 Plug 'editorconfig/editorconfig-vim'
