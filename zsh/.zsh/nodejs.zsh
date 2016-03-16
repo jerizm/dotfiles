@@ -15,9 +15,11 @@
 # ░░░░░░░░░░
 #
 #█▓▒░ node version manager
-source ~/.nvm/nvm.sh
+if [[ -a ~/.nvm/nvm.sh ]]; then
+  source ~/.nvm/nvm.sh
 
-alias npminstall="rm -rf node_modules &&  npm cache clear &&  npm cache clean && npm install"
+  alias npminstall="rm -rf node_modules &&  npm cache clear &&  npm cache clean && npm install"
 
-export NVM_DIR="/Users/$(whoami)/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+  export NVM_DIR="/Users/$(whoami)/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
