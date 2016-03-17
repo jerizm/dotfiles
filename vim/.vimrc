@@ -164,7 +164,7 @@ nmap ,m :NERDTreeToggle<CR>
 nmap <CR> o<Esc>
 
 " insert spaces in normal mode
-nmap <space> i<space><esc>
+nmap <space> i<space><Esc>
 
 " function yank function cut
 nmap  fy    jvaBVy
