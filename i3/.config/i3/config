@@ -167,6 +167,7 @@ bar {
     inactive_workspace #002b36 #586e75 #002b36
     urgent_workspace #d33682 #d33682 #fdf6e3
   }
+  position top
 }
 client.focused #6c71c4 #6c71c4 #fdf6e3 #6c71c4
 client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
