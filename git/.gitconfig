@@ -4,7 +4,7 @@
     name = Jerry Wang
     email = jerryw@gmail.com
 [core]
-    excludesfile = /Users/jerry/.gitignore_global
+    excludesfile = ~/.gitignore_global
     editor = vim
     autocrlf = false
     eol = lf
