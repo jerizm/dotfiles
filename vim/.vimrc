@@ -133,7 +133,7 @@ set smartcase       " ...unless we type a capital
 set clipboard=unnamed
 
 " airline
-set ttimeoutlen=50
+set timeoutlen=50 ttimeoutlen=0
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 

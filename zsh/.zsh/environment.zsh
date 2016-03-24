@@ -58,6 +58,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+KEYTIMEOUT=1
+
 # 10 second wait if you do something that will delete everything.  I wish I'd had this before...
 setopt RM_STAR_WAIT
 

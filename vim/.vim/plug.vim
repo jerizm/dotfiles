@@ -78,6 +78,9 @@ Plug 'editorconfig/editorconfig-vim'
 " tmux pane navigation
 Plug 'christoomey/vim-tmux-navigator'
 
+" vim surround
+Plug 'tpope/vim-surround'
+
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()
