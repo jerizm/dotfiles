@@ -184,6 +184,7 @@ let g:unite_source_grep_default_opts =
 			\ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
 let g:unite_source_grep_recursive_opt = ''
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
 nnoremap <C-p> :Unite -no-split -buffer-name=files  -start-insert file_rec/async:!<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
