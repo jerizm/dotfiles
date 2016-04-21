@@ -1,11 +1,11 @@
 windows:
-  - name: cloud
-    root: ~/Git/CloudOps-Infrastructure
+  - name: generator
+    root: ~/Git/generator-atom-node-api/
     options:
       main-pane-width: 150
     layout: main-vertical
     panes:
-      - vim
+      - echo
       - commands:
         - git pull
         - git status
