@@ -57,5 +57,5 @@ then
   fi
 else
   # create the zsh file
-	_update_zsh_update
+  _update_zsh_update
 fi
