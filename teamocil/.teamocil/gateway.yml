@@ -1,0 +1,12 @@
+windows:
+  - name: gateway
+    root: ~/Git/Atom.Gateway
+    options:
+      main-pane-width: 150
+    layout: main-vertical
+    panes:
+      - echo
+      - commands:
+        - git pull
+        - git status
+      - echo
