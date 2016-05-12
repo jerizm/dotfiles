@@ -24,3 +24,4 @@ if [[ -a ~/.nvm/nvm.sh ]]; then
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
 export NODE_ENV=dev
+alias node_tests="chokidar 'src/**/*.js' 'test/**/*.js' -c 'if [[ {path} =~ ^test.* ]]; then npm test -- {path}; else npm test; fi;'"
