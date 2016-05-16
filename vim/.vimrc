@@ -173,8 +173,9 @@ nmap  fc    jvaBVd
 " show paste mode
 set showmode
 
-" stamp over words
-noremap S "_diwP
+" cycle through buffers
+nnoremap <C-m> :bnext<CR>
+nnoremap <C-n> :bprevious<CR>
 
 " Unite
 let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
@@ -196,3 +197,4 @@ set background=dark
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 colorscheme solarized
+
