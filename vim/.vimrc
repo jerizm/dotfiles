@@ -174,7 +174,7 @@ nmap  fc    jvaBVd
 set showmode
 
 " cycle through buffers
-nnoremap <C-m> :bnext<CR>
+nnoremap <C-b> :bnext<CR>
 nnoremap <C-n> :bprevious<CR>
 
 " Unite
