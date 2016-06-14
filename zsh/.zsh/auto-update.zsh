@@ -5,7 +5,7 @@ zmodload zsh/datetime
 export ZSH="${ZDOTDIR:-$HOME}/.zprezto"
 
 function _current_epoch() {
-  echo $(( $EPOCHSECONDS / 60 / 60 / 24 ))
+  echo $EPOCHSECONDS
 }
 
 function _update_zsh_update() {
@@ -18,10 +18,10 @@ function _upgrade_zsh() {
   _update_zsh_update
 }
 
-epoch_target=$UPDATE_ZSH_DAYS
+epoch_target=$UPDATE_ZSH_SECONDS
 if [[ -z "$epoch_target" ]]; then
   # Default to old behavior
-  epoch_target=1
+  epoch_target=43200
 fi
 
 # Cancel upgrade if the current user doesn't have write permissions for the
