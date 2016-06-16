@@ -191,6 +191,9 @@ nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
 nnoremap <space>r :Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
 
+" gundo
+nnoremap <F5> :GundoToggle<CR>
+
 " colorscheme
 syntax enable
 set background=dark

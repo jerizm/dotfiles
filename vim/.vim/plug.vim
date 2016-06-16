@@ -81,6 +81,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " vim surround
 Plug 'tpope/vim-surround'
 
+" gundo view undo branching
+Plug 'sjl/gundo.vim'
+
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()
