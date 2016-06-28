@@ -1,0 +1,13 @@
+windows:
+  - name: content
+    root: ~/Git/Atom.Content.Api
+    options:
+      main-pane-width: 150
+    layout: main-vertical
+    panes:
+      - vim
+      - commands:
+        - git pull
+        - git status
+      - echo
+
