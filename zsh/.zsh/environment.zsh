@@ -69,3 +69,5 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+alias mfakey="totp.rb generate"
