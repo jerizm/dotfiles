@@ -179,14 +179,23 @@ nnoremap <C-b> :bnext<CR>
 nnoremap <C-n> :bprevious<CR>
 
 " Unite
-let g:unite_source_rec_async_command = ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts =
-			\ '-i --vimgrep --hidden'
-let g:unite_source_grep_recursive_opt = ''
+call unite#custom#source('file_rec, file_rec/async, file_rec/git', 'matchers', ['converter_relative_word', 'matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#custom#profile('default', 'context.smartcase', 1)
+call unite#custom#profile('default', 'context.ignorecase', 1)
+let g:unite_prompt = '» '
+let g:unite_source_history_yank_enable = 1
+
+if executable('ag')
+    let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden'
+    let g:unite_source_grep_recursive_opt=''
+endif
+
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
-nnoremap <C-p> :Unite -no-split -buffer-name=files  -start-insert file_rec/async:!<cr>
+nnoremap <C-p> :Unite -no-split -buffer-name=files -start-insert file_rec<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
 nnoremap <space>r :Unite -no-split -buffer-name=mru -start-insert file_mru<cr>

@@ -69,4 +69,7 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+#aws stuff
+export AWS_IAM_USERNAME=jwang && export AWS_IAM_ACCOUNT=061851502621
+
 alias mfakey="totp.rb generate"
