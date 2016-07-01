@@ -141,11 +141,6 @@ let g:airline#extensions#tabline#enabled = 1
 " make sure powerline glyphs work
 let g:airline_powerline_fonts = 1
 
-" use silver searcher for ctrlp
-if executable("ag")
-  let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --depth 8 -g ""'
-endif
-
 let g:syntastic_javascript_checkers = ['eslint']
 
 "transparent background (note has to go after local file,
@@ -195,7 +190,7 @@ endif
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
-nnoremap <C-p> :Unite -no-split -buffer-name=files -start-insert file_rec<cr>
+nnoremap <C-p> :Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
 nnoremap <space>r :Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
