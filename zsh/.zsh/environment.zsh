@@ -12,8 +12,8 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/{bin,sbin}
-  $path
+/usr/local/{bin,sbin}
+$path
 )
 
 export ZSH="${ZDOTDIR:-$HOME}/.zprezto"
@@ -72,4 +72,11 @@ export PATH=$PATH:$GOPATH/bin
 #aws stuff
 export AWS_IAM_USERNAME=jwang && export AWS_IAM_ACCOUNT=061851502621
 
-alias mfakey="totp.rb generate"
+#mfa stuff move this later
+__mfakey () {
+  key=$(oathtool -b --totp $(pass 2fa/"$@"/code))
+  echo $key
+  echo $key | pbcopy
+}
+
+alias mfakey=__mfakey
