@@ -29,3 +29,12 @@ then
 else
   printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
 fi
+
+printf "${BLUE}%s${NORMAL}\n" "Updating pass"
+echo "updating pass"
+if pass git pull
+then
+  printf "${BLUE}%s\n" "Hooray! pass has been updated."
+else
+  printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
+fi
