@@ -173,13 +173,15 @@ set showmode
 nnoremap <C-b> :bnext<CR>
 nnoremap <C-n> :bprevious<CR>
 
-" Unite
-call unite#custom#source('file_rec, file_rec/async, file_rec/git', 'matchers', ['converter_relative_word', 'matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#custom#profile('default', 'context.smartcase', 1)
-call unite#custom#profile('default', 'context.ignorecase', 1)
-let g:unite_prompt = '» '
+"
+" unite
+let g:unite_data_directory = '~/.vim/.cache/unite'
+let g:unite_source_rec_max_cache_files = 500000
 let g:unite_source_history_yank_enable = 1
+let g:unite_enable_start_insert = 5
+let g:unite_split_rule = "botright"
+let g:unite_force_overwrite_statusline = 0
+let g:unite_winheight = 25
 
 if executable('ag')
     let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
@@ -188,12 +190,22 @@ if executable('ag')
     let g:unite_source_grep_recursive_opt=''
 endif
 
+" custom ignore pattern
+call unite#custom#source('file_rec,file_rec/async',
+      \ 'ignore_pattern', join([
+        \ '\.bzr\/',
+        \ '\.git\/',
+        \ 'vendor\/',
+        \ 'node_modules\/',
+      \ ], '\|'))
+
+" fuzzy matcher and sort everything
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
-nnoremap <C-p> :Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
+
+nnoremap <C-p> :Unite file_rec/async<cr>
 nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
-nnoremap <space>r :Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
