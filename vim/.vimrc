@@ -203,8 +203,8 @@ call unite#custom#source('file_rec,file_rec/async',
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 
-nnoremap <C-p> :Unite file_rec/async<cr>
-nnoremap <space>/ :Unite grep:.<cr>
+nnoremap <C-p> :Unite -no-split file_rec/async<cr>
+nnoremap <space>/ :Unite -no-split grep:.<cr>
 nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
 
 " gundo
