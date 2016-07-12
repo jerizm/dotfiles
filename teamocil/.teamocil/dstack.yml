@@ -1,6 +1,6 @@
 windows:
-  - name: generator
-    root: ~/Git/generator-atom-node-api/
+  - name: dstack
+    root: ~/Git/dstack
     options:
       main-pane-width: 150
     layout: main-vertical

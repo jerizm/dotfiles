@@ -80,3 +80,7 @@ __mfakey () {
 }
 
 alias mfakey=__mfakey
+
+# awssudo completion
+compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
+compctl -g '~/.password-store/2fa/*(:t:r)' mfakey
