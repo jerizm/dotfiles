@@ -1,6 +1,6 @@
 windows:
   - name: generator
-    root: ~/Git/generator-atom-node-api/
+    root: ~/Git/Atom.Token.Api
     options:
       main-pane-width: 150
     layout: main-vertical
