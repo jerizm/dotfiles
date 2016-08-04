@@ -86,3 +86,6 @@ alias mfakey=__mfakey
 
 # awssudo completion
 compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
+
+# gdate
+alias gdate=date

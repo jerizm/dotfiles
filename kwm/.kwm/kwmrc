@@ -31,7 +31,7 @@ kwmc bindsym hyper-h window -f west
 */
 
 // Set default values for screen padding
-kwmc config padding 40 20 20 20
+kwmc config padding 20 10 10 10
 
 // Set default values for container gaps
 kwmc config gap 10 10
@@ -49,7 +49,7 @@ kwmc config float-non-resizable on
 kwmc config lock-to-container on
 
 // Set focus-follows-mouse-mode to autoraise
-kwmc config focus-follows-mouse on
+kwmc config focus-follows-mouse off
 
 /* Focus-follows-mouse is temporarily disabled when
    a floating window has focus */
@@ -60,7 +60,7 @@ kwmc config center-on-float on
 
 /* The mouse will automatically move to the center
    of the focused window */
-kwmc config mouse-follows-focus on
+kwmc config mouse-follows-focus off
 
 // Allow window focus to wrap-around
 kwmc config cycle-focus on
@@ -100,13 +100,13 @@ kwmc rule owner="iTerm2" properties={role="AXDialog"}
    kwmc rule owner="iTunes" properties={display="1"} */
 
 // Enable border for focused window
-kwmc config border focused on
+kwmc config border focused off
 kwmc config border focused size 1
 kwmc config border focused color 0xFFBDD322
 kwmc config border focused radius 6
 
 // Enable border for marked window
-kwmc config border marked on
+kwmc config border marked off
 kwmc config border marked size 2
 kwmc config border marked color 0xFFCC5577
 kwmc config border marked radius 6
@@ -194,8 +194,8 @@ kwmc bindsym ctrl+shift-h window -m west
 kwmc bindsym ctrl+shift-x window -m mark
 
 // Move Focused Window To Space
-kwmc bindsym ctrl+alt-left window -m space left
-kwmc bindsym ctrl+alt-right window -m space right
+//kwmc bindsym ctrl+alt-left window -m space left
+//kwmc bindsym ctrl+alt-right window -m space right
 
 // Move Focused Window To Screen
 kwmc bindsym ctrl+alt-1 window -m display 0
