@@ -37,7 +37,7 @@ kwmc config padding 20 10 10 10
 kwmc config gap 10 10
 
 // Default tiling mode for Kwm (bsp | monocle | float)
-kwmc config tiling bsp
+kwmc config tiling monocle
 
 // Let Kwm listen for hotkeys
 kwmc config hotkeys on
