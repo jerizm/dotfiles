@@ -125,7 +125,7 @@ kwmc bindsym ctrl-s mode activate prefix
 kwmc bindsym cmd+alt+ctrl-q quit
 
 // Launch iTerm2
-kwmc bindsym cmd-return exec open -na /Applications/iTerm2.app
+//kwmc bindsym cmd-return exec open -na /Applications/iTerm2.app
 
 // Set Space Tiling Mode To BSP
 kwmc bindsym cmd+ctrl-a space -t bsp
