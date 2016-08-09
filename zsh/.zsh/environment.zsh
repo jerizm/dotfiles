@@ -88,4 +88,7 @@ alias mfakey=__mfakey
 compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
 
 # gdate
-alias gdate=date
+if [[ "$OSTYPE" != darwin* ]]; then
+  alias gdate=date
+fi
+

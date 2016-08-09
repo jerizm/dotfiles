@@ -52,7 +52,7 @@ Plug 'Shougo/unite.vim'
 
 " support mru and unite
 Plug 'Shougo/neomru.vim'
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " code-completion
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
