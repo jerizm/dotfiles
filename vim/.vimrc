@@ -176,7 +176,7 @@ nnoremap <C-n> :bprevious<CR>
 "
 " unite
 let g:unite_data_directory = '~/.vim/.cache/unite'
-let g:unite_source_rec_max_cache_files = 500000
+let g:unite_source_rec_max_cache_files = 100000
 let g:unite_source_history_yank_enable = 1
 let g:unite_enable_start_insert = 5
 let g:unite_split_rule = "botright"
@@ -203,7 +203,7 @@ call unite#custom#source('file_rec,file_rec/async',
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 
-nnoremap <C-p> :Unite -no-split file_rec/async<cr>
+nnoremap <C-p> :FZF<cr>
 nnoremap <space>/ :Unite -no-split grep:.<cr>
 nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
 

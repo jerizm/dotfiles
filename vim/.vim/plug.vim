@@ -54,6 +54,9 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
+" fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 " code-completion
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
