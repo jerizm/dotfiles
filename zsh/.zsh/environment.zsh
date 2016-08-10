@@ -84,6 +84,10 @@ __mfakey () {
 
 alias mfakey=__mfakey
 
+# generate pw alias
+genpasswd() {
+  pwgen -Bs $1 1 |pbcopy |pbpaste; echo “Has been copied to clipboard”
+}
 # awssudo completion
 compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
 
