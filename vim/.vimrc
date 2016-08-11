@@ -87,8 +87,13 @@ filetype plugin indent on
 set tabstop=2 shiftwidth=2 expandtab
 set softtabstop=2
 
+" for go
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2
+
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
+
+autocmd BufRead,BufNewFile *.go set invlist
 
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
