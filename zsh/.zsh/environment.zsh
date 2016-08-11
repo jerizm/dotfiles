@@ -75,21 +75,24 @@ export PATH=$PATH:$GOPATH/bin
 #aws stuff
 export AWS_IAM_USERNAME=jwang && export AWS_IAM_ACCOUNT=061851502621
 
-#mfa stuff move this later
-__mfakey () {
-  key=$(oathtool -b --totp $(pass 2fa/"$@"/code))
-  echo $key
-  echo $key | pbcopy
-}
+if [[ "$OSTYPE" = darwin* ]]; then
+  #mfa stuff move this later
+  __mfakey () {
+    key=$(oathtool -b --totp $(pass 2fa/"$@"/code))
+    echo $key
+    echo $key | pbcopy
+  }
 
-alias mfakey=__mfakey
+  alias mfakey=__mfakey
 
-# generate pw alias
-genpasswd() {
-  pwgen -Bs $1 1 |pbcopy |pbpaste; echo “Has been copied to clipboard”
-}
-# awssudo completion
-compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
+  # generate pw alias
+  genpasswd() {
+    pwgen -Bs $1 1 |pbcopy |pbpaste; echo “Has been copied to clipboard”
+  }
+  # awssudo completion
+  compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
+
+fi
 
 # gdate
 if [[ "$OSTYPE" != darwin* ]]; then
