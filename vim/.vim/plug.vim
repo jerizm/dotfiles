@@ -87,6 +87,9 @@ Plug 'tpope/vim-surround'
 " gundo view undo branching
 Plug 'sjl/gundo.vim'
 
+" vim.go
+Plug 'fatih/vim-go'
+
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()
