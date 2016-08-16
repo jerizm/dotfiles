@@ -40,8 +40,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'
 
 " colorschemes
-Plug 'chriskempson/base16-vim'
-Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 
 " git edits in sidebar
 Plug 'airblade/vim-gitgutter'

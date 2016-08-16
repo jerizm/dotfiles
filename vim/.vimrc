@@ -218,9 +218,8 @@ nnoremap <F5> :GundoToggle<CR>
 
 " colorscheme
 syntax enable
-set background=dark
 " solarized options
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme solarized
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
+colorscheme gruvbox
 
