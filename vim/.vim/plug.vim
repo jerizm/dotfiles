@@ -24,6 +24,7 @@ call plug#begin('~/.vim/plugged')
 
 " Fancy statusline
 Plug 'vim-airline/vim-airline'
+Plug 'edkolev/tmuxline.vim'
 
 " Syntax
 Plug 'tpope/vim-git', { 'for': 'git' }
