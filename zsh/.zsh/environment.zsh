@@ -68,7 +68,7 @@ setopt RM_STAR_WAIT
 
 export SUBLIME=subl
 export VISUAL=$EDITOR
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:$HOME/Library/Python/2.7/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
