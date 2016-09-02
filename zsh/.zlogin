@@ -26,5 +26,5 @@ fi
 if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
   export GPG_AGENT_INFO
 else
-  eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
+  [[ -s "gpg-agent" ]] && eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
 fi
