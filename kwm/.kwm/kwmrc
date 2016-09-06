@@ -1,6 +1,24 @@
 /*
 This is a sample config for Kwm
 
+The following statements can be used to set Kwms internal directory structure.
+
+    This is the root folder for Kwms files, the only thing this actually
+    specifies is the location of the 'init' script which Kwm runs upon startup.
+    Defaults to $HOME/.kwm
+
+        kwm_home /path/to/.kwm
+
+    This is the root folder in which all files included using 'include' must reside.
+    Defaults to $HOME/.kwm
+
+        kwm_include /path/to/.kwm/include
+
+    This is the folder in which all bsp-layouts managed by 'tree load' and 'tree save'
+    is loaded from / saved to. Defaults to $HOME/.kwm/layouts
+
+        kwm_layouts /path/to/.kwm/layouts
+
 Commands prefixed with 'kwmc' will call
 local functions corresponding to the
 kwmc syntax.
@@ -31,10 +49,10 @@ kwmc bindsym hyper-h window -f west
 */
 
 // Set default values for screen padding
-kwmc config padding 20 10 10 10
+kwmc config padding 20 20 20 20
 
 // Set default values for container gaps
-kwmc config gap 10 10
+kwmc config gap 15 15
 
 // Default tiling mode for Kwm (bsp | monocle | float)
 kwmc config tiling monocle
@@ -60,7 +78,14 @@ kwmc config center-on-float on
 
 /* The mouse will automatically move to the center
    of the focused window */
-kwmc config mouse-follows-focus off
+kwmc config mouse-follows-focus on
+
+/* Allows a window to be moved by dragging,
+   when a modifier key and left-click is held down. */
+kwmc config mouse-drag off
+
+/* The modifier keys to be held down to initiate mouse-drag */
+kwmc config mouse-drag mod shift+ctrl
 
 // Allow window focus to wrap-around
 kwmc config cycle-focus on
@@ -87,27 +112,15 @@ kwmc config spawn left
    AXWindowRole and AXStandardWindowSubRole */
 kwmc rule owner="iTerm2" properties={role="AXDialog"}
 
-/* The following commands create rules that
-   blacklists an application from Kwms tiling
-
-   kwmc rule owner="Steam" properties={float="true"}
-   kwmc rule owner="Photoshop" properties={float="true"} */
-
-/* The following command creates a rule that
-   captures an application to the given screen,
-   if the screen exists.
-
-   kwmc rule owner="iTunes" properties={display="1"} */
-
 // Enable border for focused window
-kwmc config border focused off
-kwmc config border focused size 1
-kwmc config border focused color 0xFFBDD322
+kwmc config border focused on
+kwmc config border focused size 0
+kwmc config border focused color 0x0000000
 kwmc config border focused radius 6
 
 // Enable border for marked window
-kwmc config border marked off
-kwmc config border marked size 2
+kwmc config border marked on
+kwmc config border marked size 0
 kwmc config border marked color 0xFFCC5577
 kwmc config border marked radius 6
 
@@ -123,9 +136,6 @@ kwmc bindsym ctrl-s mode activate prefix
 
 // Quit Kwm
 kwmc bindsym cmd+alt+ctrl-q quit
-
-// Launch iTerm2
-//kwmc bindsym cmd-return exec open -na /Applications/iTerm2.app
 
 // Set Space Tiling Mode To BSP
 kwmc bindsym cmd+ctrl-a space -t bsp
@@ -194,8 +204,8 @@ kwmc bindsym ctrl+shift-h window -m west
 kwmc bindsym ctrl+shift-x window -m mark
 
 // Move Focused Window To Space
-//kwmc bindsym ctrl+alt-left window -m space left
-//kwmc bindsym ctrl+alt-right window -m space right
+kwmc bindsym ctrl+alt-left window -m space left
+kwmc bindsym ctrl+alt-right window -m space right
 
 // Move Focused Window To Screen
 kwmc bindsym ctrl+alt-1 window -m display 0
@@ -211,18 +221,18 @@ kwmc bindsym prefix+shift-x space -g decrease horizontal
 kwmc bindsym prefix+shift-y space -g decrease vertical
 
 // Increase Screen Padding
-// kwmc bindsym prefix-left space -p increase left
-// kwmc bindsym prefix-right space -p increase right
-// kwmc bindsym prefix-up space -p increase top
-// kwmc bindsym prefix-down space -p increase bottom
-// kwmc bindsym prefix-p space -p increase all
+kwmc bindsym prefix-left space -p increase left
+kwmc bindsym prefix-right space -p increase right
+kwmc bindsym prefix-up space -p increase top
+kwmc bindsym prefix-down space -p increase bottom
+kwmc bindsym prefix-p space -p increase all
 
 // Decrease Screen Padding
-// kwmc bindsym prefix+shift-left space -p decrease left
-// kwmc bindsym prefix+shift-right space -p decrease right
-// kwmc bindsym prefix+shift-up space -p decrease top
-// kwmc bindsym prefix+shift-down space -p decrease bottom
-// kwmc bindsym prefix+shift-p space -p decrease all
+kwmc bindsym prefix+shift-left space -p decrease left
+kwmc bindsym prefix+shift-right space -p decrease right
+kwmc bindsym prefix+shift-up space -p decrease top
+kwmc bindsym prefix+shift-down space -p decrease bottom
+kwmc bindsym prefix+shift-p space -p decrease all
 
 // Autowrite
 kwmc bindsym cmd-7 write \
