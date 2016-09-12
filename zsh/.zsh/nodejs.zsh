@@ -1,27 +1,11 @@
-#                 ██
-#                ░██
-#  ██████  ██████░██
-# ░░░░██  ██░░░░ ░██████
-#    ██  ░░█████ ░██░░░██
-#   ██    ░░░░░██░██  ░██
-#  ██████ ██████ ░██  ░██
-# ░░░░░░ ░░░░░░  ░░   ░░
-#
-#  ▓▓▓▓▓▓▓▓▓▓
-# ░▓ author ▓ xero <x@xero.nu>
-# ░▓ code   ▓ http://code.xero.nu/dotfiles
-# ░▓ mirror ▓ http://git.io/.files
-# ░▓▓▓▓▓▓▓▓▓▓
-# ░░░░░░░░░░
-#
-#█▓▒░ node version manager
 if [[ -a ~/.nvm/nvm.sh ]]; then
-  source ~/.nvm/nvm.sh
-
   alias npminstall="rm -rf node_modules &&  npm cache clear &&  npm cache clean && npm install"
 
+  alias node_tests="chokidar 'src/**/*.js' 'test/**/*.js' -c 'if [[ {path} =~ ^test.* ]]; then npm test -- {path}; else npm test; fi;'"
+
   export NVM_DIR="/Users/$(whoami)/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 fi
+
 export NODE_ENV=dev
-alias node_tests="chokidar 'src/**/*.js' 'test/**/*.js' -c 'if [[ {path} =~ ^test.* ]]; then npm test -- {path}; else npm test; fi;'"
+
