@@ -76,6 +76,7 @@ export PATH=$PATH:$GOPATH/bin
 export AWS_IAM_USERNAME=jwang && export AWS_IAM_ACCOUNT=061851502621
 
 if [[ "$OSTYPE" = darwin* ]]; then
+  export DEVELOPMENT=true
   #mfa stuff move this later
   __mfakey () {
     key=$(oathtool -b --totp $(pass 2fa/"$@"/code))
