@@ -32,7 +32,7 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee'}
 
 " Completion
-Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 " Better JS Support
 Plug 'pangloss/vim-javascript'
