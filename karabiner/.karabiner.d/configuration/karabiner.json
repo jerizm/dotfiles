@@ -4,7 +4,9 @@
             "name": "Default profile",
             "selected": true,
             "simple_modifications": {
-                "caps_lock": "escape"
+                "caps_lock": "escape",
+                "left_command": "left_option",
+                "left_option": "left_command"
             }
         }
     ]
