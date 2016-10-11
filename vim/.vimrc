@@ -149,8 +149,8 @@ let g:airline_powerline_fonts = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
 " go stuff
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+"
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 let g:go_list_type = "quickfix"
 
 "transparent background (note has to go after local file,
