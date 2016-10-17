@@ -1,0 +1,39 @@
+# Enable kwm compatibility mode
+khd kwm on
+
+# set color of default mode
+khd mode default color 0xFFD5C4A1
+
+# Enable the prefix mode
+khd mode prefix prefix on
+khd mode prefix timeout 0.75
+khd mode prefix restore default
+khd mode prefix color 0xFF458588
+
+# Activate prefix mode
+ctrl - f                 :    khd -e "mode activate prefix"
+
+# Quit Kwm
+cmd + alt + ctrl - q     :    kwmc quit
+
+# Set Space Tiling Mode To BSP
+cmd + ctrl - a           :    kwmc space -t bsp
+
+# Set Space Tiling Mode To Monocle
+cmd + ctrl - s           :    kwmc space -t monocle
+
+# Set Space Tiling Mode To Floating
+cmd + ctrl - d           :    kwmc space -t float
+
+# Rotate Window-Tree By 90degrees (Clockwise)
+cmd + ctrl - r           :    kwmc tree rotate 90
+
+# Set Temporary Window Container
+prefix - f               :    kwmc window -z fullscreen
+prefix - d               :    kwmc window -z parent
+prefix - w               :    kwmc window -t focused
+
+# Move Focused Window To Screen
+ctrl + alt - 1           :    kwmc window -m display 0
+ctrl + alt - 2           :    kwmc window -m display 1
+ctrl + alt - 3           :    kwmc window -m display 2
