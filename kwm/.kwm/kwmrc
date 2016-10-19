@@ -96,14 +96,13 @@ kwmc config spawn left
     This is because some applications do not have the
     AXWindowRole and AXStandardWindowSubRole
 */
-kwmc rule owner="iTerm2" properties={role="AXDialog"}
 
 /*
-The following commands create rules that
-blacklists an application from Kwms tiling
-kwmc rule owner="Steam" properties={float="true"}
+  The following commands create rules that
+  blacklists an application from Kwms tiling
     kwmc rule owner="Photoshop" properties={float="true"}
 */
+kwmc rule owner="Finder" properties={float="true"}
 
 /*
 The following command creates a rule that
