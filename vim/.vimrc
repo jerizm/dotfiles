@@ -36,7 +36,7 @@ syntax on
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
 " the plugins.
-let mapleader=","
+let mapleader=" "
 
 " }}}-------------------------------------------------------------------------
 "   Undo, Backup and Swap file locations                                  {{{
@@ -169,9 +169,6 @@ nmap ,m :NERDTreeToggle<CR>
 "have <ENTER> add a new line staying in normal mode
 nmap <CR> o<Esc>
 
-" insert spaces in normal mode
-nmap <space> i<space><Esc>
-
 " function yank function cut
 nmap  fy    jvaBVy
 nmap  fc    jvaBVd
@@ -194,11 +191,13 @@ let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 25
 
 if executable('ag')
-    let g:unite_source_rec_async_command = 'ag --nocolor --nogroup --hidden -g ""'
-    let g:unite_source_grep_command = 'ag'
-    let g:unite_source_grep_default_opts = '--nocolor --nogroup --hidden'
-    let g:unite_source_grep_recursive_opt=''
-    let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+  " Use ag in unite grep source.
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts =
+  \ '-i --vimgrep --hidden --ignore ' .
+  \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+  let g:unite_source_grep_recursive_opt = ''
+  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
 
 " custom ignore pattern
@@ -215,8 +214,8 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 
 nnoremap <C-p> :FZF<cr>
-nnoremap <space>/ :Unite -no-split grep:.<cr>
-nnoremap <space>s :Unite -no-split -buffer-name=buffer buffer<cr>
+nnoremap <leader>/ :Unite -no-split grep:.<cr>
+nnoremap <leader>s :Unite -no-split -buffer-name=buffer buffer<cr>
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -228,3 +227,6 @@ syntax enable
 "let g:solarized_contrast = "high"
 colorscheme gruvbox
 
+" hardmode
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>

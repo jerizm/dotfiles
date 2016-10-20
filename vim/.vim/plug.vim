@@ -90,8 +90,8 @@ Plug 'sjl/gundo.vim'
 " vim.go
 Plug 'fatih/vim-go'
 
-" medium mode stop hjkl
-Plug 'kbarrette/mediummode'
+" hardmode
+Plug 'wikitopian/hardmode'
 
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
