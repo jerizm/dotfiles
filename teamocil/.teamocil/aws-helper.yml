@@ -1,6 +1,6 @@
 windows:
   - name: aws-helper
-    root: ~/git/aws-helper-go
+    root: ~/git/aws-helper
     options:
       main-pane-width: 150
     layout: main-vertical
