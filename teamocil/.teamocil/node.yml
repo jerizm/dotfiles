@@ -1,0 +1,14 @@
+windows:
+  - name: node
+    root: .
+    options:
+      main-pane-width: 150
+    layout: main-vertical
+    panes:
+      - nvm use default
+      - commands:
+        - nvm use default
+        - git fetch --all
+        - git pull
+        - git status
+      - nvm use default
