@@ -111,6 +111,9 @@ captures an application to the given screen,
 if the screen exists.
 */
 kwmc rule owner="Spotify" properties={display="2"}
+kwmc rule owner="Slack" properties={display="2"}
+kwmc rule owner="WhatsApp" properties={display="2"}
+kwmc rule owner="Messages" properties={display="2"}
 
 # Enable border for focused window
 kwmc config border focused off

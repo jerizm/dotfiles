@@ -2,7 +2,6 @@
   "profiles" : [
     {
       "name" : "Default profile",
-      "selected" : true,
       "fn_function_keys" : {
         "f12" : "volume_up",
         "f9" : "vk_consumer_next",
@@ -17,8 +16,15 @@
         "f8" : "vk_consumer_play",
         "f4" : "vk_launchpad"
       },
+      "devices" : [
+
+      ],
+      "name" : "Default profile",
+      "selected" : true,
       "simple_modifications" : {
-        "caps_lock" : "escape"
+        "left_command" : "left_option",
+        "caps_lock" : "escape",
+        "left_option" : "left_command"
       }
     }
   ]
