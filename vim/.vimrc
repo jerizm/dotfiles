@@ -169,10 +169,6 @@ nmap ,m :NERDTreeToggle<CR>
 "have <ENTER> add a new line staying in normal mode
 nmap <CR> o<Esc>
 
-" function yank function cut
-nmap  fy    jvaBVy
-nmap  fc    jvaBVd
-
 " show paste mode
 set showmode
 
@@ -230,3 +226,4 @@ colorscheme gruvbox
 " hardmode
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
