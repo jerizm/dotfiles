@@ -87,6 +87,9 @@ filetype plugin indent on
 set tabstop=2 shiftwidth=2 expandtab
 set softtabstop=2
 
+
+autocmd BufNewFile,BufRead .eslintrc set filetype=yaml
+
 " for go
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=2 shiftwidth=2
 
