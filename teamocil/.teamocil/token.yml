@@ -1,5 +1,5 @@
 windows:
-  - name: generator
+  - name: token
     root: ~/Git/Atom.Token.Api
     options:
       main-pane-width: 150
