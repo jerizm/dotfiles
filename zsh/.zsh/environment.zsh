@@ -95,6 +95,8 @@ if [[ "$OSTYPE" = darwin* ]]; then
 
 fi
 
+{ ssh-add -A; } &>/dev/null
+
 # gdate
 if [[ "$OSTYPE" != darwin* ]]; then
   alias gdate=date
