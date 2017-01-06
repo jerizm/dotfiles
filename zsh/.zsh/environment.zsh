@@ -91,8 +91,9 @@ if [[ "$OSTYPE" = darwin* ]]; then
     pwgen -Bs $1 1 |pbcopy |pbpaste; echo “Has been copied to clipboard”
   }
   # awssudo completion
-  compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
-
+  if [ -f ~/.aws/awssudo.conf ]; then
+    compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
+  fi
 fi
 
 { ssh-add -A; } &>/dev/null

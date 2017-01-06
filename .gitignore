@@ -1,1 +1,6 @@
 karabiner/.karabiner.d/log
+vim/.vim/autoload/plug.vim
+vim/.vim/plugged
+vim/.vim/swap
+vim/.vim/undo
+vim/.vim/viminfo
