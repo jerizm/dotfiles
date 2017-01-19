@@ -29,7 +29,6 @@ Plug 'edkolev/tmuxline.vim'
 " Syntax
 Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee'}
 
 " Completion
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
@@ -63,9 +62,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 " class outline viewer
 Plug 'majutsushi/tagbar'
 
-" Fugitive: Git from within Vim
-Plug 'tpope/vim-fugitive'
-
 " make commenting easier
 Plug 'tpope/vim-commentary'
 
@@ -83,9 +79,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " vim surround
 Plug 'tpope/vim-surround'
-
-" gundo view undo branching
-Plug 'sjl/gundo.vim'
 
 " vim.go
 Plug 'fatih/vim-go'
