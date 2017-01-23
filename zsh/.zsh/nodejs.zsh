@@ -1,5 +1,5 @@
 if [[ -a ~/.nvm/nvm.sh ]]; then
-  alias npminstall="rm -rf node_modules &&  npm cache clear &&  npm cache clean && npm install"
+  alias npminstall="rm -rf node_modules &&  npm cache clear && npm cache clean && yarn install"
 
   alias node_tests="chokidar 'src/**/*.js' 'test/**/*.js' -c 'npm run lint && if [[ {path} =~ ^test.* ]]; then npm test -- {path}; else npm test; fi;'"
 
