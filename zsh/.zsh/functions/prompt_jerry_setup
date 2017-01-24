@@ -61,6 +61,13 @@ prompt_jerry_clear_screen() {
   prompt_jerry_preprompt_render precmd
 }
 
+prompt_jerry_check_versions() {
+  # reset git arrows
+
+  prompt_check_versions=" n $(node --version)"
+}
+
+
 prompt_jerry_check_git_arrows() {
   # reset git arrows
   prompt_jerry_git_arrows=
@@ -152,6 +159,7 @@ prompt_jerry_preprompt_render() {
   preprompt+=$prompt_jerry_username
   # execution time
   preprompt+="%F{yellow}${prompt_jerry_cmd_exec_time}%f"
+  preprompt+="%F{red}${prompt_check_versions}%f"
   preprompt+="%F{cyan}$(aws_info)%f"
 
   # if executing through precmd, do not perform fancy terminal editing
@@ -217,6 +225,9 @@ prompt_jerry_precmd() {
 
   # check for git arrows
   prompt_jerry_check_git_arrows
+
+  # check for git arrows
+  prompt_jerry_check_versions
 
   # shows the full path in the title
   prompt_jerry_set_title 'expand-prompt' '%~'
