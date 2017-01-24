@@ -64,7 +64,7 @@ prompt_jerry_clear_screen() {
 prompt_jerry_check_versions() {
   # reset git arrows
 
-  prompt_check_versions=" n $(node --version)"
+  prompt_check_versions=" $(echo $(node --version) | sed 's/v/n/g')"
 }
 
 
