@@ -83,6 +83,7 @@ Plug 'tpope/vim-surround'
 " vim.go
 Plug 'fatih/vim-go'
 
+Plug 'avakhov/vim-yaml'
 " hardmode
 Plug 'wikitopian/hardmode'
 

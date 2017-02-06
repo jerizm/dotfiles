@@ -87,9 +87,8 @@ if [[ "$OSTYPE" = darwin* ]]; then
   alias mfakey=__mfakey
 
   # generate pw alias
-  genpasswd() {
-    pwgen -Bs $1 1 |pbcopy |pbpaste; echo “Has been copied to clipboard”
-  }
+  alias passgen='pwgen -Bsy 28 1 | tr -d "\n" | pbcopy | pbpaste'
+
   # awssudo completion
   if [ -f ~/.aws/awssudo.conf ]; then
     compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
