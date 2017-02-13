@@ -37,7 +37,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'pangloss/vim-javascript'
 
 " code linting
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 
 " colorschemes
 Plug 'morhetz/gruvbox'
@@ -86,6 +86,7 @@ Plug 'fatih/vim-go'
 Plug 'avakhov/vim-yaml'
 " hardmode
 Plug 'wikitopian/hardmode'
+
 
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
