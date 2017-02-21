@@ -39,4 +39,4 @@
 [url "https://"]
     insteadOf = git://
 [http]
-    sslVerify = false
+	sslVerify = true
