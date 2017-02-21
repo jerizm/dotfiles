@@ -3,5 +3,7 @@ for config (~/.zsh/*.zsh) source $config
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source <(awless completion zsh)
+if hash awless 2>/dev/null; then
+  source <(awless completion zsh)
+fi
 
