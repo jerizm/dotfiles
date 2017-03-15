@@ -57,10 +57,10 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " code-completion
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'ajh17/VimCompletesMe'
 
-" class outline viewer
-Plug 'majutsushi/tagbar'
+Plug 'ludovicchabant/vim-gutentags'
 
 " make commenting easier
 Plug 'tpope/vim-commentary'
