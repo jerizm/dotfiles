@@ -9,15 +9,13 @@ endif
 
 
 function! BuildYCM(info)
-  if a:info.status == 'installed' || a:info.force
-    if has("unix")
-      let s:uname = system("uname -s")
-      if s:uname == "Darwin"
-        ./install.py --clang-completer
-      endif
-    elseif
-      ./install.py
+  if has("unix")
+    let s:uname = system("uname -s")
+    if s:uname == "Darwin"
+      ./install.py --tern-completer
     endif
+  elseif
+    ./install.py
   endif
 endfunction
 call plug#begin('~/.vim/plugged')
@@ -57,10 +55,10 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " code-completion
-" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-Plug 'ajh17/VimCompletesMe'
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+" Plug 'ajh17/VimCompletesMe'
 
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 
 " make commenting easier
 Plug 'tpope/vim-commentary'
