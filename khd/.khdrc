@@ -11,7 +11,7 @@ khd mode prefix restore default
 khd mode prefix color 0xFF458588
 
 # Activate prefix mode
-ctrl - f                 :    khd -e "mode activate prefix"
+# ctrl - f                 :    khd -e "mode activate prefix"
 
 # Quit Kwm
 cmd + alt + ctrl - q     :    kwmc quit
@@ -29,9 +29,9 @@ cmd + ctrl - d           :    kwmc space -t float
 cmd + ctrl - r           :    kwmc tree rotate 90
 
 # Set Temporary Window Container
-prefix - f               :    kwmc window -z fullscreen
-prefix - d               :    kwmc window -z parent
-prefix - w               :    kwmc window -t focused
+# prefix - f               :    kwmc window -z fullscreen
+# prefix - d               :    kwmc window -z parent
+# prefix - w               :    kwmc window -t focused
 
 # Move Focused Window To Screen
 ctrl + alt - 1           :    kwmc window -m display 0
