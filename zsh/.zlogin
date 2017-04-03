@@ -26,9 +26,3 @@
 } >&2
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
-  export GPG_AGENT_INFO
-else
-  [[ -s "gpg-agent" ]] && eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
-fi
