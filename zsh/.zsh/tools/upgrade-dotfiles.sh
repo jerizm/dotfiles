@@ -29,6 +29,8 @@ else
   printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
 fi
 
+whence pass >/dev/null || return 0
+
 if ! [ -x $(command -v pass) ]; then
   printf "${BLUE}%s${NORMAL}\n" "Updating pass"
   echo "updating pass"
