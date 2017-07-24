@@ -85,6 +85,8 @@ Plug 'avakhov/vim-yaml'
 " hardmode
 Plug 'wikitopian/hardmode'
 
+" close all buffers but this one
+Plug 'vim-scripts/BufOnly.vim'
 
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
