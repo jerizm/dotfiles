@@ -97,6 +97,10 @@ fi
 
 { ssh-add -A; } &>/dev/null
 
+kill_pulse() {
+  sudo kill $(ps aux | grep '[P]ulse' | awk '{print $2}')
+}
+
 # gdate
 if [[ "$OSTYPE" != darwin* ]]; then
   alias gdate=date
