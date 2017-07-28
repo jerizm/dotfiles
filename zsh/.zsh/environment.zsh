@@ -101,3 +101,5 @@ fi
 if [[ "$OSTYPE" != darwin* ]]; then
   alias gdate=date
 fi
+
+export DISABLE_UPDATE_PROMPT="true"
