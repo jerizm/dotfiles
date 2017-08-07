@@ -107,3 +107,8 @@ if [[ "$OSTYPE" != darwin* ]]; then
 fi
 
 export DISABLE_UPDATE_PROMPT="true"
+
+# pyenv
+export PYENV_ROOT="/usr/local/Cellar/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
