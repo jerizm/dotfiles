@@ -42,3 +42,5 @@
     insteadOf = git://
 [http]
 	sslVerify = true
+[credential]
+	helper = store
