@@ -1,4 +1,6 @@
-if hash docker 2>/dev/null; then
+#!/usr/bin/env zsh
+
+if (( $+commands[docker] )) ; then
   alias mc='docker-machine'
   alias dl='docker ps -l -q'
   alias dbash='docker exec -it $(dl) /bin/bash'

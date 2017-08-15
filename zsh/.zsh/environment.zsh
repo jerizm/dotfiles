@@ -109,6 +109,8 @@ fi
 export DISABLE_UPDATE_PROMPT="true"
 
 # pyenv
-export PYENV_ROOT="/usr/local/Cellar/pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if (( $+commands[pyenv] )) ; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
