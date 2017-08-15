@@ -89,10 +89,6 @@ if [[ "$OSTYPE" = darwin* ]]; then
   # generate pw alias
   alias passgen='pwgen -Bsy 28 1 | tr -d "\n" | pbcopy | pbpaste'
 
-  # awssudo completion
-  if [ -f ~/.aws/awssudo.conf ]; then
-    compctl -g "(`cut -d , -f 1 ~/.aws/awssudo.conf | tail -n +2 | tr '\n' ' '`)" awssudo
-  fi
 fi
 
 { ssh-add -A; } &>/dev/null
@@ -112,5 +108,8 @@ export DISABLE_UPDATE_PROMPT="true"
 if (( $+commands[pyenv] )) ; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
+  pyenv() {
+    eval "$( command pyenv init - )"
+    pyenv "$@"
+  }
 fi
