@@ -10,12 +10,6 @@ if [[ -a ~/.nvm/nvm.sh ]]; then
     nvm "$@"
   }
 
-  node() {
-    unset -f node
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This loads nvm
-    node "$@"
-  }
-
   npm() {
     unset -f npm
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This loads nvm
