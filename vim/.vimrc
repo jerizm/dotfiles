@@ -90,8 +90,6 @@ set softtabstop=2
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-autocmd BufRead,BufNewFile *.go set invlist
-
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 

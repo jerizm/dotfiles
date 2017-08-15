@@ -90,8 +90,8 @@ chunkc core::load border.so
 # NOTE: shell commands require escaped quotes
 #       to pass value containing a whitespace.
 #
-chunkc tiling::rule --owner \"System Preferences\" --subrole AXStandardWindow --state tile
-chunkc tiling::rule --owner Finder --name Copy --state float
+chunkc tiling::rule --owner \"System Preferences\" --subrole AXStandardWindow --state float
+chunkc tiling::rule --owner Finder --state float
 chunkc tiling::rule --owner Chrome --state float
 
 chunkc tiling::rule --owner Spotify --desktop 2
