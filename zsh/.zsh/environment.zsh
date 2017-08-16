@@ -68,9 +68,6 @@ setopt RM_STAR_WAIT
 
 export SUBLIME=subl
 export VISUAL=$EDITOR
-export PATH=$PATH:/usr/local/go/bin:$HOME/Library/Python/2.7/bin
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
 
 #aws stuff
 export AWS_IAM_USERNAME=jwang && export AWS_IAM_ACCOUNT=061851502621
@@ -104,12 +101,3 @@ fi
 
 export DISABLE_UPDATE_PROMPT="true"
 
-# pyenv
-if (( $+commands[pyenv] )) ; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  pyenv() {
-    eval "$( command pyenv init - )"
-    pyenv "$@"
-  }
-fi
