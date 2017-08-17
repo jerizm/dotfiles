@@ -2,7 +2,7 @@
 
 # Use colors, but only if connected to a terminal, and that terminal
 # supports them.
-if (( $+commands[tput] )) ; then
+if which tput >/dev/null 2>&1; then
   ncolors=$(tput colors)
 fi
 if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
@@ -31,7 +31,7 @@ else
   printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
 fi
 
-if (( $+commands[pass] )) ; then
+if which tput >/dev/null 2>&1; then
   printf "${BLUE}%s${NORMAL}\n" "Updating pass"
   echo "updating pass"
   if pass git pull
