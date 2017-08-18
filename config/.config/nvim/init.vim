@@ -1,10 +1,6 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
-
 " vim plug
-if filereadable(expand("~/.vim/plug.vim"))
-  source ~/.vim/plug.vim
+if filereadable(expand("~/.config/nvim/plug.vim"))
+  source ~/.config/nvim/plug.vim
 endif
 
 " source ~/.vimrc.before if it exists.
@@ -43,41 +39,41 @@ let mapleader=" "
 " ----------------------------------------------------------------------------
 " Save your backups to a less annoying place than the current directory.
 " If you have .vim-backup in the current directory, it'll use that.
-" Otherwise it saves it to ~/.vim/backup or . if all else fails.
-if isdirectory($HOME . '/.vim/backup') == 0
-  :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
+" Otherwise it saves it to ~/.nvim/backup or . if all else fails.
+if isdirectory($HOME . '/.nvim/backup') == 0
+  :silent !mkdir -p ~/.nvim/backup >/dev/null 2>&1
 endif
 set backupdir-=.
 set backupdir+=.
 set backupdir-=~/
-set backupdir^=~/.vim/backup/
-set backupdir^=./.vim-backup/
+set backupdir^=~/.nvim/backup/
+set backupdir^=./.nvim-backup/
 set backup
 
 " Save your swp files to a less annoying place than the current directory.
 " If you have .vim-swap in the current directory, it'll use that.
 " Otherwise it saves it to ~/.vim/swap, ~/tmp or .
-if isdirectory($HOME . '/.vim/swap') == 0
-  :silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
+if isdirectory($HOME . '/.nvim/swap') == 0
+  :silent !mkdir -p ~/.nvim/swap >/dev/null 2>&1
 endif
-set directory=./.vim-swap//
-set directory+=~/.vim/swap//
+set directory=./.nvim-swap//
+set directory+=~/.nvim/swap//
 set directory+=~/tmp//
 set directory+=.
 
 " viminfo stores the the state of your previous editing session
-set viminfo+=n~/.vim/viminfo
+set viminfo+=n~/.nvim/viminfo
 
 if exists("+undofile")
   " undofile - This allows you to use undos after exiting and restarting
   " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
   " :help undo-persistence
   " This is only present in 7.3+
-  if isdirectory($HOME . '/.vim/undo') == 0
-    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+  if isdirectory($HOME . '/.nvim/undo') == 0
+    :silent !mkdir -p ~/.nvim/undo > /dev/null 2>&1
   endif
-  set undodir=./.vim-undo//
-  set undodir+=~/.vim/undo//
+  set undodir=./.nvim-undo//
+  set undodir+=~/.nvim/undo//
   set undofile
 endif
 
@@ -153,9 +149,6 @@ let g:go_list_type = "quickfix"
 "hi Normal ctermbg=none
 hi LineNr ctermbg=none guibg=bg
 
-"have <ENTER> add a new line staying in normal mode
-nmap <CR> o<Esc>
-
 " show paste mode
 set showmode
 
@@ -165,7 +158,7 @@ nnoremap <C-n> :bprevious<CR>
 
 "
 " unite
-let g:unite_data_directory = '~/.vim/.cache/unite'
+let g:unite_data_directory = '~/.nvim/.cache/unite'
 let g:unite_source_rec_max_cache_files = 100000
 let g:unite_source_history_yank_enable = 1
 let g:unite_enable_start_insert = 5
@@ -205,13 +198,11 @@ nnoremap <F5> :GundoToggle<CR>
 
 " colorscheme
 syntax enable
-" solarized options
-"let g:solarized_visibility = "high"
-"let g:solarized_contrast = "high"
+set background=dark
 colorscheme gruvbox
 
 " hardmode
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
-source ~/.vim/syntax.vim
+source ~/.config/nvim/syntax.vim
