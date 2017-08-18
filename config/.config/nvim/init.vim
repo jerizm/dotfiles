@@ -206,3 +206,9 @@ autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 source ~/.config/nvim/syntax.vim
+
+" vim plug
+if filereadable(expand("~/.config/nvim/completion.vim"))
+  source ~/.config/nvim/completion.vim
+endif
+

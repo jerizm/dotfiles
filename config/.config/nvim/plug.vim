@@ -54,9 +54,6 @@ Plug 'tpope/vim-commentary'
 " paste with indentation of context
 Plug 'sickill/vim-pasta'
 
-" tern base JS support
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-
 " respect editor config
 Plug 'editorconfig/editorconfig-vim'
 
@@ -75,6 +72,11 @@ Plug 'wikitopian/hardmode'
 
 " close all buffers but this one
 Plug 'vim-scripts/BufOnly.vim'
+
+Plug 'roxma/nvim-completion-manager'
+
+Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+Plug 'roxma/ncm-rct-complete'
 
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
