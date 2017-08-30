@@ -5,7 +5,7 @@ windows:
       main-pane-width: 150
     layout: main-vertical
     panes:
-      - sleep 1 && vim
+      - sleep 1 && nvim
       - commands:
         - git pull
         - git status
