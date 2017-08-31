@@ -1,7 +1,7 @@
 if [[ -a ~/.nvm/nvm.sh ]]; then
   alias npminstall="rm -rf node_modules && npm cache clear && npm cache clean && npm install"
 
-  alias node_tests="chokidar 'src/**/*.js' 'test/**/*.js' -c 'npm run lint && if [[ {path} =~ ^test.* ]]; then npm test -- {path}; else npm test; fi;'"
+  alias node_tests="chokidar 'src/**/*.js' 'test/**/*.js' -c 'npm run lint && if [[ {path} =~ ^test.* ]]; then npm test -- {path}; else npm test; fi;' --throttle 500 --debounce 1000"
 
   export NVM_DIR="/Users/$(whoami)/.nvm"
   nvm() {
