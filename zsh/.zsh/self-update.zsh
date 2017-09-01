@@ -3,7 +3,7 @@
 zmodload zsh/datetime
 
 export dotfiles="${ZDOTDIR:-$HOME}/dotfiles"
-export DISABLE_UPDATE_PROMPT=true
+export DISABLE_UPDATE_PROMPT="true"
 
 function _current_epoch() {
   echo $EPOCHSECONDS
