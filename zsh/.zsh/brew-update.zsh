@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 zmodload zsh/datetime
-
+export DISABLE_UPDATE_PROMPT="true"
 function _current_epoch() {
   echo $EPOCHSECONDS
 }

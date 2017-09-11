@@ -3,6 +3,7 @@
 zmodload zsh/datetime
 
 export ZSH="${ZDOTDIR:-$HOME}/.zprezto"
+export DISABLE_UPDATE_PROMPT="true"
 
 function _current_epoch() {
   echo $EPOCHSECONDS
