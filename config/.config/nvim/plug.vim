@@ -42,11 +42,8 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 
-" code-completion
-" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-" Plug 'ajh17/VimCompletesMe'
-
-" Plug 'ludovicchabant/vim-gutentags'
+" run unit tests
+Plug 'janko-m/vim-test'
 
 " make commenting easier
 Plug 'tpope/vim-commentary'

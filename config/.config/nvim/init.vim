@@ -205,6 +205,13 @@ colorscheme gruvbox
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
+" configure test.vim
+let test#javascript#mocha#executable = 'NODE_ENV=test mocha'
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 source ~/.config/nvim/syntax.vim
 
 " vim plug
