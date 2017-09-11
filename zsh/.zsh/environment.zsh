@@ -41,8 +41,8 @@ fi
 # Editors
 #
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -101,3 +101,6 @@ fi
 
 export DISABLE_UPDATE_PROMPT="true"
 
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
