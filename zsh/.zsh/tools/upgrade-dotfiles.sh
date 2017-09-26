@@ -31,7 +31,7 @@ else
   printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
 fi
 
-if which tput >/dev/null 2>&1; then
+if which pass >/dev/null 2>&1; then
   printf "${BLUE}%s${NORMAL}\n" "Updating pass"
   echo "updating pass"
   if pass git pull
