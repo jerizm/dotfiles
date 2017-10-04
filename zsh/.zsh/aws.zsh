@@ -19,3 +19,6 @@ get_ecs_task() {
 describe_task_def() {
   aws ecs describe-task-definition --task-definition $(get_ecs_task $1 $2)
 }
+get_role_policies() {
+  aws iam list-role-policies --role-name $1 --query PolicyNames[*] | tr -d '][",' | while read line; do aws iam get-role-policy --role-name $1 --policy-name $line --query PolicyDocument.Statement[*]; done
+}

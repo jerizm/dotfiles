@@ -75,6 +75,8 @@ Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'roxma/ncm-rct-complete'
 
+Plug 'leafgarland/typescript-vim'
+
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()
