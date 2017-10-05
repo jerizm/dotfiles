@@ -76,6 +76,7 @@ Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'roxma/ncm-rct-complete'
 
 Plug 'leafgarland/typescript-vim'
+Plug 'cespare/vim-toml'
 
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required

@@ -87,7 +87,7 @@ Plug 'wikitopian/hardmode'
 
 " close all buffers but this one
 Plug 'vim-scripts/BufOnly.vim'
-
+Plug 'cespare/vim-toml'
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()
