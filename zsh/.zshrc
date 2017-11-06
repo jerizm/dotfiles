@@ -14,6 +14,10 @@ if (( $+commands[awsless] )) ; then
   source <(awless completion zsh)
 fi
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 # Entirety of my startup file... then
 if [[ "$PROFILE_STARTUP" == true ]]; then
     unsetopt xtrace

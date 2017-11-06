@@ -105,6 +105,3 @@ if command -v nvim 1>/dev/null 2>&1; then
   alias vim='nvim'
 fi
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
