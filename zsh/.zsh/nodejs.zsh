@@ -19,3 +19,13 @@ fi
 
 export NODE_ENV=dev
 
+# check for .nvmrc and use
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc ]]; then
+    nvm use
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
