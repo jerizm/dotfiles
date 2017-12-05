@@ -3,7 +3,7 @@ if [[ -a ~/.nvm/nvm.sh ]]; then
 
   alias node_tests="chokidar 'src/**/*.js' 'test/**/*.js' -c 'npm run lint && if [[ {path} =~ ^test.* ]]; then npm test -- {path}; else npm test; fi;' --throttle 500 --debounce 1000"
 
-  export NVM_DIR="/Users/$(whoami)/.nvm"
+  export NVM_DIR="$HOME/.nvm"
   nvm() {
     unset -f nvm
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
