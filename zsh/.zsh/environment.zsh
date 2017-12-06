@@ -72,13 +72,18 @@ export VISUAL=$EDITOR
 #aws stuff
 export AWS_IAM_USERNAME=jwang && export AWS_IAM_ACCOUNT=061851502621
 
-if [[ "$OSTYPE" = darwin* ]]; then
+if which oathtool >/dev/null 2>&1; then
   export DEVELOPMENT=true
   #mfa stuff move this later
   __mfakey () {
     key=$(oathtool -b --totp $(pass 2fa/"$@"/code))
     echo $key
-    echo $key | pbcopy
+    if [[ "$OSTYPE" = linux* ]]; then
+      echo "$key" | xsel -ib
+    fi
+    if [[ "$OSTYPE" = darwin* ]]; then
+      echo $key | pbcopy
+    fi
   }
 
   alias mfakey=__mfakey
