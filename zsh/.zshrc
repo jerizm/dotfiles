@@ -10,6 +10,8 @@ for config (~/.zsh/*.zsh) source $config
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export HOME_BIN="$HOME/bin"
+export PATH="$HOME_BIN:$PATH"
 # Entirety of my startup file... then
 if [[ "$PROFILE_STARTUP" == true ]]; then
     unsetopt xtrace
