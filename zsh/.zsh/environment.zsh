@@ -110,3 +110,4 @@ if command -v nvim 1>/dev/null 2>&1; then
   alias vim='nvim'
 fi
 
+ssh-add -l | grep -q id_rsa || ssh-add
