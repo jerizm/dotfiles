@@ -2,6 +2,7 @@
 if empty(glob("~/.local/share/nvim/site/autoload/plug.vim"))
   " Ensure all needed directories exist  (Thanks @kapadiamush)
   silent !mkdir -p ~/.local/share/nvim/plugged > /dev/null 2>&1
+  silent !mkdir -p ~/.local/share/nvim/autoload > /dev/null 2>&1
   " Download the actual plugin manager
   execute '!curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 endif
@@ -9,10 +10,12 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Fancy statusline
+" Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'edkolev/tmuxline.vim'
+" Plug 'edkolev/tmuxline.vim'
 
 " Syntax
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
@@ -26,7 +29,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 
 " colorschemes
-Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+" Plug 'morhetz/gruvbox'
 
 " git edits in sidebar
 Plug 'airblade/vim-gitgutter'

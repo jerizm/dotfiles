@@ -21,10 +21,12 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 " Fancy statusline
+"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'
 
 " Syntax
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
@@ -38,7 +40,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 
 " colorschemes
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 
 " git edits in sidebar
 Plug 'airblade/vim-gitgutter'
