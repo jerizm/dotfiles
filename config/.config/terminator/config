@@ -41,5 +41,5 @@
     icon_bell = False
     show_titlebar = False
     copy_on_selection = True
-    background_color = "#282c34"
+    background_color = "#1e2127"
     font = Hack 11
