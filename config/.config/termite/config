@@ -4,7 +4,7 @@
 #clickable_url = true
 #dynamic_title = true
 font = Hack 10
-#fullscreen = true
+fullscreen = true
 #geometry = 640x480
 #icon_name = terminal
 #mouse_autohide = false
@@ -36,7 +36,7 @@ scrollback_lines = 10000
 #size_hints = false
 
 # "off", "left" or "right"
-#scrollbar = off
+scrollbar = off
 
 # one dark
 [colors]

@@ -110,4 +110,8 @@ if command -v nvim 1>/dev/null 2>&1; then
   alias vim='nvim'
 fi
 
+if command -v yay 1>/dev/null 2>&1; then
+  alias syu='curl -s https://www.archlinux.org/feeds/news/ | xmllint --xpath //item/title\ \|\ //item/pubDate /dev/stdin | sed -r -e "s:<title>([^<]*?)</title><pubDate>([^<]*?)</pubDate>:\2\t\1\n:g" && yay -Syu'
+fi
+
 ssh-add -l | grep -q id_rsa || ssh-add
