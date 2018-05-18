@@ -99,8 +99,11 @@ super + alt + d
 super + Return
 	termite
 
+alt + space
+  rofi -show window
+
 super + space
-	dmenu_run -b
+	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
