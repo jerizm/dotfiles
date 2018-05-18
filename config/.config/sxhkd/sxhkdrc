@@ -8,7 +8,7 @@ super + alt + Escape
 super + c
 	bspc window -c
 
-super + t
+super + m
 	bspc desktop -l next
 
 super + b
@@ -20,11 +20,22 @@ super + {q,w}
 super + {shift,alt} + {q,w}
     bspc {window,desktop} -m {L,R}
 
-super + {s,f}
-	bspc window -t {floating,fullscreen}
-
 super + {grave,Tab}
 	bspc {window,desktop} -f last
+
+# focus the next/previous node in the same window
+super + {comma,period}
+    bspc node -f {next,prev}.local
+
+# set the window state
+super + {t,shift + t,s,f}
+  bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+super + {h,l}
+        {WINDOW=left;DESKTOP=prev;,WINDOW=right;DESKTOP=next;} \
+        if ! bspc window -f $WINDOW; then \
+                bspc desktop -f $DESKTOP; \
+        fi
 
 super + apostrophe
 	bspc window -s last
