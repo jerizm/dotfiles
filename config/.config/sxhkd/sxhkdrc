@@ -20,9 +20,6 @@ super + {q,w}
 super + {shift,alt} + {q,w}
     bspc {window,desktop} -m {L,R}
 
-super + {grave,Tab}
-	bspc {window,desktop} -f last
-
 # focus the next/previous node in the same window
 super + {comma,period}
     bspc node -f {next,prev}.local
@@ -31,7 +28,7 @@ super + {comma,period}
 super + {t,shift + t,s,f}
   bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-super + {h,l}
+super + {grave,Tab}
         {WINDOW=left;DESKTOP=prev;,WINDOW=right;DESKTOP=next;} \
         if ! bspc window -f $WINDOW; then \
                 bspc desktop -f $DESKTOP; \
