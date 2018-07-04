@@ -14,12 +14,6 @@ super + m
 super + b
 	bspc desktop -B
 
-super + {q,w}
-    bspc monitor -f {L,R}
-
-super + {shift,alt} + {q,w}
-    bspc {window,desktop} -m {L,R}
-
 # focus the next/previous node in the same window
 super + {comma,period}
     bspc node -f {next,prev}.local
@@ -81,6 +75,9 @@ super + ctrl + {1-9}
 # send node to desktop on current monitor index
 super + {_,shift} + {1-9}
     bspc {desktop -f,node -d} focused:^{1-9}
+
+super + {_,shift + }y
+  bspc {desktop,node focused} -m next && bspc {desktop,node} -f last
 
 ~button1
 	bspc pointer -g focus
