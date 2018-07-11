@@ -119,3 +119,8 @@ if command -v maim 1>/dev/null 2>&1; then
 fi
 
 ssh-add -l | grep -q id_rsa || ssh-add
+
+# KOPS STUFF
+export BUCKET_NAME=ktp-kops-sandbox-state-store
+export KOPS_CLUSTER_NAME=ktp.k8s.local
+export KOPS_STATE_STORE=s3://${BUCKET_NAME}
