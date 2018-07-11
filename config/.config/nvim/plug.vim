@@ -75,10 +75,13 @@ Plug 'wikitopian/hardmode'
 " close all buffers but this one
 Plug 'vim-scripts/BufOnly.vim'
 
-Plug 'roxma/nvim-completion-manager'
+Plug 'ncm2/ncm2'
 
 Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
-Plug 'roxma/ncm-rct-complete'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-jedi'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
