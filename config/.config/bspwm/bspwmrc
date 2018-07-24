@@ -12,7 +12,7 @@ bspc config gapless_monocle     true
 bspc config focus_by_distance   true
 bspc config focus_follows_pointer true
 
-bspc monitor HDMI-1 -d I II III IV V
-bspc monitor eDP-1 -d VI VII VIII IX X
+bspc monitor HDMI-1 -d web term misc
+bspc monitor eDP-1 -d I II III
 
 bspc rule -a * floating=on
