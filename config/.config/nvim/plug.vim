@@ -75,6 +75,8 @@ Plug 'wikitopian/hardmode'
 " close all buffers but this one
 Plug 'vim-scripts/BufOnly.vim'
 
+" completion
+Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
 
 Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
