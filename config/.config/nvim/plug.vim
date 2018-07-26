@@ -79,7 +79,7 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
 
-Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
