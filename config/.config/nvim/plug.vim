@@ -76,8 +76,8 @@ Plug 'wikitopian/hardmode'
 Plug 'vim-scripts/BufOnly.vim'
 
 " completion
-Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
 
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
 Plug 'ncm2/ncm2-bufword'
