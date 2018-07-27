@@ -66,6 +66,9 @@ super + ctrl + {_,shift + }space
 super + alt + {h,j,k,l}
 	bspc window -e {left -10,down +10,up -10,right +10}
 
+shift + alt + 4
+  maim -s | xclip -selection clipboard -t image/png
+
 super + alt + shift + {h,j,k,l}
 	bspc window -e {right -10,up +10,down -10,left +10}
 
@@ -122,4 +125,4 @@ XF86AudioLowerVolume
     ponymix decrease 10
 
 XF86AudioRaiseVolume
-    ponymix increase 10
+   ponymix increase 10
