@@ -22,3 +22,6 @@ describe_task_def() {
 get_role_policies() {
   aws iam list-role-policies --role-name $1 --query 'PolicyNames[*]' | tr -d '][",' | while read line; do aws iam get-role-policy --role-name $1 --policy-name $line --query 'PolicyDocument.Statement[*]'; done
 }
+ecr_password() {
+  aws ecr get-login --no-include-email | gsed 's/\(docker login -u AWS -p \)\|\( https.*\)//g'
+}
