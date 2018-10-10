@@ -76,13 +76,15 @@ if which oathtool >/dev/null 2>&1; then
   export DEVELOPMENT=true
   #mfa stuff move this later
   __mfakey () {
-    key=$(oathtool -b --totp $(pass 2fa/"$@"/code))
+    key=$(oathtool -b --totp $(pass 2fa/"$1"/code))
     echo $key
-    if [[ "$OSTYPE" = linux* ]]; then
-      echo "$key" | xsel -ib
-    fi
-    if [[ "$OSTYPE" = darwin* ]]; then
-      echo $key | pbcopy
+    if [[ -z "$2" ]]; then
+      if [[ "$OSTYPE" = linux* ]]; then
+        echo "$key" | xsel -ib
+      fi
+      if [[ "$OSTYPE" = darwin* ]]; then
+        echo $key | pbcopy
+      fi
     fi
   }
 

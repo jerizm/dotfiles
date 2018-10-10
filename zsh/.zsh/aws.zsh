@@ -1,5 +1,5 @@
 cluster_arn() {
-  aws ecs list-clusters | jq '.clusterArns[] | select(. | contains("qa"))' -r
+  aws ecs list-clusters | jq '.clusterArns[] | select(. | contains("qa-ecsStack"))' -r
 }
 ecs_service_name() {
   aws ecs list-services --cluster $(cluster_arn $1) | jq ".serviceArns[] | select(. | contains(\"$2\"))" -r
