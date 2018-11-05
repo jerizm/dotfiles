@@ -24,7 +24,6 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 " Better JS Support
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
 
 " code linting
 Plug 'w0rp/ale'
