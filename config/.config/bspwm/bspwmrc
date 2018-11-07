@@ -16,4 +16,4 @@ bspc monitor HDMI-1 -d web term misc
 bspc monitor eDP-1 -d I II III
 
 bspc rule -a Chromium state=floating
-bspc rule -a Google-chrome-stable state=floating
+bspc rule -a Google-chrome state=floating
