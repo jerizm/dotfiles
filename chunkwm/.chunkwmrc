@@ -95,8 +95,9 @@ chunkc tiling::rule --owner Finder --state float
 chunkc tiling::rule --owner Chrome --state float
 chunkc tiling::rule --owner GIMP --state float
 chunkc tiling::rule --owner Calculator --state float
+chunkc tiling::rule --owner Trello --state float
 
 chunkc tiling::rule --owner \"Google Play Music Desktop Player\" --desktop 2
-chunkc tiling::rule --owner Slack --desktop 2
-chunkc tiling::rule --owner WhatsApp --desktop 2
-chunkc tiling::rule --owner Messages --desktop 2
+# chunkc tiling::rule --owner Slack --desktop 2
+chunkc tiling::rule --owner WhatsApp --state float
+# chunkc tiling::rule --owner Messages --desktop 2
