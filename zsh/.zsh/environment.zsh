@@ -69,9 +69,6 @@ setopt RM_STAR_WAIT
 export SUBLIME=subl
 export VISUAL=$EDITOR
 
-#aws stuff
-export AWS_IAM_USERNAME=jwang && export AWS_IAM_ACCOUNT=061851502621
-
 if which oathtool >/dev/null 2>&1; then
   export DEVELOPMENT=true
   #mfa stuff move this later

@@ -1,3 +1,6 @@
+config/.config/configstore
+config/.config/karabiner
+zsh/.zsh/aws-private.zsh
 karabiner/.karabiner.d/log
 vim/.vim/autoload/plug.vim
 vim/.vim/plugged
