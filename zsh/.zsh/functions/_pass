@@ -17,7 +17,6 @@
 #   PASSWORD_STORE_DIR=$HOME/work/pass pass $@
 # }
 
-
 _pass () {
 	local cmd
 	if (( CURRENT > 2)); then

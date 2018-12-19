@@ -44,3 +44,31 @@ ctrl + alt - c : chunkc tiling::window --send-to-desktop next
 ctrl + alt - 1 : chunkc tiling::window --send-to-desktop 1
 ctrl + alt - 2 : chunkc tiling::window --send-to-desktop 2
 ctrl + alt - 3 : chunkc tiling::window --send-to-desktop 3
+
+# copied below from https://gitlab.com/julian-heng/chunkwm-config
+
+# ========== Floating Windows ==================
+
+# float / unfloat window
+shift + alt - space : chunkc tiling::window --toggle float
+
+# make floating window fill left-half / right-half of screen
+shift + alt - a : "${HOME}"/.config/chunkwm/scripts/window/float.sh left
+shift + alt - d : "${HOME}"/.config/chunkwm/scripts/window/float.sh right
+
+# make floating window center
+shift + alt - s : "${HOME}"/.config/chunkwm/scripts/window/float.sh down
+
+# make floating window fullscreen
+shift + alt - w : "${HOME}"/.config/chunkwm/scripts/window/float.sh up
+
+# ========== Resizing Windows ==================
+
+# resize windows
+ctrl + alt - j : "${HOME}"/.config/chunkwm/scripts/window/resize.sh left
+ctrl + alt - k : "${HOME}"/.config/chunkwm/scripts/window/resize.sh down
+ctrl + alt - i : "${HOME}"/.config/chunkwm/scripts/window/resize.sh up
+ctrl + alt - l : "${HOME}"/.config/chunkwm/scripts/window/resize.sh right
+
+# equalize size of windows
+ctrl + alt - 0 : chunkc tiling::desktop --equalize

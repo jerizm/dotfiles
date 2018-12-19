@@ -21,14 +21,11 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 " Fancy statusline
-"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
-"Plug 'edkolev/tmuxline.vim'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git', { 'for': 'git' }
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 " Completion
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
@@ -47,7 +44,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'airblade/vim-gitgutter'
 
 " file switching and viewer
-Plug 'scrooloose/nerdtree'
 Plug 'Shougo/unite.vim'
 
 " support mru and unite
@@ -56,12 +52,6 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" code-completion
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
-" Plug 'ajh17/VimCompletesMe'
-
-" Plug 'ludovicchabant/vim-gutentags'
 
 " make commenting easier
 Plug 'tpope/vim-commentary'

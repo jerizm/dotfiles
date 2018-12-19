@@ -73,7 +73,7 @@ if which oathtool >/dev/null 2>&1; then
   export DEVELOPMENT=true
   #mfa stuff move this later
   __mfakey () {
-    key=$(oathtool -b --totp $(pass 2fa/"$1"/code))
+    key=$(oathtool -b --totp $(pass "$1"))
     echo $key
     if [[ -z "$2" ]]; then
       if [[ "$OSTYPE" = linux* ]]; then
@@ -97,6 +97,8 @@ fi
 kill_pulse() {
   sudo kill $(ps aux | grep '[P]ulse' | awk '{print $2}')
 }
+
+compdef _pass __mfakey
 
 # gdate
 if [[ "$OSTYPE" != darwin* ]]; then
