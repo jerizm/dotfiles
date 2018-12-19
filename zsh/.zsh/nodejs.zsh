@@ -5,17 +5,7 @@ if [[ -a ~/.nvm/nvm.sh ]]; then
 
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  # nvm() {
-  #   unset -f nvm
-  #   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-  #   nvm "$@"
-  # }
-
-  # npm() {
-  #   unset -f npm
-  #   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This loads nvm
-  #   npm "$@"
-  # }
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
 export NODE_ENV=dev
