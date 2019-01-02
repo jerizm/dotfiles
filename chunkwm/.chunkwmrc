@@ -98,6 +98,7 @@ chunkc tiling::rule --owner Calculator --state float
 
 chunkc tiling::rule --owner Trello --state float --desktop 2
 chunkc tiling::rule --owner \"Google Play Music Desktop Player\" --desktop 2
+chunkc tiling::rule --owner \"YT Music\" --desktop 2
 chunkc tiling::rule --owner Slack --state float --desktop 2
 chunkc tiling::rule --owner WhatsApp --state float --desktop 2
 chunkc tiling::rule --owner Messages --desktop 2
