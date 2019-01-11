@@ -1,11 +1,11 @@
 " vim plug
 if filereadable(expand("~/.config/nvim/plug.vim"))
-  source ~/.config/nvim/plug.vim
+    source ~/.config/nvim/plug.vim
 endif
 
 " source ~/.vimrc.before if it exists.
 if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
+    source ~/.vimrc.before
 endif
 
 " ================ General Config ====================
@@ -38,7 +38,7 @@ let mapleader=" "
 " If you have .vim-backup in the current directory, it'll use that.
 " Otherwise it saves it to ~/.nvim/backup or . if all else fails.
 if isdirectory($HOME . '/.nvim/backup') == 0
-  :silent !mkdir -p ~/.nvim/backup >/dev/null 2>&1
+    :silent !mkdir -p ~/.nvim/backup >/dev/null 2>&1
 endif
 set backupdir-=.
 set backupdir+=.
@@ -51,7 +51,7 @@ set backup
 " If you have .vim-swap in the current directory, it'll use that.
 " Otherwise it saves it to ~/.vim/swap, ~/tmp or .
 if isdirectory($HOME . '/.nvim/swap') == 0
-  :silent !mkdir -p ~/.nvim/swap >/dev/null 2>&1
+    :silent !mkdir -p ~/.nvim/swap >/dev/null 2>&1
 endif
 set directory=./.nvim-swap//
 set directory+=~/.nvim/swap//
@@ -62,16 +62,16 @@ set directory+=.
 set viminfo+=n~/.nvim/viminfo
 
 if exists("+undofile")
-  " undofile - This allows you to use undos after exiting and restarting
-  " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
-  " :help undo-persistence
-  " This is only present in 7.3+
-  if isdirectory($HOME . '/.nvim/undo') == 0
-    :silent !mkdir -p ~/.nvim/undo > /dev/null 2>&1
-  endif
-  set undodir=./.nvim-undo//
-  set undodir+=~/.nvim/undo//
-  set undofile
+    " undofile - This allows you to use undos after exiting and restarting
+    " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
+    " :help undo-persistence
+    " This is only present in 7.3+
+    if isdirectory($HOME . '/.nvim/undo') == 0
+        :silent !mkdir -p ~/.nvim/undo > /dev/null 2>&1
+    endif
+    set undodir=./.nvim-undo//
+    set undodir+=~/.nvim/undo//
+    set undofile
 endif
 
 " ================ Indentation ======================
@@ -165,23 +165,23 @@ let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 25
 
 if executable('ag')
-  " Use ag in unite grep source.
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts =
-  \ '-i --vimgrep --hidden --ignore ' .
-  \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-  let g:unite_source_grep_recursive_opt = ''
-  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+    " Use ag in unite grep source.
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts =
+                \ '-i --vimgrep --hidden --ignore ' .
+                \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+    let g:unite_source_grep_recursive_opt = ''
+    let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 endif
 
 " custom ignore pattern
 call unite#custom#source('file_rec,file_rec/async',
-      \ 'ignore_pattern', join([
-        \ '\.bzr\/',
-        \ '\.git\/',
-        \ 'vendor\/',
-        \ 'node_modules\/',
-      \ ], '\|'))
+            \ 'ignore_pattern', join([
+            \ '\.bzr\/',
+            \ '\.git\/',
+            \ 'vendor\/',
+            \ 'node_modules\/',
+            \ ], '\|'))
 
 " fuzzy matcher and sort everything
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
@@ -203,19 +203,26 @@ colorscheme onedark
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
 if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
 "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
 " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
 if (has("termguicolors"))
-  set termguicolors
+    set termguicolors
 endif
 
 let g:lightline = {
-  \ 'colorscheme': 'onedark',
-  \ }
+            \ 'colorscheme': 'onedark',
+            \ }
+
+let g:ale_fixers = {
+            \   'javascript': ['prettier'],
+            \   'css': ['prettier'],
+            \}
+
+let g:ale_fix_on_save = 1
 
 " hardmode
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
@@ -232,5 +239,5 @@ source ~/.config/nvim/syntax.vim
 
 " vim plug
 if filereadable(expand("~/.config/nvim/completion.vim"))
-  source ~/.config/nvim/completion.vim
+    source ~/.config/nvim/completion.vim
 endif
