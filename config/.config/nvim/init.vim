@@ -224,9 +224,8 @@ let g:ale_fixers = {
 
 let g:ale_fix_on_save = 1
 
-" hardmode
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+" hardtime
+let g:hardtime_default_on = 1
 
 " configure test.vim
 let test#javascript#mocha#executable = 'NODE_ENV=test mocha'

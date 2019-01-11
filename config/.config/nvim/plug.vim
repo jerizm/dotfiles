@@ -68,8 +68,9 @@ Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
 
 Plug 'avakhov/vim-yaml'
-" hardmode
-Plug 'wikitopian/hardmode'
+
+" hardtime
+Plug 'takac/vim-hardtime'
 
 " close all buffers but this one
 Plug 'vim-scripts/BufOnly.vim'
