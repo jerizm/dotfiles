@@ -4,5 +4,4 @@ decrypt_kms() {
 encrypt_kms() {
     aws kms encrypt --plaintext "$1" --key-id "$2"
 }
-source /usr/local/bin/aws_zsh_completer.sh
 
