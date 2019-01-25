@@ -88,10 +88,11 @@ set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
 
-set foldmethod=indent   "fold based on indent
+set foldmethod=syntax
+" set foldcolumn=1
+let javaScript_fold=1
 set foldnestmax=3       "deepest fold is 3 levels
-set nofoldenable        "dont fold by default
-
+set foldlevelstart=99
 " ================ Completion =======================
 
 set wildmode=list:longest
