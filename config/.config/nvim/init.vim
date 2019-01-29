@@ -220,6 +220,7 @@ let g:lightline = {
 
 let g:ale_fixers = {
             \   'javascript': ['prettier'],
+            \   'json': ['prettier'],
             \   'css': ['prettier'],
             \   'yaml': ['prettier'],
             \}
