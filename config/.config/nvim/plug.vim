@@ -28,6 +28,9 @@ Plug 'pangloss/vim-javascript'
 " code linting
 Plug 'w0rp/ale'
 
+" prettier
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+
 " colorschemes
 Plug 'joshdick/onedark.vim'
 " Plug 'morhetz/gruvbox'

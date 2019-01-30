@@ -88,11 +88,10 @@ set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
 
-set foldmethod=syntax
-" set foldcolumn=1
-let javaScript_fold=1
+set foldmethod=syntax   "fold based on syntax
 set foldnestmax=3       "deepest fold is 3 levels
-set foldlevelstart=99
+set nofoldenable        "dont fold by default
+
 " ================ Completion =======================
 
 set wildmode=list:longest
@@ -218,14 +217,8 @@ let g:lightline = {
             \ 'colorscheme': 'onedark',
             \ }
 
-let g:ale_fixers = {
-            \   'javascript': ['prettier'],
-            \   'json': ['prettier'],
-            \   'css': ['prettier'],
-            \   'yaml': ['prettier'],
-            \}
-
-let g:ale_fix_on_save = 1
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " hardtime
 let g:hardtime_default_on = 1
