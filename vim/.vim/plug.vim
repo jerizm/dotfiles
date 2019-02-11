@@ -20,15 +20,16 @@ function! BuildYCM(info)
 endfunction
 call plug#begin('~/.vim/plugged')
 
+
 " Fancy statusline
+" Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
+" Plug 'edkolev/tmuxline.vim'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git', { 'for': 'git' }
-
-" Completion
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 " Better JS Support
 Plug 'pangloss/vim-javascript'
@@ -36,9 +37,12 @@ Plug 'pangloss/vim-javascript'
 " code linting
 Plug 'w0rp/ale'
 
+" prettier
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+
 " colorschemes
-" Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
+" Plug 'morhetz/gruvbox'
 
 " git edits in sidebar
 Plug 'airblade/vim-gitgutter'
@@ -51,16 +55,10 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 
 " make commenting easier
 Plug 'tpope/vim-commentary'
-
-" paste with indentation of context
-Plug 'sickill/vim-pasta'
-
-" tern base JS support
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 
 " respect editor config
 Plug 'editorconfig/editorconfig-vim'
@@ -75,12 +73,26 @@ Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go'
 
 Plug 'avakhov/vim-yaml'
-" hardmode
-Plug 'wikitopian/hardmode'
+
+" hardtime
+Plug 'takac/vim-hardtime'
 
 " close all buffers but this one
 Plug 'vim-scripts/BufOnly.vim'
+
+" completion
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-jedi'
+
+Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
+
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()

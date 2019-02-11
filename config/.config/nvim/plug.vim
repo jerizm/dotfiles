@@ -48,9 +48,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 " make commenting easier
 Plug 'tpope/vim-commentary'
 
-" paste with indentation of context
-Plug 'easymotion/vim-easymotion'
-
 " respect editor config
 Plug 'editorconfig/editorconfig-vim'
 
