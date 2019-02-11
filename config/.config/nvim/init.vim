@@ -188,15 +188,12 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 
 nnoremap <C-p> :FZF<cr>
-nnoremap <leader>/ :Unite -no-split grep:.<cr>
-nnoremap <leader>s :Unite -no-split -buffer-name=buffer buffer<cr>
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>
 
 " colorscheme
 syntax on
-" set background=dark
 colorscheme onedark
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -218,18 +215,13 @@ let g:lightline = {
             \ }
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.yml,*.html PrettierAsync
 
 " hardtime
 let g:hardtime_default_on = 1
 
-" configure test.vim
-let test#javascript#mocha#executable = 'NODE_ENV=test mocha'
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+map <Leader> <Plug>(easymotion-prefix)
+
 source ~/.config/nvim/syntax.vim
 
 " vim plug

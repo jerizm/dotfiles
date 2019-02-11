@@ -19,9 +19,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
-" Completion
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-
 " Better JS Support
 Plug 'pangloss/vim-javascript'
 
@@ -39,7 +36,6 @@ Plug 'joshdick/onedark.vim'
 Plug 'airblade/vim-gitgutter'
 
 " file switching and viewer
-Plug 'scrooloose/nerdtree'
 Plug 'Shougo/unite.vim'
 
 " support mru and unite
@@ -49,14 +45,11 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 
-" run unit tests
-Plug 'janko-m/vim-test'
-
 " make commenting easier
 Plug 'tpope/vim-commentary'
 
 " paste with indentation of context
-Plug 'sickill/vim-pasta'
+Plug 'easymotion/vim-easymotion'
 
 " respect editor config
 Plug 'editorconfig/editorconfig-vim'
