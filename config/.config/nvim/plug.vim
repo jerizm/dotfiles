@@ -42,8 +42,8 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
-" fzf
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+" fzy picker
+Plug 'srstevenson/vim-picker'
 
 " make commenting easier
 Plug 'tpope/vim-commentary'
