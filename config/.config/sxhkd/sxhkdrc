@@ -85,6 +85,9 @@ super + {_,shift + }y
 ~button1
 	bspc pointer -g focus
 
+~button2
+    echo -n | xsel -n -i
+
 super + button{1-3}
 	bspc pointer -g {move,resize_side,resize_corner}
 
