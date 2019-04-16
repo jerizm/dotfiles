@@ -25,6 +25,9 @@ Plug 'pangloss/vim-javascript'
 " code linting
 Plug 'w0rp/ale'
 
+" delete w/o mucking with clipboard
+Plug 'svermeulen/vim-easyclip'
+
 " prettier
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
@@ -42,8 +45,8 @@ Plug 'Shougo/unite.vim'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
-" fzy picker
-Plug 'srstevenson/vim-picker'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " make commenting easier
 Plug 'tpope/vim-commentary'

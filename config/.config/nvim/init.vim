@@ -164,6 +164,16 @@ let g:unite_split_rule = "botright"
 let g:unite_force_overwrite_statusline = 0
 let g:unite_winheight = 25
 
+if executable('ag')
+    " Use ag in unite grep source.
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts =
+                \ '-i --vimgrep --hidden --ignore ' .
+                \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+    let g:unite_source_grep_recursive_opt = ''
+    let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
+endif
+
 " custom ignore pattern
 call unite#custom#source('file_rec,file_rec/async',
             \ 'ignore_pattern', join([
@@ -177,11 +187,7 @@ call unite#custom#source('file_rec,file_rec/async',
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 
-" vim picker
-nnoremap <C-p> :PickerEdit<cr>
-let g:picker_selector_flags = '-l 30'
-let g:picker_height = 30
-
+nnoremap <C-p> :FZF<cr>
 
 " gundo
 nnoremap <F5> :GundoToggle<CR>

@@ -30,3 +30,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 source $(which aws)_zsh_completer.sh
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/jerry/.nvm/versions/node/v8.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/jerry/.nvm/versions/node/v8.15.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
