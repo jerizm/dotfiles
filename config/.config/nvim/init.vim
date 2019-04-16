@@ -223,7 +223,9 @@ let g:hardtime_default_on = 1
 map <Leader> <Plug>(easymotion-prefix)
 
 source ~/.config/nvim/syntax.vim
-
+" easy clip settings
+let g:EasyClipUseYankDefaults = 0
+let g:EasyClipUsePasteToggleDefaults = 0
 " vim plug
 if filereadable(expand("~/.config/nvim/completion.vim"))
     source ~/.config/nvim/completion.vim
