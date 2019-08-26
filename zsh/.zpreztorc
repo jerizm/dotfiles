@@ -36,6 +36,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'syntax-highlighting' \
   'history-substring-search' \
+  'python' \
   'prompt' \
   'homebrew' \
   'tmux'
@@ -61,6 +62,8 @@ zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 # Set the tab title format.
 zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
+# python virtualenv
+zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 #
 # Tmux
 #
