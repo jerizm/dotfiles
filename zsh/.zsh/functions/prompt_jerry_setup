@@ -69,7 +69,6 @@ prompt_jerry_check_versions() {
   fi
 }
 
-
 prompt_jerry_check_git_arrows() {
   # reset git arrows
   prompt_jerry_git_arrows=
@@ -170,6 +169,7 @@ prompt_jerry_preprompt_render() {
   preprompt+="%F{red}${prompt_check_versions}%f"
   preprompt+="%F{cyan}$(aws_info)%f"
   preprompt+="%F{cyan}$(aws_profile)%f"
+  [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && preprompt+=" %F{blue}aws:(%f%F{red}$AWS_ACCOUNT_NAME:$AWS_ACCOUNT_ROLE%f%F{blue})%F$reset_color"
 
   # if executing through precmd, do not perform fancy terminal editing
   if [[ "$1" == "precmd" ]]; then
