@@ -130,18 +130,6 @@ prompt_jerry_string_length_to_var() {
   typeset -g "${var}"="${length}"
 }
 
-function aws_info {
-   local account="none"
-   local expiration=""
-   local timer="expired"
-   local tstamp=$(gdate +%s)
-   [[ -n "${AWS_ASSUMED_ROLE}" ]] && account="${AWS_ASSUMED_ROLE}" || return
-   [[ -n "${AWS_EXPIRATION}" ]] && expiration="$(gdate -d "${AWS_EXPIRATION}" +%s)"
-   local tleft=$((${expiration}-${tstamp}))
-   [[ ${tleft} > 0 ]] && timer=$(gdate -d@${tleft} -u +%H:%M:%S)
-   printf " ${account} ${timer}"
-}
-
 function aws_profile {
   local profile=""
   [[ -n "${AWS_PROFILE}" ]] && account="${AWS_PROFILE}" || return
@@ -167,7 +155,6 @@ prompt_jerry_preprompt_render() {
   # execution time
   preprompt+="%F{yellow}${prompt_jerry_cmd_exec_time}%f"
   preprompt+="%F{red}${prompt_check_versions}%f"
-  preprompt+="%F{cyan}$(aws_info)%f"
   preprompt+="%F{cyan}$(aws_profile)%f"
   [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && preprompt+=" %F{blue}aws:(%f%F{red}$AWS_ACCOUNT_NAME:$AWS_ACCOUNT_ROLE%f%F{blue})%F$reset_color"
 
