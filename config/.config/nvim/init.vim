@@ -215,7 +215,7 @@ let g:lightline = {
             \ }
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.yml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.yml PrettierAsync
 
 " hardtime
 let g:hardtime_default_on = 1
@@ -226,7 +226,9 @@ source ~/.config/nvim/syntax.vim
 " easy clip settings
 let g:EasyClipUseYankDefaults = 0
 let g:EasyClipUsePasteToggleDefaults = 0
+
 " vim plug
 if filereadable(expand("~/.config/nvim/completion.vim"))
     source ~/.config/nvim/completion.vim
 endif
+

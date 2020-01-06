@@ -80,18 +80,12 @@ Plug 'takac/vim-hardtime'
 " close all buffers but this one
 Plug 'vim-scripts/BufOnly.vim'
 
-" completion
-Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
-
-Plug 'ncm2/ncm2-tern',  {'do': 'npm install'}
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-tmux'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-jedi'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'cespare/vim-toml'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
