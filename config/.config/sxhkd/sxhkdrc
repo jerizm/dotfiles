@@ -52,7 +52,10 @@ super + {comma,period}
 	bspc desktop -C {backward,forward}
 
 super + bracket{left,right}
-	bspc desktop -f {prev,next}
+  desk=`bspc query -D -d focused`; \
+  bspc desktop -m {prev,next}; \
+  bspc monitor -f {prev,next}; \
+  bspc desktop -f $desk
 
 super + shift + bracket{left,right}
 	bspc window -d {prev,next}
