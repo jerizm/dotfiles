@@ -34,5 +34,4 @@ fi
 
 feh --bg-fill /home/jerry/background.jpg
 picom &
-
 exec bspwm
