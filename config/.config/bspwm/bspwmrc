@@ -2,8 +2,7 @@
 
 sxhkd &
 $HOME/.config/bspwm/panel &
-autorandr --change
-sleep 2
+
 bspc config border_width        1
 bspc config window_gap          5
 
