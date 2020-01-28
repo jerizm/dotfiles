@@ -1,5 +1,7 @@
 #! /bin/sh
 
+bspc rule -r "*"
+
 sxhkd &
 $HOME/.config/bspwm/panel &
 
@@ -17,3 +19,5 @@ bspc monitor eDP1 -d I II III
 
 bspc rule -a Chromium state=floating
 bspc rule -a Google-chrome state=floating
+
+bspc subscribe all | while read line; do polybar-msg hook title_bar 1; done &
