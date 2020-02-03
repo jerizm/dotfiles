@@ -1,4 +1,5 @@
 [bar/left]
+monitor = ${env:MONITOR:}
 modules-left = bspwm
 modules-center =
 modules-right = title_bar
@@ -22,6 +23,7 @@ font-1 = Hack Nerd Font:size=18;5
 
 
 [bar/center]
+monitor = ${env:MONITOR:}
 modules-left = battery
 modules-center =
 modules-right = wireless
@@ -43,6 +45,7 @@ font-1 = ${bar/left.font-1}
 
 
 [bar/right]
+monitor = ${env:MONITOR:}
 modules-left = cpu temperature memory
 modules-center = pulseaudio
 modules-right = date
