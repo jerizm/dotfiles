@@ -1,4 +1,4 @@
-config/.config/polybar/scripts/__pycache__
+polybar/.config/polybar/scripts/__pycache__
 config/.config/configstore
 config/.config/karabiner
 zsh/.zsh/aws-private.zsh
