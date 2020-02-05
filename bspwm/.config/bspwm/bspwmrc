@@ -14,10 +14,7 @@ bspc config gapless_monocle     true
 bspc config focus_by_distance   true
 bspc config focus_follows_pointer true
 
-bspc monitor HDMI1 -d web term misc
-bspc monitor eDP1 -d I II III
-
-bspc rule -a Chromium state=floating
-bspc rule -a Google-chrome state=floating
+bspc monitor HDMI1 -d web term
+bspc monitor eDP1 -d I
 
 bspc subscribe all | while read line; do polybar-msg hook title_bar 1; done &
