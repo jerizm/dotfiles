@@ -66,7 +66,6 @@ KEYTIMEOUT=1
 # 10 second wait if you do something that will delete everything.  I wish I'd had this before...
 setopt RM_STAR_WAIT
 
-export SUBLIME=subl
 export VISUAL=$EDITOR
 
 if which oathtool >/dev/null 2>&1; then
@@ -94,10 +93,6 @@ fi
 
 { ssh-add -A; } &>/dev/null
 
-kill_pulse() {
-  sudo kill $(ps aux | grep '[P]ulse' | awk '{print $2}')
-}
-
 compdef _pass __mfakey
 
 # gdate
@@ -124,11 +119,6 @@ if command -v assume-role 1>/dev/null 2>&1; then
 fi
 
 ssh-add -l | grep -q id_rsa || ssh-add
-
-# KOPS STUFF
-export BUCKET_NAME=ktp-kops-sandbox-state-store
-export KOPS_CLUSTER_NAME=ktp.k8s.local
-export KOPS_STATE_STORE=s3://${BUCKET_NAME}
 
 gifify() {
   if [[ -n "$1" ]]; then
