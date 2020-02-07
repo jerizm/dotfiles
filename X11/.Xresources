@@ -1,6 +1,6 @@
 #include "/home/jerry/.config/colorschemes/snazzy"
 
-Xft.dpi: 120
+Xft.dpi: 90
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintfull
