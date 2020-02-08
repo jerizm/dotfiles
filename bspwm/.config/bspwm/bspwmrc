@@ -4,6 +4,7 @@ bspc rule -r "*"
 
 sxhkd &
 $HOME/.config/bspwm/panel &
+redshift -l 40.72:-73.85 &
 
 bspc config border_width        1
 bspc config window_gap          5
@@ -15,6 +16,6 @@ bspc config focus_by_distance   true
 bspc config focus_follows_pointer true
 
 bspc monitor HDMI1 -d web term
-bspc monitor eDP1 -d I
+bspc monitor eDP1 -d I II III
 
 bspc subscribe all | while read line; do polybar-msg hook title_bar 1; done &
