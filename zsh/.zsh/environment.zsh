@@ -16,7 +16,7 @@ path=(
 $path
 )
 
-export SHOW_AWS_PROMPT=true
+export SPACESHIP_AWS_SHOW=true
 export ZSH="${ZDOTDIR:-$HOME}/.zprezto"
 
 #
