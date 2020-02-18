@@ -9,4 +9,4 @@ vim/.vim/swap
 vim/.vim/undo
 vim/.vim/viminfo
 tmux/.tmux/plugins
-config/.config/nvim/.netrwhist
+nvim/.config/nvim/.netrwhist
