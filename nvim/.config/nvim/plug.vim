@@ -10,9 +10,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Fancy statusline
-" Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
-" Plug 'edkolev/tmuxline.vim'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'

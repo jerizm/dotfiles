@@ -134,3 +134,4 @@ gifify() {
     echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
   fi
 }
+alias ssh='TERM=xterm-256color ssh'
