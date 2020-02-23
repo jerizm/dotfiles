@@ -29,7 +29,5 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.cargo/bin"
 
-source $(which aws)_zsh_completer.sh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
