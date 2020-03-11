@@ -53,11 +53,12 @@ style: """
 """
 
 update: (output, domEl) ->
-  spaces = JSON.parse(output)
-  if ($(domEl).find('.spaces-container').attr('data-count') != spaces.length.toString())
-    $(domEl).find('.spaces-container').attr('data-count', "#{spaces.length}")
-    $(domEl).find('ul').html(@generateIcons(spaces))
-  else
-    $(domEl).find('li.visible').removeClass('visible')
-  for space in spaces when space['visible'] == 1
-    $(domEl).find("li#desktop#{space['index']}").addClass('visible')
+  if (output)
+    spaces = JSON.parse(output)
+    if ($(domEl).find('.spaces-container').attr('data-count') != spaces.length.toString())
+      $(domEl).find('.spaces-container').attr('data-count', "#{spaces.length}")
+      $(domEl).find('ul').html(@generateIcons(spaces))
+    else
+      $(domEl).find('li.visible').removeClass('visible')
+    for space in spaces when space['visible'] == 1
+      $(domEl).find("li#desktop#{space['index']}").addClass('visible')
