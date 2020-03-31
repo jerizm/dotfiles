@@ -93,8 +93,8 @@ initial = 1
 
 [module/date]
 type = internal/date
-time = %I:%M %P
-;time = %H:%M
+;time = %I:%M %P
+time = %H:%M
 date = %m/%d/%y
 format = <label>
 label = %date% %time%
