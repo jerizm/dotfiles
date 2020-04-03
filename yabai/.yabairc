@@ -34,12 +34,12 @@ yabai -m config window_gap                   10
 yabai -m rule --add app="^System Preferences$" manage=off
 
 yabai -m rule --add app=iTerm space=1
-yabai -m rule --add app=Slack space=4
+yabai -m rule --add app=Slack space=5
 yabai -m rule --add app=Firefox space=2
-yabai -m rule --add app=Trello space=4
-yabai -m rule --add app=To\ Do space=4
+yabai -m rule --add app=Trello space=5
+yabai -m rule --add app=To\ Do space=6
 yabai -m rule --add app=Signal space=3
 yabai -m rule --add app=WhatsApp space=3
 yabai -m rule --add app=Messages space=3
-yabai -m rule --add app=YT\ Music space=5
+yabai -m rule --add app=YT\ Music space=6
 echo "yabai configuration loaded.."
