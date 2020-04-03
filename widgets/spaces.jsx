@@ -1,9 +1,10 @@
+export const command = "/usr/local/bin/yabai -m query --spaces";
 export const refreshFrequency = 300;
 export const render = event => {
     if (event) {
         const spaces = JSON.parse(event);
         return (
-            <div class="spaces-container" data-count={spaces.length}>
+            <div className="spaces-container" data-count={spaces.length}>
                 <ul>{generateIcons(spaces)}</ul>
             </div>
         );
@@ -23,8 +24,8 @@ function generateIcons(spaces) {
         display.forEach(space => {
             icons.push(
                 <li
-                    class={space.focused === 1 ? "visible" : ""}
-                    id={"desktop" + space.index}
+                    className={space.focused === 1 ? "visible" : ""}
+                    key={space.id}
                 >
                     {space.index}
                 </li>
