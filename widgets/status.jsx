@@ -1,30 +1,32 @@
 export const command = "./code/status.sh";
 
-export const refreshFrequency = 10000;
+export const refreshFrequency = 1000;
 
 export const render = ({ output }) => {
-    const sections = output.split("|");
-    const out = sections.map((section, i) => {
-        const matches = section.match(/@(.*?)@/g);
-        const name = matches ? matches[0].replace(/@/g, "") : null;
+    if (output) {
+        const sections = output.split("|");
+        const out = sections.map((section, i) => {
+            const matches = section.match(/@(.*?)@/g);
+            const name = matches ? matches[0].replace(/@/g, "") : null;
+            return (
+                <span>
+                    {name && <i className={"fas fa-" + name}></i>}
+                    {section.trim().replace(/@.*@/, "")}
+                    {i < sections.length - 1 && <span> | </span>}
+                </span>
+            );
+        });
         return (
-            <span>
-                {name && <i className={"fas fa-" + name}></i>}
-                {section.trim().replace(/@.*@/, "")}
-                {i < sections.length - 1 && <span> | </span>}
-            </span>
+            <div>
+                <link
+                    rel="stylesheet"
+                    type="text/css"
+                    href="./assets/fontawesome-all.min.css"
+                />
+                <div className="status">{out}</div>
+            </div>
         );
-    });
-    return (
-        <div>
-            <link
-                rel="stylesheet"
-                type="text/css"
-                href="./assets/fontawesome-all.min.css"
-            />
-            <div className="status">{out}</div>
-        </div>
-    );
+    }
 };
 
 export const className = {
@@ -34,4 +36,14 @@ export const className = {
     right: "18px",
     top: "8px",
     height: 13
+};
+
+export const updateState = (event, previousState) => {
+    if (event.error) {
+        return { ...previousState, warning: `We got an error: ${event.error}` };
+    }
+    if (event.output !== "") {
+        return event;
+    }
+    return previousState;
 };

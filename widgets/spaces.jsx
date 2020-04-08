@@ -1,8 +1,10 @@
+import { run } from "uebersicht";
+
 export const command = "/usr/local/bin/yabai -m query --spaces";
 export const refreshFrequency = 300;
-export const render = event => {
-    if (event) {
-        const spaces = JSON.parse(event);
+export const render = ({ output }) => {
+    if (output) {
+        const spaces = JSON.parse(output);
         return (
             <div className="spaces-container" data-count={spaces.length}>
                 <ul>{generateIcons(spaces)}</ul>
@@ -27,7 +29,16 @@ function generateIcons(spaces) {
                     className={space.focused === 1 ? "visible" : ""}
                     key={space.id}
                 >
-                    {space.index}
+                    <a
+                        onClick={() => {
+                            run(
+                                "/usr/local/bin/yabai -m space --focus " +
+                                    space.index
+                            );
+                        }}
+                    >
+                        {space.index}
+                    </a>
                 </li>
             );
         });
@@ -66,7 +77,7 @@ export const updateState = (event, previousState) => {
         return { ...previousState, warning: `We got an error: ${event.error}` };
     }
     if (event.output !== "") {
-        return event.output;
+        return event;
     }
     return previousState;
 };
