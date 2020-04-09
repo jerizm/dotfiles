@@ -1,6 +1,6 @@
 export const command = "./code/status.sh";
 
-export const refreshFrequency = 1000;
+export const refreshFrequency = 2000;
 
 export const render = ({ output }) => {
     if (output) {
