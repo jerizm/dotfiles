@@ -140,7 +140,9 @@ let g:syntastic_javascript_checkers = ['eslint']
 " go stuff
 "
 let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
-let g:go_list_type = "quickfix"
+" let g:go_list_type = "quickfix"
+
+let g:coc_enable_locationlist = 0
 
 "transparent background (note has to go after local file,
 "as that might set colors
@@ -214,8 +216,7 @@ let g:lightline = {
             \ 'colorscheme': 'onedark',
             \ }
 
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.yml PrettierAsync
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 " hardtime
 let g:hardtime_default_on = 1
@@ -231,4 +232,3 @@ let g:EasyClipUsePasteToggleDefaults = 0
 if filereadable(expand("~/.config/nvim/completion.vim"))
     source ~/.config/nvim/completion.vim
 endif
-

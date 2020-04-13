@@ -21,13 +21,10 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'pangloss/vim-javascript'
 
 " code linting
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 " delete w/o mucking with clipboard
 Plug 'svermeulen/vim-easyclip'
-
-" prettier
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " colorschemes
 Plug 'joshdick/onedark.vim'
@@ -76,7 +73,7 @@ Plug 'jparise/vim-graphql'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
