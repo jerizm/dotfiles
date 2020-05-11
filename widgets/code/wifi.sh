@@ -17,8 +17,8 @@ subin=$(($myvar2 - $myvar1))
 subout=$(($myvar4 - $myvar3))
 
 # ETHERNET: convert bytes to kilobytes
-kbin=`echo "scale=2; $subin/1024;" | bc`
-kbout=`echo "scale=2; $subout/1024;" | bc`
+kbin=`echo "scale=3; $subin/1024/125;" | bc`
+kbout=`echo "scale=3; $subout/1024/125;" | bc`
 
 INFO="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport --getinfo)"
 
