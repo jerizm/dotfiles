@@ -40,4 +40,10 @@ if which pass >/dev/null 2>&1; then
   else
     printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
   fi
+  if pass git push
+  then
+    printf "${BLUE}%s\n" "Hooray! pass has been pushed."
+  else
+    printf "${RED}%s${NORMAL}\n" 'There was an error updating. Try again later?'
+  fi
 fi
