@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 
 # global settings
 yabai -m config mouse_follows_focus          on
@@ -38,4 +38,5 @@ yabai -m rule --add app=Signal space=3
 yabai -m rule --add app=WhatsApp space=3
 yabai -m rule --add app=Messages space=3
 yabai -m rule --add app=YT\ Music space=5
+yabai -m rule --add app=Xcode space=4
 echo "yabai configuration loaded.."
