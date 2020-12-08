@@ -109,7 +109,7 @@ if command -v nvim 1>/dev/null 2>&1; then
 fi
 
 if command -v yay 1>/dev/null 2>&1; then
-  alias syu='curl -s https://www.archlinux.org/feeds/news/ | xmllint --xpath //item/title\ \|\ //item/pubDate /dev/stdin | sed -r -e "s:<title>([^<]*?)</title><pubDate>([^<]*?)</pubDate>:\2\t\1\n:g" && yay -Syu'
+  alias syu='curl -s https://www.archlinux.org/feeds/news/ | xmllint --xpath //item/title\ \|\ //item/pubDate /dev/stdin | sed -r -e "s:<.*>([^<]*?)</.*>:\1:g" && yay -Syu'
 fi
 
 if command -v maim 1>/dev/null 2>&1; then
