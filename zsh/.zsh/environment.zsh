@@ -116,8 +116,8 @@ if command -v maim 1>/dev/null 2>&1; then
   alias screenshot='maim -s | xclip -selection clipboard -t image/png'
 fi
 
-if command -v assume-role 1>/dev/null 2>&1; then
-    source $(which assume-role)
+if command -v awsume 1>/dev/null 2>&1; then
+    alias awsume='. awsume'
 fi
 
 ssh-add -l | grep -q id_rsa || ssh-add
