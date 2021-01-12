@@ -77,7 +77,7 @@ if which oathtool >/dev/null 2>&1; then
     echo $key
     if [[ -z "$2" ]]; then
       if [[ "$OSTYPE" = linux* ]]; then
-        echo "$key" | xsel -ib
+        echo -n "$key" | wl-copy
       fi
       if [[ "$OSTYPE" = darwin* ]]; then
         echo $key | pbcopy
