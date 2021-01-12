@@ -40,4 +40,5 @@ yabai -m rule --add app=WhatsApp space=3
 yabai -m rule --add app=Messages space=3
 yabai -m rule --add app=YT\ Music space=5
 yabai -m rule --add app=Xcode space=4
+yabai -m rule --add app="Synology Surveillance.*" space=4
 echo "yabai configuration loaded.."
