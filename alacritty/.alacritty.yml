@@ -24,7 +24,20 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 13.5
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  use_thin_strokes: true
+
+# When true, bold text is drawn using the bright variant of colors.
+draw_bold_text_with_bright_colors: true
 
 # Colors (One Dark)
 colors:
@@ -54,3 +67,5 @@ colors:
     magenta: '0xc678dd'
     cyan:    '0x56b6c2'
     white:   '0xffffff'
+
+live_config_reload: true
