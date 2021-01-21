@@ -5,7 +5,9 @@ karabiner/automatic_backups
 vim/autoload/plug.vim
 vim/plugged
 vim/swap
+vim/.vim/swap
 vim/undo
 vim/viminfo
 tmux/.tmux/plugins
 nvim/.netrwhist
+nvim/.config/nvim/.netrwhist
