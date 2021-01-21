@@ -1,0 +1,11 @@
+- clean: ['~']
+
+- link:
+    ~/.xinitrc: X11/.xinitrc
+    ~/.Xmodmap: X11/.Xmodmap
+    ~/.Xresources: X11/.Xresources
+    ~/.gitconfig: git/.gitconfig
+    ~/.tmux.arch.conf: tmux/.tmux.arch.conf
+    ~/.config/polybar: polybar/
+    ~/.config/bspwm: bspwm/
+    ~/.config/sxhkd: sxhkd/

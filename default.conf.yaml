@@ -10,7 +10,6 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - cp git/.gitconfig ~/.gitconfig
 
 - link:
     ~/.config/nvim: nvim

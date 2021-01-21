@@ -1,5 +1,8 @@
 - clean: ['~']
 
+- shell:
+    - cp git/.gitconfig ~/.gitconfig
+
 - link:
     ~/.tmux.osx.conf: tmux/.tmux.osx.conf
     ~/.skhdrc: skhd/.skhdrc
