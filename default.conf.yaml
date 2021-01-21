@@ -14,7 +14,6 @@
 - link:
     ~/.config/nvim: nvim
     ~/.zsh: zsh/
-    ~/.alacritty.yml: alacritty/.alacritty.yml
     ~/.dir_colors: zsh/.dir_colors
     ~/.editorconfig: zsh/.editorconfig
     ~/.fzf.zsh: zsh/.fzf.zsh

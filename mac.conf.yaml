@@ -9,3 +9,4 @@
     ~/.config/karabiner: karabiner
     ~/.xvimrc: xvim/.xvimrc
     ~/.yabairc: yabai/.yabairc
+    ~/.alacritty.yml: alacritty/.alacritty.yml

@@ -9,3 +9,7 @@
     ~/.config/polybar: polybar/
     ~/.config/bspwm: bspwm/
     ~/.config/sxhkd: sxhkd/
+    ~/.config/dunst: dunst/
+    ~/.config/termite: termite/
+    ~/.alacritty.yml: alacritty/.alacritty.arch.yml
+    ~/.config/systemd/user/ssh-agent.service: systemd-user/ssh-agent.service
