@@ -1,6 +1,7 @@
 window:
   decorations: none
   dynamic_title: true
+  startup_mode: maximized
 
 font:
   # Normal (roman) font face
@@ -24,7 +25,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.5
+  size: 12.5
 
   offset:
     x: 0
