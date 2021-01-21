@@ -1,0 +1,27 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~', '~/.config/nvim']
+
+
+- create:
+    - ~/.config
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - cp git/.gitconfig ~/.gitconfig
+
+- link:
+    ~/.config/nvim: nvim
+    ~/.zsh: zsh/
+    ~/.alacritty.yml: alacritty/.alacritty.yml
+    ~/.dir_colors: zsh/.dir_colors
+    ~/.editorconfig: zsh/.editorconfig
+    ~/.fzf.zsh: zsh/.fzf.zsh
+    ~/.gitignore_global: git/.gitignore_global
+    ~/.tern-config: zsh/.tern-config
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.zlogin: zsh/.zlogin
+    ~/.zpreztorc: zsh/.zpreztorc
+    ~/.zshrc: zsh/.zshrc

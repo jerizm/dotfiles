@@ -1,0 +1,8 @@
+- clean: ['~']
+
+- link:
+    ~/.tmux.osx.conf: tmux/.tmux.osx.conf
+    ~/.skhdrc: skhd/.skhdrc
+    ~/.config/karabiner: karabiner
+    ~/.xvimrc: xvim/.xvimrc
+    ~/.yabairc: yabai/.yabairc
