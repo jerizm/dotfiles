@@ -32,6 +32,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-feh --bg-fill /home/jerry/background.jpg
-picom &
-exec bspwm
+# feh --bg-fill /home/jerry/background.jpg
+# picom &
+# exec bspwm
