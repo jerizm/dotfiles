@@ -77,7 +77,7 @@ if which oathtool >/dev/null 2>&1; then
     echo $key
     if [[ -z "$2" ]]; then
       if [[ "$OSTYPE" = linux* ]]; then
-        echo -n "$key" | wl-copy
+        echo -n "$key" | xclip -selection clipboard
       fi
       if [[ "$OSTYPE" = darwin* ]]; then
         echo $key | pbcopy
