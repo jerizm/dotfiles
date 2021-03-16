@@ -81,6 +81,7 @@ Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'felippepuhle/coc-graphql', {'do': 'yarn install --frozen-lockfile'}
 
+Plug 'jph00/swift-apple'
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()
