@@ -8,6 +8,7 @@
     editor = nvim
     autocrlf = false
     eol = lf
+    pager = delta
 [merge]
     tool = kdiff3NoAuto
 [mergetool "kdiff3NoAuto"]
@@ -45,4 +46,12 @@
 [credential]
 	helper = store
 [pull]
-	ff = only
+    ff = only
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = true
+
+[interactive]
+    diffFilter = delta --color-only

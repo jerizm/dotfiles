@@ -36,9 +36,9 @@ yabai -m rule --add app=Slack space=6
 yabai -m rule --add app=Firefox space=2
 yabai -m rule --add app=Trello space=6
 yabai -m rule --add app=To\ Do space=5
-yabai -m rule --add app=Signal space=3
-yabai -m rule --add app=WhatsApp space=3
-yabai -m rule --add app=Messages space=3
+yabai -m rule --add app=Signal space=5
+yabai -m rule --add app=WhatsApp space=5
+yabai -m rule --add app=Messages space=5
 yabai -m rule --add app=YT\ Music space=5
 yabai -m rule --add app=Xcode space=4
 yabai -m rule --add app="Synology Surveillance.*" space=4
