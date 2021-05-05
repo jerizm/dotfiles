@@ -15,7 +15,6 @@
 # ░░░░░░░░░░
 #
 #█▓▒░ history
-HISTFILE=~/.zhistory
 setopt APPEND_HISTORY
 HISTSIZE=1200
 SAVEHIST=1000
