@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :q
-|2,0,1612466041,,"q"
+|2,0,1629910995,,"q"
 
 # Search String History (newest to oldest):
 
@@ -80,32 +80,48 @@
 |<"FIFO 40;33                      # pipe","SOCK 1;38;211                 # socket","DOOR 01;35                      # door","BLK 40;33;01                    # block device driver"
 
 # File marks:
-'0  1  0  ~/.dir_colors
-|4,48,1,0,1612466041,"~/.dir_colors"
-'1  1  0  ~/git/gizmobox/assistant-relay/docker-compose.yml
-|4,49,1,0,1612383065,"~/git/gizmobox/assistant-relay/docker-compose.yml"
+'0  1  2  /private/tmp/merged-branches
+|4,48,1,2,1629910995,"/private/tmp/merged-branches"
+'1  1  0  ~/.dir_colors
+|4,49,1,0,1612466041,"~/.dir_colors"
 '2  1  0  ~/git/gizmobox/assistant-relay/docker-compose.yml
 |4,50,1,0,1612383065,"~/git/gizmobox/assistant-relay/docker-compose.yml"
-'3  1  0  ~/gizmobox/grafana-pfsense/docker-compose.yml
-|4,51,1,0,1612205528,"~/gizmobox/grafana-pfsense/docker-compose.yml"
+'3  1  0  ~/git/gizmobox/assistant-relay/docker-compose.yml
+|4,51,1,0,1612383065,"~/git/gizmobox/assistant-relay/docker-compose.yml"
 '4  1  0  ~/gizmobox/grafana-pfsense/docker-compose.yml
 |4,52,1,0,1612205528,"~/gizmobox/grafana-pfsense/docker-compose.yml"
-'5  1  0  /private/tmp/merged-branches
-|4,53,1,0,1596208669,"/private/tmp/merged-branches"
+'5  1  0  ~/gizmobox/grafana-pfsense/docker-compose.yml
+|4,53,1,0,1612205528,"~/gizmobox/grafana-pfsense/docker-compose.yml"
 '6  1  0  /private/tmp/merged-branches
 |4,54,1,0,1596208669,"/private/tmp/merged-branches"
 '7  1  0  /private/tmp/merged-branches
-|4,55,1,0,1593701426,"/private/tmp/merged-branches"
+|4,55,1,0,1596208669,"/private/tmp/merged-branches"
 '8  1  0  /private/tmp/merged-branches
-|4,56,1,0,1593701426,"/private/tmp/merged-branches"
+|4,56,1,0,1596208669,"/private/tmp/merged-branches"
+'9  1  0  /private/tmp/merged-branches
+|4,57,1,0,1593701426,"/private/tmp/merged-branches"
 
 # Jumplist (newest first):
+-'  1  2  /private/tmp/merged-branches
+|4,39,1,2,1629910995,"/private/tmp/merged-branches"
+-'  1  0  ~/.dir_colors
+|4,39,1,0,1612466041,"~/.dir_colors"
 -'  1  0  ~/.dir_colors
 |4,39,1,0,1612466041,"~/.dir_colors"
 -'  1  0  ~/git/gizmobox/assistant-relay/docker-compose.yml
 |4,39,1,0,1612383065,"~/git/gizmobox/assistant-relay/docker-compose.yml"
 -'  1  0  ~/git/gizmobox/assistant-relay/docker-compose.yml
 |4,39,1,0,1612383065,"~/git/gizmobox/assistant-relay/docker-compose.yml"
+-'  1  0  ~/git/gizmobox/assistant-relay/docker-compose.yml
+|4,39,1,0,1612383065,"~/git/gizmobox/assistant-relay/docker-compose.yml"
+-'  1  0  ~/git/gizmobox/assistant-relay/docker-compose.yml
+|4,39,1,0,1612383065,"~/git/gizmobox/assistant-relay/docker-compose.yml"
+-'  1  0  ~/gizmobox/grafana-pfsense/docker-compose.yml
+|4,39,1,0,1612205528,"~/gizmobox/grafana-pfsense/docker-compose.yml"
+-'  1  0  ~/gizmobox/grafana-pfsense/docker-compose.yml
+|4,39,1,0,1612205528,"~/gizmobox/grafana-pfsense/docker-compose.yml"
+-'  1  0  ~/gizmobox/grafana-pfsense/docker-compose.yml
+|4,39,1,0,1612205528,"~/gizmobox/grafana-pfsense/docker-compose.yml"
 -'  1  0  ~/gizmobox/grafana-pfsense/docker-compose.yml
 |4,39,1,0,1612205528,"~/gizmobox/grafana-pfsense/docker-compose.yml"
 -'  1  0  ~/gizmobox/grafana-pfsense/docker-compose.yml
@@ -133,6 +149,10 @@
 
 # History of marks within files (newest to oldest):
 
+> /private/tmp/merged-branches
+	*	1629910994	0
+	"	1	2
+
 > ~/.dir_colors
 	*	1612466040	0
 	"	1	0
@@ -143,8 +163,4 @@
 
 > ~/gizmobox/grafana-pfsense/docker-compose.yml
 	*	1612205527	0
-	"	1	0
-
-> /private/tmp/merged-branches
-	*	1596208668	0
 	"	1	0
