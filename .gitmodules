@@ -1,4 +1,9 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+    ignore = dirty
+
+[submodule "simple-bar"]
+	path = widgets/simple-bar
+	url = https://github.com/Jean-Tinland/simple-bar
 	ignore = dirty
