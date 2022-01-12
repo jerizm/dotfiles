@@ -35,6 +35,7 @@ yabai -m rule --add app=iTerm space=1
 yabai -m rule --add app=Alacritty space=1
 yabai -m rule --add app=Slack space=6
 yabai -m rule --add app=Firefox space=2
+yabai -m rule --add app=PrusaSlicer space=3
 yabai -m rule --add app=Trello space=6
 yabai -m rule --add app=To\ Do space=5
 yabai -m rule --add app=Signal space=5
