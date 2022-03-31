@@ -85,6 +85,7 @@ Plug 'felippepuhle/coc-graphql', {'do': 'yarn install --frozen-lockfile'}
 Plug 'jph00/swift-apple'
 Plug 'itspriddle/vim-shellcheck'
 
+Plug 'eliba2/vim-node-inspect'
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()
