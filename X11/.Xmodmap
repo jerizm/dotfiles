@@ -3,3 +3,6 @@
  keysym Escape = Escape
  keysym Caps_Lock = Escape
  add Lock = Caps_Lock
+! 66 is the keycode of Caps_Lock
+clear    Lock
+keycode  66 = Escape
