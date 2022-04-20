@@ -138,5 +138,7 @@ gifify() {
 alias ssh='TERM=xterm-256color ssh'
 
 if (( $+commands[aws] )); then
-    source $(which aws)_zsh_completer.sh
+    autoload bashcompinit && bashcompinit
+    autoload -Uz compinit && compinit
+    complete -C aws_completer aws
 fi
