@@ -24,3 +24,4 @@
     ~/.zpreztorc: zsh/.zpreztorc
     ~/.zshrc: zsh/.zshrc
     ~/.gitconfig: git/.gitconfig
+    ~/.bin: bin/

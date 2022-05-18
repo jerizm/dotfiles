@@ -39,5 +39,5 @@ if [ -f '/Users/jerry/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jerry/goo
 if [ -f '/Users/jerry/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jerry/google-cloud-sdk/completion.zsh.inc'; fi
 
 # fnm
-export PATH=/home/jerry/.fnm:$PATH
+export PATH=/home/jerry/.bin:/home/jerry/.fnm:$PATH
 eval "`fnm env`"
