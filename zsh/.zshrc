@@ -37,7 +37,3 @@ if [ -f '/Users/jerry/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jerry/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jerry/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jerry/google-cloud-sdk/completion.zsh.inc'; fi
-
-# fnm
-export PATH=/home/jerry/.bin:/home/jerry/.fnm:$PATH
-eval "`fnm env`"
