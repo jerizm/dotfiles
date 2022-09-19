@@ -5,4 +5,5 @@ if [[ -a /usr/local/bin/fnm ]]; then
     export NODE_ENV=dev
     eval "$(fnm env)"
     alias node_global="npm ls -g --depth=0 | grep -oP ' \K(.*)(?=@)'"
+    eval "$(npm completion 2>/dev/null)"
 fi
