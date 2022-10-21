@@ -1,3 +1,6 @@
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+
 if [[ -a /usr/local/bin/fnm ]]; then
     alias npminstall="rm -rf node_modules && npm install"
 
