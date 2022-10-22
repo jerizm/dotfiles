@@ -18,6 +18,7 @@
     keepBackup = false
 [push]
     default = simple
+    autoSetupRemote = true
 [alias]
     unstage = reset HEAD --
     co = checkout
