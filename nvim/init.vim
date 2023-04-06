@@ -133,7 +133,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " make sure powerline glyphs work
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='iceberg'
 
 let g:syntastic_javascript_checkers = ['eslint']
 
@@ -196,7 +196,7 @@ nnoremap <F5> :GundoToggle<CR>
 
 " colorscheme
 syntax on
-colorscheme onedark
+colorscheme iceberg
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -232,3 +232,5 @@ let g:EasyClipUsePasteToggleDefaults = 0
 if filereadable(expand("~/.config/nvim/completion.vim"))
     source ~/.config/nvim/completion.vim
 endif
+
+let g:transparent_enabled = v:true

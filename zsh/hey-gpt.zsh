@@ -11,6 +11,19 @@ hey_gpt () {
 }
 alias h=hey_gpt
 
+data_gpt () {
+    prompt_input=$(echo "$1: $2" | string join ' ')
+
+    curl https://api.openai.com/v1/chat/completions -s \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer $OPENAI_API_KEY" \
+    -d '{
+        "model": "gpt-4",
+        "messages": [{"role": "user", "content": "'$1'"}],
+        "temperature": 0.7
+    }' | jq -r '.choices[0].message.content'
+}
+
 img_gpt () {
     create_img=$(curl https://api.openai.com/v1/images/generations -s \
     -H "Content-Type: application/json" \

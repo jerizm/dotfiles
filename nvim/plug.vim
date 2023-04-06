@@ -27,8 +27,10 @@ Plug 'dense-analysis/ale'
 Plug 'svermeulen/vim-easyclip'
 
 " colorschemes
-Plug 'joshdick/onedark.vim'
+" Plug 'joshdick/onedark.vim'
 " Plug 'morhetz/gruvbox'
+Plug 'cocopon/iceberg.vim'
+
 
 " git edits in sidebar
 Plug 'airblade/vim-gitgutter'
@@ -86,6 +88,9 @@ Plug 'jph00/swift-apple'
 Plug 'itspriddle/vim-shellcheck'
 
 Plug 'eliba2/vim-node-inspect'
+
+" transparency
+Plug 'xiyaowong/transparent.nvim'
 " All of your Plugs must be added before the following line
 filetype plugin indent on    " required
 call plug#end()
