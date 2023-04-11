@@ -25,11 +25,6 @@ fi
 # Cancel upgrade if git is unavailable on the system
 whence brew >/dev/null || return 0
 
-integer myfd
-exec {myfd}<>/tmp/lockfile
-
-flock -x -w 10 $myfd || exit 1
-
 if [ -f ~/.brew-update ]
 then
   . ~/.brew-update
@@ -58,6 +53,3 @@ else
   # create the brew file
 	_update_brew_update
 fi
-
-#"release lock"
-exec {myfd}>&-
