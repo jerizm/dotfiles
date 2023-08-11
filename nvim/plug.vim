@@ -57,9 +57,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " vim surround
 Plug 'tpope/vim-surround'
 
-" vim.go
-Plug 'fatih/vim-go'
-
 Plug 'avakhov/vim-yaml'
 
 " hardtime
@@ -88,6 +85,15 @@ Plug 'jph00/swift-apple'
 Plug 'itspriddle/vim-shellcheck'
 
 Plug 'eliba2/vim-node-inspect'
+
+"" AI
+"" codeium
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
+
+"" CodeGPT
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'dpayne/CodeGPT.nvim'
 
 " transparency
 Plug 'xiyaowong/transparent.nvim'

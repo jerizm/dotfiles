@@ -29,3 +29,7 @@ indent_size = 2
 [*.mustache]
 indent_style = space
 indent_size = 2
+
+[*.gql]
+indent_style = space
+indent_size = 2

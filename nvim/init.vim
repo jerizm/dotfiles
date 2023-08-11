@@ -233,4 +233,11 @@ if filereadable(expand("~/.config/nvim/completion.vim"))
     source ~/.config/nvim/completion.vim
 endif
 
+" codeium
+let g:codeium_disable_bindings = 1
+inoremap <script><silent><nowait><expr> <C-g> codeium#Accept()
+inoremap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
+inoremap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+inoremap <C-x>   <Cmd>call codeium#Clear()<CR>
+
 let g:transparent_enabled = v:true
