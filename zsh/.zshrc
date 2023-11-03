@@ -43,3 +43,6 @@ if [ -f '/Users/jerry/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jer
 # fnm
 export PATH=/home/jerry/.fnm:$PATH
 eval "`fnm env`"
+
+# Created by `pipx` on 2023-10-18 16:28:51
+export PATH="$PATH:/Users/jerry/.local/bin"
