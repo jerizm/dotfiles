@@ -9,5 +9,5 @@ if [[ -a /usr/local/bin/fnm ]]; then
     eval "`fnm env`"
     eval "$(npm completion 2>/dev/null)"
     mkdir ~/.npm-global
-    npm config set prefix '~/.npm-global'
+    # npm config set prefix '~/.npm-global'
 fi
