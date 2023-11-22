@@ -4,14 +4,19 @@ DIR="$HOME/.config/sketchybar/"
 ITEM_DIR="$DIR/items"
 PLUGIN_DIR="$DIR/plugins"
 
-FONT="Hack Nerd Font Mono"
-#FONT="JetBrainsMono Nerd Font"
+#FONT="Hack Nerd Font Mono"
+FONT="JetBrainsMono Nerd Font"
 ICON_FONT="SF Pro"
 
 PADDING=3
 
 source "$DIR/colors.sh"
 source "$DIR/icons.sh"
+
+HELPER=git.felix.helper
+killall helper
+(cd $CONFIG_DIR/helper && make)
+$CONFIG_DIR/helper/helper $HELPER > /dev/null 2>&1 &
 
 BAR_PROPS=(
   height=20
@@ -36,7 +41,7 @@ DEF_PROPS=(
   icon.color=$GREEN
   icon.padding_left=$PADDING
   icon.padding_right=$PADDING
-  label.font="$FONT:Bold:12.0"
+  label.font="$FONT:Semibold:12.0"
   label.color=$GREEN
   label.padding_left=$PADDING
   label.padding_right=$PADDING
@@ -62,6 +67,8 @@ source "$ITEM_DIR/time.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/sound.sh"
 source "$ITEM_DIR/wifi.sh"
+source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/disk.sh"
 
 sketchybar --hotload on
 sketchybar --update
