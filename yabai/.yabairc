@@ -27,7 +27,7 @@ yabai -m config window_gap                   10
 yabai -m config external_bar                 all:25:0
 
 # always float Preferences
-yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^League.*" manage=off
 yabai -m rule --add app="^Finder.*" manage=off
 yabai -m rule --add app="^Keka.*" manage=off
@@ -52,4 +52,9 @@ yabai -m rule --add app=YT\ Music space=5
 yabai -m rule --add app=Xcode space=4
 yabai -m rule --add app=PS\ Remote\ Play space=4
 yabai -m rule --add app="Synology Surveillance.*" space=4
+
+yabai -m signal --add event=display_added action="yabai --restart-service"
+# If the notched display is removed, set external_bar to off so the main screen (which is now not notched) no longer has a padding decrease
+yabai -m signal --add event=display_removed action="yabai --restart-service"
+
 echo "yabai configuration loaded.."
