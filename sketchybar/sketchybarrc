@@ -1,54 +1,68 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
-source "$HOME/.config/sketchybar/color.sh"
+DIR="$HOME/.config/sketchybar/"
+ITEM_DIR="$DIR/items"
+PLUGIN_DIR="$DIR/plugins"
 
-PLUGIN_DIR="$HOME/.config/sketchybar/controller"
-PLUGIN_TOUCH="$HOME/.config/sketchybar/controller/touch"
-ITEM_DIR="$HOME/.config/sketchybar/view"
+FONT="Hack Nerd Font Mono"
+#FONT="JetBrainsMono Nerd Font"
+ICON_FONT="SF Pro"
 
-PADDING=4
-ICON="SF Symbols"
-LABEL="Hack Nerd Font Mono"
+PADDING=3
 
-sketchybar --bar     height=20                                            \
-                     blur_radius=0                                        \
-                     padding_left=4                                       \
-                     padding_right=4                                      \
-                     color=0xff222222                                 \
-                     position=top                                      \
-                     sticky=on                                            \
-                     font_smoothing=on                                    \
-                                                                          \
-           --default updates=when_shown                                   \
-                     drawing=on                                           \
-                     icon.font="$ICON:SemiBold:10.0"                      \
-                     label.font="$LABEL:SemiBold:10.0"                    \
-                     icon.padding_left=$PADDING                           \
-                     icon.padding_right=$PADDING                          \
-                     label.padding_left=$PADDING                          \
-                     label.padding_right=$PADDING                         \
-                     label.color=0xff${NORD6:1}                           \
-                     icon.color=0xff${NORD6:1}                            \
+source "$DIR/colors.sh"
+source "$DIR/icons.sh"
 
+BAR_PROPS=(
+  height=20
+  color=$BG_PRI_COLR
+  border_width=1
+  border_color=$BORDER_COLR
+  shadow=off
+  position=top
+  sticky=on
+  padding_right=15
+  padding_left=15
+  corner_radius=0
+  y_offset=0
+  margin=0
+  blur_radius=15
+  notch_width=0
+)
 
-# left
-source "$ITEM_DIR/space.sh"
-source "$ITEM_DIR/front_app.sh"
+DEF_PROPS=(
+  updates=when_shown
+  icon.font="$ICON_FONT:Regular:13.0"
+  icon.color=$GREEN
+  icon.padding_left=$PADDING
+  icon.padding_right=$PADDING
+  label.font="$FONT:Bold:12.0"
+  label.color=$GREEN
+  label.padding_left=$PADDING
+  label.padding_right=$PADDING
+  background.padding_right=$PADDING
+  background.padding_left=$PADDING
+  background.height=15
+  background.corner_radius=4
+  popup.background.border_width=2
+  popup.background.corner_radius=11
+  popup.background.border_color=$BORDER_COLR
+  popup.background.color=$BG_PRI_COLR
+  popup.background.shadow.drawing=on
+)
 
-# right
+sketchybar --bar "${BAR_PROPS[@]}"
+sketchybar --default "${DEF_PROPS[@]}"
+
+source "$ITEM_DIR/apple.sh"
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/focus.sh"
+
 source "$ITEM_DIR/time.sh"
-source "$ITEM_DIR/cal.sh"
-source "$ITEM_DIR/wifi.sh"
-source "$ITEM_DIR/mic.sh"
 source "$ITEM_DIR/battery.sh"
-#source "$ITEM_DIR/airpodsbattery.sh"
-#source "$ITEM_DIR/airpodscasebattery.sh"
 source "$ITEM_DIR/sound.sh"
-source "$ITEM_DIR/disk.sh"
-#source "$ITEM_DIR/mem.sh"
-#source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/wifi.sh"
 
-# initializing
+sketchybar --hotload on
 sketchybar --update
 
-echo "sketchybar configuration loaded.."
