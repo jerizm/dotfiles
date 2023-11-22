@@ -1,2 +1,2 @@
-LABEL=$(date +'%a, %b %d, %Y  %r')
+LABEL=$(date +'%a %D %r')
 sketchybar --set $NAME label="$LABEL"
