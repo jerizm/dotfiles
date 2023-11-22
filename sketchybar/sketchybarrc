@@ -5,7 +5,7 @@ ITEM_DIR="$DIR/items"
 PLUGIN_DIR="$DIR/plugins"
 
 #FONT="Hack Nerd Font Mono"
-FONT="JetBrainsMono Nerd Font"
+FONT="JetBrainsMono NF"
 ICON_FONT="SF Pro"
 
 PADDING=3
@@ -68,6 +68,7 @@ source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/sound.sh"
 source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/cpu.sh"
+source "$ITEM_DIR/mem.sh"
 source "$ITEM_DIR/disk.sh"
 
 sketchybar --hotload on

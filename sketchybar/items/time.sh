@@ -1,6 +1,7 @@
 TIME=(
   update_freq=1
   icon.drawing=off
+  label.font="$FONT:Semibold:12.0"
   background.padding_right=0
   script="$PLUGIN_DIR/time.sh"
 )
