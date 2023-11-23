@@ -16,7 +16,7 @@ cpu_percent=(
   padding_right=5
   width=55
   icon.drawing=off
-  update_freq=4
+  update_freq=10
   mach_helper="$HELPER"
 )
 

@@ -1,5 +1,5 @@
 TIME=(
-  update_freq=1
+  update_freq=20
   icon.drawing=off
   label.font="$FONT:Semibold:12.0"
   background.padding_right=0
