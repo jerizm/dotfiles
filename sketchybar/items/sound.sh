@@ -1,5 +1,5 @@
 SOUND=(
-  update_freq=60
+  update_freq=20
 	script="$PLUGIN_DIR/sound.sh"
 )
 
