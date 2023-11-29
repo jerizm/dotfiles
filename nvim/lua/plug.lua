@@ -20,7 +20,6 @@ require("lazy").setup({
     "tpope/vim-sleuth",
 
     "nvim-lualine/lualine.nvim",
-    "itchyny/lightline.vim",
     -- NOTE: This is where your plugins related to LSP can be installed.
     --  The configuration is done below. Search for lspconfig to find it below.
     {
@@ -114,94 +113,24 @@ require("lazy").setup({
             end,
         },
     },
-    -- tokyonight [theme]
-    -- https://github.com/folke/tokyonight.nvim
     {
         "folke/tokyonight.nvim",
-        event = "User LoadColorSchemes",
+        lazy = false,
+        priority = 1000,
         opts = {
-            plugins = { ["dashboard-nvim"] = true },
-            dim_inactive = true, -- dims inactive windows
+            style = "night",
             transparent = true,
-
-            -- Colors can be overrided
-            on_highlights = function(hl, _)
-                hl.Function = { fg = "#4278e3", bold = true }
-                hl.SpecialChar = { fg = "#b4be82" }
-                hl.Variable = { fg = "#84a0c6" }
-                hl["@keyword"] = { fg = "#84a0c6" }
-                hl["@keyword.function"] = { fg = "#84a0c6" }
-                hl["@parameter"] = { fg = "#D9D7D6" }
-                hl["@variable"] = { fg = "#D9D7D6" }
-                hl["@constructor"] = { fg = "#eb8d1a" }
-                hl["@conditional"] = { fg = "#7aa2f7" }
-                hl["@namespace"] = { fg = "#8a9099" }
-                hl["@comment"] = { fg = "#495154", italic = true }
-            end,
             styles = {
-                sidebars = "dark", -- style for sidebars, see below
-                floats = "dark", -- style for floating windows
+                sidebars = "transparent",
+                floats = "transparent",
             },
-            on_colors = function(c)
-                c.bg_sidebar = "#15191c"
-                c.StatusLine = { bg = "#15191c" }
-            end,
         },
+        config = function(_, opts)
+            local tokyonight = require("tokyonight")
+            tokyonight.setup(opts)
+            tokyonight.load()
+        end,
     },
-    --  Code identation [guides]
-    --  https://github.com/lukas-reineke/indent-blankline.nvim
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        event = "User BaseFile",
-        opts = {
-            buftype_exclude = {
-                "nofile",
-                "terminal",
-            },
-            filetype_exclude = {
-                "help",
-                "startify",
-                "aerial",
-                "alpha",
-                "dashboard",
-                "lazy",
-                "neogitstatus",
-                "NvimTree",
-                "neo-tree",
-                "Trouble",
-                "ranger",
-                "rnvimr",
-            },
-            context_patterns = {
-                "class",
-                "return",
-                "function",
-                "method",
-                "^if",
-                "^while",
-                "jsx_element",
-                "^for",
-                "^object",
-                "^table",
-                "block",
-                "arguments",
-                "if_statement",
-                "else_clause",
-                "jsx_element",
-                "jsx_self_closing_element",
-                "try_statement",
-                "catch_clause",
-                "import_statement",
-                "operation_type",
-            },
-            show_trailing_blankline_indent = false,
-            use_treesitter = true,
-            char = "▏",
-            context_char = "▏",
-            show_current_context = true,
-        },
-    },
-
     {
         -- Add indentation guides even on blank lines
         "lukas-reineke/indent-blankline.nvim",
@@ -210,7 +139,6 @@ require("lazy").setup({
         main = "ibl",
         opts = {},
     },
-
     -- "gc" to comment visual regions/lines
     { "numToStr/Comment.nvim", opts = {} },
     "dense-analysis/ale",
@@ -227,6 +155,24 @@ require("lazy").setup({
         dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
         opts = {},
     },
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+    "Shougo/unite.vim",
+    "Shougo/neomru.vim",
+    { "Shougo/vimproc.vim", build = "make" },
     "vim-scripts/BufOnly.vim",
+    {
+        "svermeulen/vim-easyclip",
+        config = function()
+            vim.g.easyclip_postfix = ""
+            vim.g.EasyClipUseYankDefaults = 0
+            vim.g.EasyClipUsePasteToggleDefaults = 0
+        end,
+    },
     "github/copilot.vim",
+})
+
+require("lualine").setup({
+    options = {
+        theme = "tokyonight",
+    },
 })

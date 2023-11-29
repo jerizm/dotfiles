@@ -8,7 +8,6 @@ HOME = os.getenv("HOME")
 
 vim.opt.encoding = "utf-8"
 vim.wo.number = true -- Line numbers are good
-vim.wo.relativenumber = true -- relative line numbers also good
 vim.o.signcolumn = "auto"
 vim.opt.backspace = "indent,eol,start" -- Allow backspace in insert mode
 vim.opt.history = 1000 -- "Store lots of :cmdline history
@@ -178,18 +177,8 @@ vim.api.nvim_set_keymap("n", "<F5>", ":GundoToggle<CR>", {
     noremap = true,
 })
 
--- Command
-vim.cmd(
-    "command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')"
-)
-
--- Hardtime settings
-vim.g.hardtime_default_on = 1
-
--- EasyClip settings
-vim.g.EasyClipUseYankDefaults = 0
-vim.g.EasyClipUsePasteToggleDefaults = 0
-
 -- Source other vim files
 require("syntax")
-require("completion")
+-- bufferline
+vim.opt.termguicolors = true
+require("bufferline").setup{}
