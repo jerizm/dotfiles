@@ -75,7 +75,7 @@ vim.opt.list = true
 vim.opt.listchars.tab = "\\ \\ "
 vim.opt.listchars.trail = "·"
 
-vim.wo.wrap = true
+vim.wo.wrap = false
 vim.wo.linebreak = true
 vim.wo.list = false
 
@@ -128,13 +128,6 @@ vim.opt.timeoutlen = 200
 vim.opt.ttimeoutlen = 0
 vim.opt.laststatus = 2
 
-vim.g["airline#extensions#tabline#enabled"] = 1
-
--- " make sure powerline glyphs work
-vim.g["airline#extensions#tabline#enabled"] = 1
-vim.g["airline_powerline_fonts"] = 1
-vim.g["airline_theme"] = "iceberg"
-
 vim.g["syntastic_javascript_checkers"] = "eslint"
 
 -- " go stuff
@@ -184,15 +177,6 @@ vim.api.nvim_set_keymap("n", "<C-p>", ":FZF<CR>", {
 vim.api.nvim_set_keymap("n", "<F5>", ":GundoToggle<CR>", {
     noremap = true,
 })
-
--- Colorscheme
-vim.cmd.syntax("on")
-vim.cmd.colorscheme("iceberg")
-
--- Lightline settings
-vim.g.lightline = {
-    colorscheme = "one",
-}
 
 -- Command
 vim.cmd(
