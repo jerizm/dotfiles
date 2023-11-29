@@ -231,4 +231,12 @@ return {
       })
     end,
   },
+  {
+    "svermeulen/vim-easyclip",
+    config = function()
+      vim.g.easyclip_postfix = ""
+      vim.g.EasyClipUseYankDefaults = 0
+      vim.g.EasyClipUsePasteToggleDefaults = 0
+    end,
+  },
 }
