@@ -1,15 +1,15 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 require("plug")
 
 HOME = os.getenv("HOME")
 
 -- ================ General Config ====================
 
-vim.opt.encoding = 'utf-8'
+vim.opt.encoding = "utf-8"
 vim.wo.number = true -- Line numbers are good
 vim.wo.relativenumber = true -- relative line numbers also good
-vim.o.signcolumn = 'auto'
+vim.o.signcolumn = "auto"
 vim.opt.backspace = "indent,eol,start" -- Allow backspace in insert mode
 vim.opt.history = 1000 -- "Store lots of :cmdline history
 vim.opt.showcmd = true -- Show incomplete cmds down the bottom
@@ -81,16 +81,30 @@ vim.wo.list = false
 
 -- ================ Folds ============================
 
-vim.opt.foldmethod = 'syntax'
+vim.opt.foldmethod = "syntax"
 vim.opt.foldnestmax = 3
 vim.opt.foldenable = false
 
 -- ================ Completion =======================
 
-vim.opt.wildmode = {'list', 'longest'}
+vim.opt.wildmode = { "list", "longest" }
 vim.opt.wildmenu = true
-vim.opt.wildignore:append{'*.o', '*.obj', '*~', '*vim/backups*', '*sass-cache*', '*DS_Store*', 'vendor/rails/**',
-                          'vendor/cache/**', '*.gem', 'log/**', 'tmp/**', '*.png', '*.jpg', '*.gif'}
+vim.opt.wildignore:append({
+    "*.o",
+    "*.obj",
+    "*~",
+    "*vim/backups*",
+    "*sass-cache*",
+    "*DS_Store*",
+    "vendor/rails/**",
+    "vendor/cache/**",
+    "*.gem",
+    "log/**",
+    "tmp/**",
+    "*.png",
+    "*.jpg",
+    "*.gif",
+})
 
 -- " ================ Scrolling ========================
 vim.opt.scrolloff = 8
@@ -114,39 +128,39 @@ vim.opt.timeoutlen = 200
 vim.opt.ttimeoutlen = 0
 vim.opt.laststatus = 2
 
-vim.g['airline#extensions#tabline#enabled'] = 1
+vim.g["airline#extensions#tabline#enabled"] = 1
 
 -- " make sure powerline glyphs work
-vim.g['airline#extensions#tabline#enabled'] = 1
-vim.g['airline_powerline_fonts'] = 1
-vim.g['airline_theme'] = 'iceberg'
+vim.g["airline#extensions#tabline#enabled"] = 1
+vim.g["airline_powerline_fonts"] = 1
+vim.g["airline_theme"] = "iceberg"
 
-vim.g['syntastic_javascript_checkers'] = 'eslint'
+vim.g["syntastic_javascript_checkers"] = "eslint"
 
 -- " go stuff
 -- "
-vim.g['syntastic_go_checkers'] = 'go', 'golint', 'govet', 'errcheck'
+vim.g["syntastic_go_checkers"] = "go", "golint", "govet", "errcheck"
 -- " let g:go_list_type = "quickfix"
 
-vim.g['coc_enable_locationlist'] = 0
+vim.g["coc_enable_locationlist"] = 0
 
 -- "transparent background (note has to go after local file,
 -- "as that might set colors
 -- "hi Normal ctermbg=none
-vim.cmd('hi LineNr ctermbg=none guibg=bg')
+vim.cmd("hi LineNr ctermbg=none guibg=bg")
 vim.opt.showmode = true
 
 -- " cycle through buffers
-vim.api.nvim_set_keymap('n', '<C-b>', ':bnext<CR>', {
+vim.api.nvim_set_keymap("n", "<C-b>", ":bnext<CR>", {
     noremap = true,
-    silent = true
+    silent = true,
 })
-vim.api.nvim_set_keymap('n', '<C-n>', ':bprevious<CR>', {
+vim.api.nvim_set_keymap("n", "<C-n>", ":bprevious<CR>", {
     noremap = true,
-    silent = true
+    silent = true,
 })
 -- Unite settings
-vim.g.unite_data_directory = '~/.nvim/.cache/unite'
+vim.g.unite_data_directory = "~/.nvim/.cache/unite"
 vim.g.unite_source_rec_max_cache_files = 100000
 vim.g.unite_source_history_yank_enable = 1
 vim.g.unite_enable_start_insert = 5
@@ -155,33 +169,35 @@ vim.g.unite_force_overwrite_statusline = 0
 vim.g.unite_winheight = 25
 
 -- Use 'ag' in unite grep source if 'ag' is executable
-if vim.fn.executable('ag') == 1 then
-    vim.g.unite_source_grep_command = 'ag'
+if vim.fn.executable("ag") == 1 then
+    vim.g.unite_source_grep_command = "ag"
     vim.g.unite_source_grep_default_opts =
-        '-i --vimgrep --hidden --ignore .hg --ignore .svn --ignore .git --ignore .bzr'
-    vim.g.unite_source_grep_recursive_opt = ''
+        "-i --vimgrep --hidden --ignore .hg --ignore .svn --ignore .git --ignore .bzr"
+    vim.g.unite_source_grep_recursive_opt = ""
     vim.env.FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 end
 
 -- Key mappings
-vim.api.nvim_set_keymap('n', '<C-p>', ':FZF<CR>', {
-    noremap = true
+vim.api.nvim_set_keymap("n", "<C-p>", ":FZF<CR>", {
+    noremap = true,
 })
-vim.api.nvim_set_keymap('n', '<F5>', ':GundoToggle<CR>', {
-    noremap = true
+vim.api.nvim_set_keymap("n", "<F5>", ":GundoToggle<CR>", {
+    noremap = true,
 })
 
 -- Colorscheme
-vim.cmd.syntax 'on'
-vim.cmd.colorscheme 'iceberg'
+vim.cmd.syntax("on")
+vim.cmd.colorscheme("iceberg")
 
 -- Lightline settings
 vim.g.lightline = {
-    colorscheme = 'onedark'
+    colorscheme = "one",
 }
 
 -- Command
-vim.cmd('command! -nargs=0 Prettier :call CocAction(\'runCommand\', \'prettier.formatFile\')')
+vim.cmd(
+    "command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')"
+)
 
 -- Hardtime settings
 vim.g.hardtime_default_on = 1
