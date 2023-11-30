@@ -1,1 +1,0 @@
-/Users/jerry/dotfiles/zsh/.fzf.zsh
