@@ -3,26 +3,39 @@
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
+local highlight = {
+  "CursorColumn",
+  "Whitespace",
+}
 return {
   {
-    "folke/tokyonight.nvim",
+    "catppuccin/nvim",
+    lazy = false,
+    name = "catppuccin",
     opts = {
-      transparent = true,
-      style = "night",
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+      transparent_background = true,
+      flavor = "mocha",
     },
   },
-  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin",
     },
   },
-
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = "LazyFile",
+    opts = {
+      indent = { highlight = highlight, char = "" },
+      whitespace = {
+        highlight = highlight,
+        remove_blankline_trail = false,
+      },
+      scope = { enabled = true },
+    },
+    main = "ibl",
+  },
   -- change trouble config
   {
     "folke/trouble.nvim",
@@ -69,6 +82,7 @@ return {
         layout_strategy = "horizontal",
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
+        hidden = true,
         winblend = 0,
       },
     },
@@ -157,9 +171,18 @@ return {
     event = "VeryLazy",
     opts = function()
       return {
-        theme = "tokyonight",
+        theme = "catppuccin",
       }
     end,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    opts = {
+      suggestion = { enabled = true },
+      panel = { enabled = true },
+    },
   },
   -- use mini.starter instead of alpha
   { import = "lazyvim.plugins.extras.ui.mini-starter" },
@@ -273,4 +296,5 @@ return {
       },
     },
   },
+  { "vim-scripts/BufOnly.vim" },
 }

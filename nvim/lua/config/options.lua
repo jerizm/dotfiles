@@ -4,3 +4,4 @@
 local opt = vim.opt
 opt.relativenumber = false -- Relative line numbers
 opt.clipboard = "" -- dont use system clipboard
+vim.g.minipairs_disable = true -- disable minipairs
