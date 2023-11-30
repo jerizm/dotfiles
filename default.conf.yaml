@@ -4,7 +4,6 @@
 
 - clean: ['~', '~/.config/nvim']
 
-
 - create:
     - ~/.config
 
