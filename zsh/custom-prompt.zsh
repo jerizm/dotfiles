@@ -27,4 +27,5 @@ setopt PROMPT_SUBST
 
 #█▓▒░ autoload zsh functions
 fpath=(~/.zsh/functions $fpath)
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)

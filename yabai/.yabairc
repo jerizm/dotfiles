@@ -32,7 +32,7 @@ yabai -m rule --add app="^League.*" manage=off
 yabai -m rule --add app="^Finder.*" manage=off
 yabai -m rule --add app="^Keka.*" manage=off
 yabai -m rule --add app="^Simulator$" manage=off space=4
-yabai -m rule --add app="^TV$" manage=off space=4
+yabai -m rule --add app="TV" manage=off space=7
 
 yabai -m rule --add app=iTerm space=1
 yabai -m rule --add app=Alacritty space=1
