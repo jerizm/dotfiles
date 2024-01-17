@@ -4,7 +4,6 @@
     ~/.tmux.osx.conf: tmux/.tmux.osx.conf
     ~/.skhdrc: skhd/.skhdrc
     ~/.config/karabiner: karabiner
-    ~/.xvimrc: xvim/.xvimrc
     ~/.yabairc: yabai/.yabairc
-    ~/.alacritty.yml: alacritty/.alacritty.yml
+    ~/.alacritty.toml: alacritty/.alacritty.toml
     ~/.config/sketchybar: sketchybar

@@ -28,6 +28,8 @@ fi
 export XDG_CONFIG_HOME="$HOME/.config"
 
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/.cargo/bin:$HOME/Library/Python/3.9/bin:$HOME/bin"
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
