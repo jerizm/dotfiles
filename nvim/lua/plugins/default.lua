@@ -222,6 +222,11 @@ return {
     end,
   },
   {
+    "chrisgrieser/nvim-recorder",
+    dependencies = "rcarriga/nvim-notify", -- optional
+    opts = {}, -- required even with default settings, since it calls `setup()`
+  },
+  {
     "stevearc/conform.nvim",
     optional = true,
     opts = {
