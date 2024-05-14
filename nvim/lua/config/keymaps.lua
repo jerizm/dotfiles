@@ -6,6 +6,7 @@ vim.api.nvim_set_keymap("n", "<C-b>", ":bnext<CR>", {
   noremap = true,
   silent = true,
 })
+
 vim.api.nvim_set_keymap("n", "<C-n>", ":bprevious<CR>", {
   noremap = true,
   silent = true,
