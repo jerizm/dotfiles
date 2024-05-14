@@ -18,13 +18,13 @@ require("lazy").setup({
         { import = "plugins" },
     },
     defaults = {},
-    install = { colorscheme = { "catppuccin" } },
     checker = { enabled = true },
     performance = {},
 })
 
 
 -- mini plugins
+require('mini.basics').setup()
 require('mini.ai').setup()
 require('mini.files').setup()
 require('mini.fuzzy').setup()
@@ -49,7 +49,20 @@ require('mini.comment').setup()
 --
 require("config.options")
 require("config.keymaps")
---
--- --require("notify").setup({
--- --  background_colour = "#000000",
--- --})
+require("catppuccin").setup({
+    transparent_background = true,
+    flavor = "mocha",
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = true,
+        mini = {
+            enabled = true,
+            indentscope_color = "",
+        },
+    },
+})
+
+vim.cmd.colorscheme "catppuccin-mocha"
