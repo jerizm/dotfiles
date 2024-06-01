@@ -9,5 +9,6 @@ if [[ -a /usr/local/bin/fnm ]]; then
     eval "`fnm env`"
     eval "$(npm completion 2>/dev/null)"
     mkdir ~/.npm-global
+    export NODE_OPTIONS=--openssl-legacy-provider
     # npm config set prefix '~/.npm-global'
 fi

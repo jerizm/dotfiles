@@ -36,16 +36,6 @@ return {
     },
     main = "ibl",
   },
-  -- change trouble config
-  {
-    "folke/trouble.nvim",
-    -- opts will be merged with the parent spec
-    opts = { use_diagnostic_signs = true },
-  },
-
-  -- disable trouble
-  { "folke/trouble.nvim", enabled = false },
-
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
@@ -152,6 +142,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "eslint_d",
         "stylua",
         "shellcheck",
         "shfmt",
