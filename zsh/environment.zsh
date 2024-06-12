@@ -73,7 +73,10 @@ if which oathtool >/dev/null 2>&1; then
   export DEVELOPMENT=true
   #mfa stuff move this later
   __mfakey () {
-    key=$(oathtool -b --totp $(pass "$1"))
+    totp=$(pass "$1")
+    parts=($(echo $totp | tr "=" "\n"))
+
+    key=$(oathtool -b --totp $parts[-1])
     echo $key
     if [[ -z "$2" ]]; then
       if [[ "$OSTYPE" = linux* ]]; then
