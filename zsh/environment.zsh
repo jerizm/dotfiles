@@ -74,9 +74,9 @@ if which oathtool >/dev/null 2>&1; then
   #mfa stuff move this later
   __mfakey () {
     totp=$(pass "$1")
-    parts=($(echo $totp | tr "=" "\n"))
-
-    key=$(oathtool -b --totp $parts[-1])
+    #parts=($(echo $totp | tr "=" "\n"))
+    secret=$(echo $totp | sed 's/.*secret=\([[:alnum:]]\+\)&\{0,1\}.*/\1/i')
+    key=$(oathtool -b --totp $secret)
     echo $key
     if [[ -z "$2" ]]; then
       if [[ "$OSTYPE" = linux* ]]; then

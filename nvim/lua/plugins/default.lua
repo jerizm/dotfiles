@@ -148,6 +148,7 @@ return {
         "shfmt",
         "flake8",
         "prettier",
+        "prettierd",
       },
     },
   },
@@ -207,9 +208,7 @@ return {
     "nvimtools/none-ls.nvim",
     optional = true,
     opts = function(_, opts)
-      local nls = require("null-ls")
       opts.sources = opts.sources or {}
-      table.insert(opts.sources, nls.builtins.formatting.prettier)
     end,
   },
   {
@@ -220,24 +219,40 @@ return {
   {
     "stevearc/conform.nvim",
     optional = true,
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = {
+      {
+        -- Customize or remove this keymap to your liking
+        "<leader>f",
+        function()
+          require("conform").format({ async = true, lsp_format = "fallback" })
+        end,
+        mode = "",
+        desc = "Format buffer",
+      },
+    },
     opts = {
       formatters_by_ft = {
-        ["javascript"] = { "prettier" },
-        ["javascriptreact"] = { "prettier" },
-        ["typescript"] = { "prettier" },
-        ["typescriptreact"] = { "prettier" },
-        ["vue"] = { "prettier" },
-        ["css"] = { "prettier" },
-        ["scss"] = { "prettier" },
-        ["less"] = { "prettier" },
-        ["html"] = { "prettier" },
-        ["json"] = { "prettier" },
-        ["jsonc"] = { "prettier" },
-        ["yaml"] = { "prettier" },
-        ["markdown"] = { "prettier" },
-        ["markdown.mdx"] = { "prettier" },
-        ["graphql"] = { "prettier" },
-        ["handlebars"] = { "prettier" },
+        lua = { "stylua" },
+        fish = { "fish_indent" },
+        sh = { "shfmt" },
+        javascript = { "prettierd" },
+        javascriptreact = { "prettierd" },
+        typescript = { "prettierd" },
+        typescriptreact = { "prettierd" },
+        vue = { "prettierd" },
+        css = { "prettierd" },
+        scss = { "prettierd" },
+        less = { "prettierd" },
+        html = { "prettierd" },
+        json = { "prettierd" },
+        jsonc = { "prettierd" },
+        yaml = { "prettierd" },
+        markdown = { "prettierd" },
+        ["markdown.mdx"] = { "prettierd" },
+        graphql = { "prettierd" },
+        handlebars = { "prettierd" },
       },
     },
   },
