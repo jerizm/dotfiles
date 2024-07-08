@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-brew=/opt/homebrew/bin/brew
+brew=$(which brew)
 
 $brew update
 $brew upgrade
