@@ -119,9 +119,7 @@ for config (~/.zsh/*.zsh) source $config
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
-
-source "$ZIM_HOME/modules/spaceship-vi-mode/spaceship-vi-mode.plugin.zsh"
-eval spaceship_vi_mode_enable
+eval "$(starship init zsh)"
 
 #
 # zsh-history-substring-search

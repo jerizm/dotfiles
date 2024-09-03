@@ -3,8 +3,6 @@ zmodule duration-info
 zmodule asciiship
 zmodule zsh-users/zsh-completions --fpath src
 zmodule completion
-zmodule spaceship-prompt/spaceship-vi-mode
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
-zmodule spaceship-prompt/spaceship-prompt --name spaceship --no-submodules
 zmodule zsh-users/zsh-history-substring-search
