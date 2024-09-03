@@ -19,8 +19,8 @@
     ~/.gitignore_global: git/.gitignore_global
     ~/.tern-config: zsh/.tern-config
     ~/.tmux.conf: tmux/.tmux.conf
-    ~/.zlogin: zsh/.zlogin
-    ~/.zpreztorc: zsh/.zpreztorc
     ~/.zshrc: zsh/.zshrc
+    ~/.zprofile: zsh/.zprofile
+    ~/.config/zsh/zimrc: zsh/zimrc
     ~/.gitconfig: git/.gitconfig
     ~/.bin: bin/
