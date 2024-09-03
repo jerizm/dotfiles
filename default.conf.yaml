@@ -12,6 +12,7 @@
 
 - link:
     ~/.config/nvim: nvim
+    ~/.config/spaceship.zsh: spaceship.zsh
     ~/.zsh: zsh/
     ~/.dir_colors: zsh/.dir_colors
     ~/.editorconfig: zsh/.editorconfig
