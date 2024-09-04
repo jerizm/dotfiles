@@ -92,7 +92,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # ------------------
 # Initialize modules
 # ------------------
-
+ZVM_INIT_MODE=sourcing
 ZIM_CONFIG_FILE=~/.config/zsh/zimrc
 ZIM_HOME=~/.zim
 # Download zimfw plugin manager if missing.
