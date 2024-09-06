@@ -1,14 +1,12 @@
-if [[ -a /usr/local/bin/fnm ]]; then
-    alias npminstall="rm -rf node_modules && npm install"
-
-    alias node_tests="chokidar 'handlers/**/*.js' 'lib/**/*.js' 'test/**/*.js' 'handlers/**/*.ts' 'lib/**/*.ts' 'test/**/*.ts' -c 'if [[ {path} =~ ^test.* ]]; then npm test -- {path}; else npm test; fi;' --throttle 500 --debounce 1000"
+if ! command -v -- "fnm" > /dev/null 2>&1; then
+    printf "fnm not found\n"
+else
     export NODE_ENV=dev
     alias node_global="npm ls -g --depth=0 | grep -oP ' \K(.*)(?=@)'"
     # fnm
     export PATH=/home/jerry/.fnm:$PATH
     eval "`fnm env`"
     eval "$(npm completion 2>/dev/null)"
-    mkdir ~/.npm-global
     export NODE_OPTIONS=--openssl-legacy-provider
-    # npm config set prefix '~/.npm-global'
+    fnm-reinstall-packages-from () { npm install -g $(fnm exec --using=$1 npm list -g | grep "├──\|└──" | awk '{gsub(/@[0-9.]+/, "", $2); print $2}' | tr '\n' ' ' | sed 's/ $//') }
 fi
