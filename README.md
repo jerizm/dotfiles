@@ -1,5 +1,8 @@
-# dotfiles
+# My dotfiles
 
-My dotfiles uses stow like https://github.com/xero/dotfiles
-
-I use https://github.com/sorin-ionescu/prezto
+-   [dotbot](https://github.com/anishathalye/dotbot)
+    -   for managing symlinks
+-   [zimfw](https://github.com/zimfw/zimfw)
+    -   zsh plugins and what not
+-   [starship](https://starship.rs)
+    -   prompt
