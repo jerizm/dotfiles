@@ -53,6 +53,7 @@
     minus-style = "syntax #340001"
     syntax-theme = Monokai Extended
     navigate = true
-
 [interactive]
     diffFilter = delta --color-only
+[includeIf "hasconfig:remote.*.url:git@github.com:HiatusApp/**"]
+    path = .gitconfig_work
