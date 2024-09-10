@@ -1,12 +1,9 @@
-if ! command -v -- "fnm" > /dev/null 2>&1; then
-    printf "fnm not found\n"
-else
-    export NODE_ENV=dev
-    alias node_global="npm ls -g --depth=0 | grep -oP ' \K(.*)(?=@)'"
-    # fnm
-    export PATH=/home/jerry/.fnm:$PATH
-    eval "`fnm env`"
-    eval "$(npm completion 2>/dev/null)"
+# fnm
+FNM_PATH="/Users/jerry/.fnm"
+if [ -d "$FNM_PATH" ]; then
+    export PATH="/Users/jerry/.fnm:$PATH"
+    export PATH="/Users/jerry/.npm-global/bin:$PATH"
+    eval "$(fnm env --use-on-cd --shell zsh)"
+    export NODE_ENV=development
     export NODE_OPTIONS=--openssl-legacy-provider
-    fnm-reinstall-packages-from () { npm install -g $(fnm exec --using=$1 npm list -g | grep "├──\|└──" | awk '{gsub(/@[0-9.]+/, "", $2); print $2}' | tr '\n' ' ' | sed 's/ $//') }
 fi
