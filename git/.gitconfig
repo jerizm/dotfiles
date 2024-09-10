@@ -57,3 +57,5 @@
     diffFilter = delta --color-only
 [includeIf "hasconfig:remote.*.url:git@github.com:HiatusApp/**"]
     path = .gitconfig_work
+[submodule]
+	recurse = true
