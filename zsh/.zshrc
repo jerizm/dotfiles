@@ -120,7 +120,6 @@ for config (~/.zsh/*.zsh) source $config
 # Post-init module configuration
 # ------------------------------
 eval "$(starship init zsh)"
-
 #
 # zsh-history-substring-search
 #
