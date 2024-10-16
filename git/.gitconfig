@@ -2,7 +2,7 @@
     default = simple
 [user]
     name = Jerry Wang
-    email = jerryw@gmail.com
+    email = me@jerrywang.email
 [core]
     excludesfile = ~/.gitignore_global
     editor = nvim
@@ -59,3 +59,5 @@
     path = .gitconfig_work
 [submodule]
 	recurse = true
+[init]
+	defaultBranch = main
