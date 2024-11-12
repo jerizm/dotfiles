@@ -63,6 +63,7 @@ yabai -m signal --add event=display_added action="yabai --restart-service"
 # If the notched display is removed, set external_bar to off so the main screen (which is now not notched) no longer has a padding decrease
 yabai -m signal --add event=display_removed action="yabai --restart-service"
 
+yabai -m rule --add app=".*" sub-layer=normal
 yabai -m rule --apply
 
 echo "yabai configuration loaded.."

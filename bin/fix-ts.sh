@@ -8,4 +8,6 @@ fd -t f -e ts --exec sd 'import \* as Joi' 'import Joi'
 fd -t f -e ts --exec sd 'import \* as AWS' 'import AWS'
 fd -t f -e ts --exec sd 'import \* as needle' 'import needle'
 fd -t f -e ts --exec sd 'import \* as pino' 'import pino'
+fd -t f -e ts --exec sd 'import \* as jsonata' 'import jsonata'
+fd -t f -e ts --exec sd 'import \* as dynamodb' 'import dynamodb'
 fd -t f -e ts --exec sd "\.js'" "'"

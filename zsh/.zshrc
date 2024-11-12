@@ -133,3 +133,5 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
 # }}} End configuration added by Zim install
 
+autoload -U +X bashcompinit && bashcompinit
+complete -C "$(which aws_completer)" aws
