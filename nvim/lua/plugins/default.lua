@@ -125,15 +125,6 @@ return {
       }
     end,
   },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    build = ":Copilot auth",
-    opts = {
-      suggestion = { enabled = true },
-      panel = { enabled = true },
-    },
-  },
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
 
