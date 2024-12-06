@@ -42,6 +42,7 @@ yabai -m rule --add app=Alacritty space=1
 yabai -m rule --add app=Slack space=6
 yabai -m rule --add app=Firefox space=2
 yabai -m rule --add app=PrusaSlicer space=3
+yabai -m rule --add app=Bambu\ Studio space=4
 yabai -m rule --add app=Fusion\ 360 space=3
 yabai -m rule --add app=Android\ Studio space=3
 yabai -m rule --add app=Steam\ Link space=3
