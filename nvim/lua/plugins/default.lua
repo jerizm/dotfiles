@@ -36,71 +36,30 @@ return {
     },
     main = "ibl",
   },
+  {
+    "ibhagwan/fzf-lua",
+    cmd = "FzfLua",
+    keys = { { "<c-p>", LazyVim.pick("files", { root = false }), desc = "Find Files (Root Dir)" } },
+  },
+  {
+    "saghen/blink.cmp",
+    opts = {
+      -- keymap = { preset = "default" },
+      completion = {
+        trigger = {
+          show_on_insert_on_trigger_character = false,
+        },
+      },
+    },
+    -- opts_extend = { "sources.default" },
+  },
+  --
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
     keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
     config = true,
-  },
-
-  -- override nvim-cmp and add cmp-emoji
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
-    ---@param opts cmp.ConfigSchema
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
-  },
-
-  -- change some telescope options and a keymap to browse plugin files
-  {
-    "nvim-telescope/telescope.nvim",
-    keys = {
-      -- add a keymap to browse plugin files
-      -- stylua: ignore
-      {
-        "<leader>fp",
-        function() require("telescope.builtin").find_files({ cwd = require("lazy.core.config").options.root, hidden = true }) end,
-        desc = "Find Plugin File",
-      },
-      {
-        "<C-p>",
-        function()
-          require("telescope.builtin").find_files()
-        end,
-        desc = "Find Files + Hidden",
-      },
-    },
-    -- change some options
-    opts = {
-      pickers = {
-        find_files = {
-          -- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
-          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-        },
-      },
-      defaults = {
-        layout_strategy = "horizontal",
-        layout_config = { prompt_position = "top" },
-        sorting_strategy = "ascending",
-        hidden = true,
-        winblend = 0,
-      },
-    },
-  },
-
-  -- add telescope-fzf-native
-  {
-    "telescope.nvim",
-    dependencies = {
-      "nvim-telescope/telescope-fzf-native.nvim",
-      build = "make",
-      config = function()
-        require("telescope").load_extension("fzf")
-      end,
-    },
   },
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
   -- would overwrite `ensure_installed` with the new value.
