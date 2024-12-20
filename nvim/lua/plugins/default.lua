@@ -40,6 +40,23 @@ return {
     "ibhagwan/fzf-lua",
     cmd = "FzfLua",
     keys = { { "<c-p>", LazyVim.pick("files", { root = false }), desc = "Find Files (Root Dir)" } },
+    opts = {
+      oldfiles = {
+        include_current_session = true,
+      },
+      previewers = {
+        builtin = {
+          syntax_limit_b = 1024 * 100, -- 100KB
+        },
+      },
+      grep = {
+        actions = {
+          ["ctrl-g"] = {
+            require("fzf-lua.actions").toggle_ignore,
+          },
+        },
+      },
+    },
   },
   {
     "saghen/blink.cmp",
