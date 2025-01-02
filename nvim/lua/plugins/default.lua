@@ -39,7 +39,10 @@ return {
   {
     "ibhagwan/fzf-lua",
     cmd = "FzfLua",
-    keys = { { "<c-p>", LazyVim.pick("files", { root = false }), desc = "Find Files (Root Dir)" } },
+    keys = {
+      { "<c-p>", LazyVim.pick("files", { root = false }), desc = "Find Files (Root Dir)" },
+      { "<leader>f/", LazyVim.pick("live_grep", { root = false }), desc = "Grep (Current Dir)" },
+    },
     opts = {
       oldfiles = {
         include_current_session = true,
