@@ -47,7 +47,7 @@ then
     then
       _upgrade_zsh
     else
-      echo "Would you like to check for prezto updates? [Y/n]: \c"
+      echo "Would you like to check for zim updates? [Y/n]: \c"
       read line
       if [[ "$line" == Y* ]] || [[ "$line" == y* ]] || [ -z "$line" ]; then
         _upgrade_zsh
