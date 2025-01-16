@@ -1,0 +1,5 @@
+font-family = "FiraMono Nerd Font"
+theme = catppuccin-mocha
+macos-titlebar-proxy-icon = hidden
+title = " "
+

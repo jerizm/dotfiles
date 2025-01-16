@@ -25,3 +25,4 @@
     ~/.gitconfig: git/.gitconfig
     ~/.bin: bin/
     ~/.config/starship.toml: starship/starship.toml
+    ~/.config/ghostty/config: ghostty/config

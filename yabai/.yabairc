@@ -39,6 +39,7 @@ yabai -m rule --add app="TV" manage=off space=7
 
 yabai -m rule --add app=iTerm space=1
 yabai -m rule --add app=Alacritty space=1
+yabai -m rule --add app=Ghostty space=1
 yabai -m rule --add app=Slack space=6
 yabai -m rule --add app=Firefox space=2
 yabai -m rule --add app=PrusaSlicer space=3
