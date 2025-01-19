@@ -15,6 +15,7 @@ return {
     opts = {
       transparent_background = true,
       flavor = "mocha",
+      integrations = { blink_cmp = true },
     },
   },
   {
@@ -68,6 +69,12 @@ return {
       completion = {
         trigger = {
           show_on_insert_on_trigger_character = false,
+        },
+        accept = {
+          -- experimental auto-brackets support
+          auto_brackets = {
+            enabled = false,
+          },
         },
       },
     },
