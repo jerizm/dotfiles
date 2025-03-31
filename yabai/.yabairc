@@ -56,6 +56,7 @@ yabai -m rule --add app=WhatsApp space=5
 yabai -m rule --add app=Messages space=5
 yabai -m rule --add app=YT\ Music space=5
 yabai -m rule --add app=Xcode space=4
+yabai -m rule --add app=TurboTax space=4
 yabai -m rule --add app=PS\ Remote\ Play space=4
 yabai -m rule --add app="Synology Surveillance.*" space=4
 
