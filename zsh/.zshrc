@@ -135,3 +135,10 @@ unset key
 
 autoload -U +X bashcompinit && bashcompinit
 complete -C "$(which aws_completer)" aws
+
+# bun completions
+[ -s "/Users/jerry/.bun/_bun" ] && source "/Users/jerry/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
