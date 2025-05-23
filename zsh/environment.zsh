@@ -54,9 +54,7 @@ if which oathtool >/dev/null 2>&1; then
 
 fi
 
-
 compdef _pass __mfakey
-
 
 export DISABLE_UPDATE_PROMPT="true"
 
@@ -84,3 +82,5 @@ if command -v eza 1>/dev/null 2>&1; then
     alias lt='eza -al --sort=modified'
 fi
 { ssh-add -A; } &>/dev/null
+
+export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=1
