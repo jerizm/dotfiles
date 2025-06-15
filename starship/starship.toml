@@ -11,8 +11,9 @@ disabled = true
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 style = 'bold blue'
 symbol = '☁ aws '
+
 [aws.region_aliases]
-us-east-1 = 'e1'
+us-east-1 = 'east-1'
 
 [buf]
 symbol = " "
@@ -33,7 +34,8 @@ symbol = " "
 read_only = " 󰌾"
 
 [docker_context]
-symbol = " "
+# symbol = " "
+disabled = true
 
 [elixir]
 symbol = " "
