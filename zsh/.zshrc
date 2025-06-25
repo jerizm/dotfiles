@@ -143,12 +143,6 @@ complete -C "$(which aws_completer)" aws
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jerry/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jerry/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/jerry/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jerry/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 # pnpm
 export PNPM_HOME="/Users/jerry/Library/pnpm"
 case ":$PATH:" in
@@ -156,3 +150,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jerry/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jerry/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jerry/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jerry/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
