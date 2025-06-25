@@ -2,7 +2,7 @@
     default = simple
 [user]
     name = Jerry Wang
-    email = me@jerrywang.email
+    email = me@jer.wang
 [core]
     excludesfile = ~/.gitignore_global
     editor = nvim
