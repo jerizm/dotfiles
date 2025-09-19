@@ -16,44 +16,44 @@ source "$DIR/icons.sh"
 HELPER=git.felix.helper
 killall helper
 (cd $CONFIG_DIR/helper && make)
-$CONFIG_DIR/helper/helper $HELPER > /dev/null 2>&1 &
+$CONFIG_DIR/helper/helper $HELPER >/dev/null 2>&1 &
 
 BAR_PROPS=(
-  height=20
-  color=$BG_PRI_COLR
-  border_width=1
-  border_color=$BORDER_COLR
-  shadow=off
-  position=top
-  sticky=on
-  padding_right=15
-  padding_left=15
-  corner_radius=0
-  y_offset=0
-  margin=0
-  blur_radius=15
-  notch_width=0
+    height=20
+    color=$BG_PRI_COLR
+    border_width=1
+    border_color=$BORDER_COLR
+    shadow=off
+    position=top
+    sticky=on
+    padding_right=15
+    padding_left=15
+    corner_radius=0
+    y_offset=0
+    margin=0
+    blur_radius=15
+    notch_width=0
 )
 
 DEF_PROPS=(
-  updates=when_shown
-  icon.font="$ICON_FONT:Regular:13.0"
-  icon.color=$GREEN
-  icon.padding_left=$PADDING
-  icon.padding_right=$PADDING
-  label.font="$FONT:Semibold:12.0"
-  label.color=$GREEN
-  label.padding_left=$PADDING
-  label.padding_right=$PADDING
-  background.padding_right=$PADDING
-  background.padding_left=$PADDING
-  background.height=15
-  background.corner_radius=4
-  popup.background.border_width=2
-  popup.background.corner_radius=11
-  popup.background.border_color=$BORDER_COLR
-  popup.background.color=$BG_PRI_COLR
-  popup.background.shadow.drawing=on
+    updates=when_shown
+    icon.font="$ICON_FONT:Regular:13.0"
+    icon.color=$GREEN
+    icon.padding_left=$PADDING
+    icon.padding_right=$PADDING
+    label.font="$FONT:Semibold:12.0"
+    label.color=$GREEN
+    label.padding_left=$PADDING
+    label.padding_right=$PADDING
+    background.padding_right=$PADDING
+    background.padding_left=$PADDING
+    background.height=15
+    background.corner_radius=4
+    popup.background.border_width=2
+    popup.background.corner_radius=11
+    popup.background.border_color=$BORDER_COLR
+    popup.background.color=$BG_PRI_COLR
+    popup.background.shadow.drawing=on
 )
 
 sketchybar --bar "${BAR_PROPS[@]}"
@@ -73,4 +73,3 @@ source "$ITEM_DIR/cpu.sh"
 
 # sketchybar --hotload on
 sketchybar --update
-

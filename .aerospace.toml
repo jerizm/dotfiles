@@ -35,11 +35,11 @@ automatically-unhide-macos-hidden-apps = false
     alt-b = 'workspace Browsing'
     alt-c = 'workspace Communication'
     alt-d = 'workspace Development'
-    alt-2 = 'workspace Misc_2'
     alt-t = 'workspace Terminal'
     alt-o = 'workspace Other'
     alt-w = 'workspace Work'
-    alt-1 = 'workspace Misc_1'
+    alt-1 = 'workspace 1_Misc'
+    alt-2 = 'workspace 2_Misc'
 
     alt-shift-b = 'move-node-to-workspace Browsing'
     alt-shift-c = 'move-node-to-workspace Communication'
@@ -47,8 +47,8 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-t = 'move-node-to-workspace Terminal'
     alt-shift-o = 'move-node-to-workspace Other'
     alt-shift-w = 'move-node-to-workspace Work'
-    alt-shift-1 = 'move-node-to-workspace Misc_1'
-    alt-shift-2 = 'move-node-to-workspace Misc_2'
+    alt-shift-1 = 'move-node-to-workspace 1_Misc'
+    alt-shift-2 = 'move-node-to-workspace 2_Misc'
 
     ctrl-alt-2= 'move-workspace-to-monitor --wrap-around next'
 
@@ -58,11 +58,11 @@ automatically-unhide-macos-hidden-apps = false
     Browsing = 'main'
     Development = 'main'
     Terminal = 'main'
-    Misc_1 = 'main'
+    1_Misc = 'main'
     Communication = ['secondary', 'main']
     Other = ['secondary', 'main']
     Work = ['secondary', 'main']
-    Misc_2 = ['secondary', 'main']
+    2_Misc = ['secondary', 'main']
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
