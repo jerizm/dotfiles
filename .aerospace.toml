@@ -1,0 +1,114 @@
+after-startup-command = []
+
+start-at-login = true
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+
+default-root-container-layout = 'tiles'
+
+default-root-container-orientation = 'auto'
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+automatically-unhide-macos-hidden-apps = false
+
+# Possible values: (qwerty|dvorak|colemak)
+# See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
+[key-mapping]
+    preset = 'qwerty'
+
+[gaps]
+    inner.horizontal = 0
+    inner.vertical =   0
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        25
+    outer.right =      0
+
+[mode.main.binding]
+    alt-slash = 'layout tiles horizontal vertical'
+    alt-comma = 'layout accordion horizontal vertical'
+
+    alt-b = 'workspace Browsing'
+    alt-c = 'workspace Communication'
+    alt-d = 'workspace Development'
+    alt-2 = 'workspace Misc_2'
+    alt-t = 'workspace Terminal'
+    alt-o = 'workspace Other'
+    alt-w = 'workspace Work'
+    alt-1 = 'workspace Misc_1'
+
+    alt-shift-b = 'move-node-to-workspace Browsing'
+    alt-shift-c = 'move-node-to-workspace Communication'
+    alt-shift-d = 'move-node-to-workspace Development'
+    alt-shift-t = 'move-node-to-workspace Terminal'
+    alt-shift-o = 'move-node-to-workspace Other'
+    alt-shift-w = 'move-node-to-workspace Work'
+    alt-shift-1 = 'move-node-to-workspace Misc_1'
+    alt-shift-2 = 'move-node-to-workspace Misc_2'
+
+    ctrl-alt-2= 'move-workspace-to-monitor --wrap-around next'
+
+    alt-shift-semicolon = 'mode service'
+
+[workspace-to-monitor-force-assignment]
+    Browsing = 'main'
+    Development = 'main'
+    Terminal = 'main'
+    Misc_1 = 'main'
+    Communication = ['secondary', 'main']
+    Other = ['secondary', 'main']
+    Work = ['secondary', 'main']
+    Misc_2 = ['secondary', 'main']
+
+# 'service' binding mode declaration.
+# See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
+[mode.service.binding]
+    esc = ['reload-config', 'mode main']
+    r = ['flatten-workspace-tree', 'mode main'] # reset layout
+    f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+
+    alt-shift-h = ['join-with left', 'mode main']
+    alt-shift-j = ['join-with down', 'mode main']
+    alt-shift-k = ['join-with up', 'mode main']
+    alt-shift-l = ['join-with right', 'mode main']
+
+[[on-window-detected]]
+    if.app-id = 'com.mitchellh.ghostty'
+    run = "move-node-to-workspace t"
+
+[[on-window-detected]]
+    if.app-id = 'com.mozilla.firefox'
+    run = "move-node-to-workspace b"
+
+[[on-window-detected]]
+    if.app-id = 'com.tinyspeck.slackmacgap'
+    run = "move-node-to-workspace w"
+
+[[on-window-detected]]
+    if.app-id = 'com.linear'
+    run = "move-node-to-workspace w"
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.MobileSMS'
+    run = "move-node-to-workspace c"
+
+[[on-window-detected]]
+    if.app-id = 'net.whatsapp.WhatsApp'
+    run = "move-node-to-workspace c"
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.finder'
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = 'com.apple.systempreferences'
+    run = ['layout floating']
+
+[[on-window-detected]]
+    if.app-id = 'com.runningwithcrayons.Alfred-Preferences'
+    run = ['layout floating']
+

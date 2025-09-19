@@ -27,3 +27,4 @@
     ~/.config/starship.toml: starship/starship.toml
     ~/.config/ghostty/config: ghostty/config
     ~/.config/ghostty/themes: ghostty/themes
+    ~/.aerospace.toml: .aerospace.toml
