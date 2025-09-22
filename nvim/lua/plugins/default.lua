@@ -129,6 +129,7 @@ return {
     opts = {
       ensure_installed = {
         "eslint_d",
+        "tombi",
         "stylua",
         "shellcheck",
         "shfmt",
@@ -234,6 +235,7 @@ return {
         less = { "prettierd" },
         html = { "prettierd" },
         json = { "prettierd" },
+        toml = { "tombi" },
         jsonc = { "prettierd" },
         yaml = { "prettierd" },
         markdown = { "prettierd" },
