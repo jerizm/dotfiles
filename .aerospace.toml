@@ -25,6 +25,7 @@ alt-comma = "layout accordion horizontal vertical"
 alt-b = "workspace Browsing"
 alt-c = "workspace Communication"
 alt-d = "workspace Development"
+alt-g = "workspace Gaming"
 alt-t = "workspace Terminal"
 alt-o = "workspace Other"
 alt-w = "workspace Work"
@@ -33,6 +34,7 @@ alt-2 = "workspace 2_Misc"
 alt-shift-b = "move-node-to-workspace Browsing"
 alt-shift-c = "move-node-to-workspace Communication"
 alt-shift-d = "move-node-to-workspace Development"
+alt-shift-g = "move-node-to-workspace Gaming"
 alt-shift-t = "move-node-to-workspace Terminal"
 alt-shift-o = "move-node-to-workspace Other"
 alt-shift-w = "move-node-to-workspace Work"
@@ -58,10 +60,11 @@ Browsing = "main"
 Development = "main"
 Terminal = "main"
 1_Misc = "main"
-Communication = ["secondary", "Built-in Retina Display", "main"]
-Other = ["secondary", "Built-in Retina Display", "main"]
-Work = ["secondary", "Built-in Retina Display", "main"]
-2_Misc = ["secondary", "Built-in Retina Display", "main"]
+Gaming = "main"
+Communication = ["secondary", "built-in", "main"]
+Other = ["secondary", "built-in", "main"]
+Work = ["secondary", "built-in", "main"]
+2_Misc = ["secondary", "built-in", "main"]
 
 [[on-window-detected]]
 if.app-id = "com.mitchellh.ghostty"
@@ -92,8 +95,16 @@ if.app-id = "net.whatsapp.WhatsApp"
 run = "move-node-to-workspace Communication"
 
 [[on-window-detected]]
+if.app-id = "com.playstation.RemotePlay"
+run = "move-node-to-workspace Gaming"
+
+[[on-window-detected]]
+if.app-id = "com.valvesoftware.steam"
+run = "move-node-to-workspace Gaming"
+
+[[on-window-detected]]
 if.app-id = "com.apple.finder"
-run = "layout floating"
+run = ["layout floating"]
 
 [[on-window-detected]]
 if.app-id = "com.apple.systempreferences"
