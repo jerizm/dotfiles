@@ -42,6 +42,7 @@ alt-shift-1 = "move-node-to-workspace 1_Misc"
 alt-shift-2 = "move-node-to-workspace 2_Misc"
 ctrl-alt-2 = "move-workspace-to-monitor --wrap-around next"
 alt-shift-semicolon = "mode service"
+alt-shift-f = "layout floating tiling"
 
 [mode.service.binding]
 esc = ["reload-config", "mode main"]
@@ -96,6 +97,10 @@ run = "move-node-to-workspace Communication"
 
 [[on-window-detected]]
 if.app-id = "com.playstation.RemotePlay"
+run = "move-node-to-workspace Gaming"
+
+[[on-window-detected]]
+if.app-id = "org.streetpea.chiaking"
 run = "move-node-to-workspace Gaming"
 
 [[on-window-detected]]
