@@ -1,4 +1,7 @@
-after-startup-command = []
+after-startup-command = [
+  "exec-and-forget borders active_color=0xffacccea inactive_color=0xff494d64 width=5.0",
+  "exec-and-forget sketchybar --reload",
+]
 start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
