@@ -1,6 +1,7 @@
 after-startup-command = [
   "exec-and-forget borders active_color=0xffacccea inactive_color=0xff494d64 width=5.0",
   "exec-and-forget sketchybar --reload",
+  "layout tiles"
 ]
 start-at-login = true
 enable-normalization-flatten-containers = true
@@ -107,6 +108,10 @@ if.app-id = "org.streetpea.chiaking"
 run = "move-node-to-workspace Gaming"
 
 [[on-window-detected]]
+if.app-id = "com.valvesoftware.steam.helper"
+run = "move-node-to-workspace Gaming"
+
+[[on-window-detected]]
 if.app-id = "com.valvesoftware.steam"
 run = "move-node-to-workspace Gaming"
 
@@ -115,8 +120,12 @@ if.app-id = "com.apple.finder"
 run = ["layout floating"]
 
 [[on-window-detected]]
-if.app-id = "com.apple.systempreferences"
-run = ["layout floating"]
+if.app-id = "com.apple.iphonesimulator"
+run = "move-node-to-workspace Development"
+
+[[on-window-detected]]
+if.app-id = "com.apple.dt.Xcode"
+run = "move-node-to-workspace Development"
 
 [[on-window-detected]]
 if.app-id = "com.runningwithcrayons.Alfred-Preferences"
