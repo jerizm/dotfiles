@@ -19,4 +19,6 @@ else
     NORMAL=""
 fi
 
-printf "${BLUE}%s${NORMAL}\n" "Update zim"
+printf "${BLUE}%s${NORMAL}\n" "Updating zim"
+env ZIM_HOME="${ZSH}" zsh "${ZSH}/zimfw.zsh" upgrade
+env ZIM_HOME="${ZSH}" zsh "${ZSH}/zimfw.zsh" update
