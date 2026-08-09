@@ -15,6 +15,7 @@
     ~/.zsh: zsh/
     ~/.dir_colors: zsh/.dir_colors
     ~/.editorconfig: zsh/.editorconfig
+    ~/.wezterm.lua: zsh/.wezterm.lua
     ~/.fzf.zsh: zsh/.fzf.zsh
     ~/.gitignore_global: git/.gitignore_global
     ~/.tern-config: zsh/.tern-config
