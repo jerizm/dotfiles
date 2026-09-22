@@ -1,5 +1,9 @@
 #!/bin/bash
 
+killall stats_provider
+# Update with path to stats_provider
+stats_provider --cpu usage --disk usage --memory ram_usage &
+
 DIR="$HOME/.config/sketchybar/"
 ITEM_DIR="$DIR/items"
 PLUGIN_DIR="$DIR/plugins"
@@ -70,6 +74,10 @@ source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/mem.sh"
 source "$ITEM_DIR/disk.sh"
 source "$ITEM_DIR/cpu.sh"
+
+sketchybar --add item disk_usage right \
+    --set disk_usage script="sketchybar --set disk_usage label=\$DISK_USAGE" \
+    --subscribe disk_usage system_stats
 
 # sketchybar --hotload on
 sketchybar --update

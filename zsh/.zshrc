@@ -156,3 +156,6 @@ if [ -f '/Users/jerry/git/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jerry
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jerry/git/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jerry/git/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Pi
+export PATH="/Users/jerry/.fnm/node-versions/v24.13.0/installation/bin:$PATH"

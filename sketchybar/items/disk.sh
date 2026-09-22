@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
-sketchybar --add item disk right                              \
-           --set disk script="$PLUGIN_DIR/disk.sh"            \
-                      update_freq=60                           \
+DISKICON=􀤂
+
+sketchybar --add item disk_usage right \
+    --set disk_usage icon=$DISKICON script="sketchybar --set disk_usage label=\$DISK_USAGE" \
+    --subscribe disk_usage system_stats
