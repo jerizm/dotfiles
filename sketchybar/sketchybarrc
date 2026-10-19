@@ -75,9 +75,15 @@ source "$ITEM_DIR/mem.sh"
 source "$ITEM_DIR/disk.sh"
 source "$ITEM_DIR/cpu.sh"
 
+# disk usage
 sketchybar --add item disk_usage right \
     --set disk_usage script="sketchybar --set disk_usage label=\$DISK_USAGE" \
     --subscribe disk_usage system_stats
-
+# wireguard
+sketchybar --add item wireguard right \
+    --set wireguard update_freq=5 \
+    script="$CONFIG_DIR/plugins/wireguard.sh" \
+    icon.font="JetBrainsMono NF:Bold:14.0" \
+    label.font="SF Pro:Bold:12.0"#
 # sketchybar --hotload on
 sketchybar --update
