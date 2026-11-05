@@ -5,3 +5,6 @@ decrypt_kms() {
 encrypt_kms() {
     aws kms encrypt --key-id "$1" --plaintext fileb://<(echo -n "$2")
 }
+
+# Roles with requireMFA trust only MFA under 1h old (hiatus.ops.iam AccountMFAPrincipal)
+export AWS_SESSION_TOKEN_TTL=55m
