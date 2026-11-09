@@ -22,6 +22,8 @@
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.zshrc: zsh/.zshrc
     ~/.zprofile: zsh/.zprofile
+    ~/AGENTS.md: zsh/AGENTS.md
+    ~/CLAUDE.md: zsh/CLAUDE.md
     ~/.config/zsh/zimrc: zsh/zimrc
     ~/.gitconfig: git/.gitconfig
     ~/.bin: bin/

@@ -7,4 +7,5 @@ encrypt_kms() {
 }
 
 # Roles with requireMFA trust only MFA under 1h old (hiatus.ops.iam AccountMFAPrincipal)
-export AWS_SESSION_TOKEN_TTL=55m
+export AWS_SESSION_TOKEN_TTL=3500s
+export AWS_CHAINED_SESSION_TOKEN_TTL=3500s
