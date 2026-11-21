@@ -6,6 +6,7 @@
 
 - create:
     - ~/.config
+    - ~/.config/herdr
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
@@ -31,3 +32,4 @@
     ~/.config/ghostty/config: ghostty/config
     ~/.config/ghostty/themes: ghostty/themes
     ~/.aerospace.toml: .aerospace.toml
+    ~/.config/herdr/config.toml: herdr/config.toml

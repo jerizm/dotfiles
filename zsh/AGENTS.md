@@ -10,7 +10,9 @@ Always hold a You Arent Gonna Need it mentality. Do not overengineer. Never expa
 
 Always spin up a sub agent with minimal context using a cheap model, with the job of reviewing your changes, to sus out possible problems with fresh eyes. Run it on the final diff, after the last edit and before you push. In the reviewer prompt, ask for factual errors only, not wording preferences.
 
-Before you write a claim into a doc or instruction file, check it against the code.
+Before you write a claim into a doc or instruction file, check it against the code. If the claim is about runtime behaviour, run it: reading the code is not enough.
+
+Before you call a resource unused or a metric zero, check the raw value, not a rounded or unit-converted one.
 
 Less is more. You see elegance in simplicity. You favour concise, clean solutions over those that are complex and comprehensive for risk of over-engineering. Upon work completion take pause to critical review your work - if complexity has crept in address the issue and suggest a small change to our workflow to help avoid this in the future.
 
