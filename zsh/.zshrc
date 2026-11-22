@@ -93,7 +93,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Initialize modules
 # ------------------
 ZVM_INIT_MODE=sourcing
-ZIM_CONFIG_FILE=~/.config/zsh/zimrc
+export ZIM_CONFIG_FILE=~/.config/zsh/zimrc
 ZIM_HOME=~/.zim
 # Download zimfw plugin manager if missing.
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
@@ -108,7 +108,7 @@ fi
 # add completion functions
 fpath+=("$HOME/dotfiles/zsh/functions/")
 # Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
-if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE} ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 
@@ -157,5 +157,6 @@ if [ -f '/Users/jerry/git/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jerry
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jerry/git/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jerry/git/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Pi
-export PATH="/Users/jerry/.fnm/node-versions/v24.13.0/installation/bin:$PATH"
+
+# dedupe PATH; runs last because scalar PATH= assignments skip -U
+typeset -U path
