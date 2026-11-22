@@ -45,7 +45,7 @@
 [http]
 	sslVerify = true
 [credential]
-	helper = store
+	helper = osxkeychain
 [pull]
     ff = only
 [delta]

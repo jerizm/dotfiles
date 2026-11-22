@@ -2,9 +2,6 @@
 
 - link:
     ~/.tmux.osx.conf: tmux/.tmux.osx.conf
-    ~/.skhdrc: skhd/.skhdrc
     ~/.config/karabiner: karabiner
-    ~/.yabairc: yabai/.yabairc
     ~/.alacritty.toml: alacritty/.alacritty.toml
     ~/.config/sketchybar: sketchybar
-    ~/.p10k.zsh: zsh/.p10k.zsh

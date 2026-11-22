@@ -50,7 +50,7 @@ if which oathtool >/dev/null 2>&1; then
     alias mfakey=__mfakey
 
   # generate pw alias
-  alias passgen='pwgen -Bsy 28 1 | tr -d "\n" | pbcopy | pbpaste'
+  alias passgen='pwgen -Bsy 28 1 | tr -d "\n" | pbcopy; pbpaste'
 
 fi
 
@@ -81,6 +81,5 @@ if command -v eza 1>/dev/null 2>&1; then
     alias ls='eza -al --group-directories-first --color=always'
     alias lt='eza -al --sort=modified'
 fi
-{ ssh-add -A; } &>/dev/null
 
 export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=1
