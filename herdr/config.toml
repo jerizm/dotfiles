@@ -1,4 +1,10 @@
 onboarding = false
 
 [keys]
-prefix = "ctrl+space"
+prefix = "ctrl+/"
+
+[ui]
+status_indicators = "symbols"
+
+[ui.toast]
+delivery = "herdr"
