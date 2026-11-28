@@ -1,10 +1,22 @@
 onboarding = false
-
 [keys]
-prefix = "ctrl+/"
+prefix = "ctrl+a"
+previous_workspace = ["ctrl+shift+b", "ctrl+shift+up"]
+next_workspace = ["ctrl+shift+n", "ctrl+shift+down"]
+switch_tab = ""
+next_tab = "ctrl+n"
+previous_tab = "ctrl+b"
+rename_tab = "prefix+,"
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
 
 [ui]
 status_indicators = "symbols"
+tab_bar_right = [
+  { type = "command", command = "printf '✻ '; ~/dotfiles/herdr/claude-usage.sh", interval_seconds = 300, timeout_seconds = 15 },
+]
 
 [ui.toast]
 delivery = "herdr"

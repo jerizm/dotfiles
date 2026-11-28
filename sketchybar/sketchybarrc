@@ -70,6 +70,11 @@ source "$ITEM_DIR/mem.sh"
 source "$ITEM_DIR/disk.sh"
 source "$ITEM_DIR/cpu.sh"
 
+# claude plan usage
+sketchybar --add item claude right \
+    --set claude update_freq=300 icon=✻ \
+    script="$PLUGIN_DIR/claude.sh"
+
 # wireguard
 sketchybar --add item wireguard right \
     --set wireguard update_freq=5 \
