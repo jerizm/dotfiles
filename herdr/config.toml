@@ -1,10 +1,33 @@
 onboarding = false
-
 [keys]
-prefix = "ctrl+/"
+prefix = "ctrl+a"
+previous_workspace = ["ctrl+shift+b", "ctrl+shift+up"]
+next_workspace = ["ctrl+shift+n", "ctrl+shift+down"]
+switch_tab = ""
+next_tab = "ctrl+n"
+previous_tab = "ctrl+b"
+rename_tab = "prefix+,"
+focus_pane_left = "ctrl+h"
+focus_pane_down = "ctrl+j"
+focus_pane_up = "ctrl+k"
+focus_pane_right = "ctrl+l"
+# tmux parity (tmux/.tmux.conf)
+split_vertical = "prefix+|"
+split_horizontal = "prefix+minus"
+last_pane = "ctrl+\\"
+cycle_pane_next = "ctrl+space"
+resize_pane_left = "prefix+h"
+resize_pane_down = "prefix+j"
+resize_pane_up = "prefix+k"
+resize_pane_right = "prefix+l"
 
 [ui]
 status_indicators = "symbols"
+pane_outer_borders = false
+pane_gaps = false
+tab_bar_right = [
+  { type = "command", command = "printf '✻ '; ~/dotfiles/herdr/claude-usage.sh", interval_seconds = 300, timeout_seconds = 15 },
+]
 
 [ui.toast]
 delivery = "herdr"

@@ -32,3 +32,7 @@
     ~/.config/ghostty/themes: ghostty/themes
     ~/.aerospace.toml: .aerospace.toml
     ~/.config/herdr/config.toml: herdr/config.toml
+    ~/.agents: agents
+
+- shell:
+    - [agents/install.sh, Installing agent skills and Claude plugins]
